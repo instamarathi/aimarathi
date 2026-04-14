@@ -434,6 +434,12 @@ nav .nav-links .dropdown .coming-tag {
   border-radius: 0 6px 6px 0;
 }
 
+.exercise pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+}
+
 .exercise h4 {
   color: var(--color-green);
   margin-top: 0;
