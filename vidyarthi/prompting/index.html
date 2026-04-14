@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompting शिका — AI Marathi</title>
+  <meta name="description" content="AI ला चांगले prompts कसे लिहायचे? Task + Context + Constraints + Format — simple formula शिका.">
+  <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DSX7QN8HXY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DSX7QN8HXY');
+  </script>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/aimarathi/" class="logo">
+        <img src="/aimarathi/assets/logo.svg" alt="AI Marathi logo">
+        <span>AI</span> Marathi
+      </a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <a class="dropdown-label" href="/aimarathi/suruvaat/" style="color: var(--color-accent);">&#127937; सुरुवात</a>
+        </li>
+        <li>
+          <a class="dropdown-label" href="/aimarathi/likha/">&#128218; शिका &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/likha/">&#9997; लिहा — Writing</a></li>
+            <li><a href="/aimarathi/code/">&lt;/&gt; Code</a></li>
+            <li><a href="/aimarathi/bagha/">&#127912; बघा — Visual</a></li>
+            <li><a href="/aimarathi/aika/">&#127911; ऐका — Audio</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="dropdown-label" href="/aimarathi/tools/">&#128295; Tools &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/claude/">Claude</a></li>
+            <li><a href="/aimarathi/chatgpt/">ChatGPT</a></li>
+            <li><a href="/aimarathi/gemini/">Gemini</a></li>
+            <li><a href="/aimarathi/perplexity/">Perplexity</a></li>
+            <li><a href="/aimarathi/claude-code/">Claude Code</a></li>
+            <li class="dropdown-more"><a href="/aimarathi/tools/">&#x2026;</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="dropdown-label" href="/aimarathi/vidyarthi/">&#127891; विद्यार्थी &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/vidyarthi/">Overview</a></li>
+            <li><a href="/aimarathi/vidyarthi/prompting/">Prompting</a></li>
+            <li><a href="/aimarathi/vidyarthi/samjun-ghya/">समजून घ्या</a></li>
+            <li><a href="/aimarathi/vidyarthi/abhyas/">अभ्यास</a></li>
+            <li><a href="/aimarathi/vidyarthi/lihinyasathi/">लिहिण्यासाठी</a></li>
+            <li class="dropdown-more"><a href="/aimarathi/vidyarthi/">&#x2026;</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="dropdown-label" href="/aimarathi/blog/">&#128221; Blog &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/blog/chatgpt-vs-claude-vs-gemini/">ChatGPT vs Claude vs Gemini</a></li>
+            <li><a href="/aimarathi/blog/ai-youtube-video-workflow/">YouTube Video AI Workflow</a></li>
+            <li><a href="/aimarathi/blog/aggregators/">AI Aggregators</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-copywriting/">Prompt Engineering: Copywriting</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-ad-images/">Prompt Engineering: Ad Images</a></li>
+            <li class="dropdown-more"><a href="/aimarathi/blog/">&#x2026;</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#9790;</button>
+    </div>
+  </nav>
+
+
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo; <a href="/aimarathi/vidyarthi/">विद्यार्थी</a> &rsaquo; Prompting
+      </div>
+      <h1>Prompting शिका</h1>
+      <p>AI ला नक्की काय हवं ते सांगायला शिका — एक simple formula वापरून.</p>
+    </div>
+
+    <!-- Objective -->
+    <section>
+      <h2>Objective</h2>
+      <p>या module नंतर तुम्ही clear, specific prompts लिहू शकाल जे consistently चांगले results देतात.</p>
+    </section>
+
+    <!-- Formula -->
+    <section>
+      <h2>Prompting Formula: TCCF</h2>
+      <p>चांगला prompt लिहायला 4 गोष्टी लागतात:</p>
+
+      <div class="step">
+        <span class="step-number">T</span>
+        <h3>Task — काय करायचं आहे?</h3>
+        <p>AI ला clearly सांगा — explain करायचं आहे, summarize करायचं आहे, compare करायचं आहे, quiz बनवायचा आहे? Specific verb वापरा.</p>
+      </div>
+
+      <div class="step">
+        <span class="step-number">C</span>
+        <h3>Context — background काय आहे?</h3>
+        <p>तुम्ही कोण आहात, कोणत्या level ला आहात, कशासाठी हवं आहे. "मी 12th Science student आहे" हे सांगितलं तर AI output पूर्ण बदलतो.</p>
+      </div>
+
+      <div class="step">
+        <span class="step-number">C</span>
+        <h3>Constraints — काय नको, किती हवं?</h3>
+        <p>Word limit, language, difficulty level, काय include करू नये — या सगळ्या constraints आहेत. "200 words मध्ये", "technical terms avoid कर", "Hindi वापरू नकोस" — अशा गोष्टी.</p>
+      </div>
+
+      <div class="step">
+        <span class="step-number">F</span>
+        <h3>Format — output कसा दिसायला हवा?</h3>
+        <p>Bullet points, paragraph, table, quiz, step-by-step — format सांगितलं तर AI exactly त्या format मध्ये देतो.</p>
+      </div>
+    </section>
+
+    <!-- Demo -->
+    <section>
+      <h2>Demo: Biology Exam Question</h2>
+
+      <div class="exercise">
+        <h4>&#10060; वाईट prompt:</h4>
+        <pre>cell division explain कर</pre>
+      </div>
+      <p>हा prompt खूप vague आहे. AI ला माहीत नाही — mitosis का meiosis? कोणत्या level साठी? किती detail हवं? Output generic येतो.</p>
+
+      <div class="exercise">
+        <h4>&#9989; चांगला prompt:</h4>
+        <pre>मी 12th Science (Biology) चा student आहे. मला mitosis आणि meiosis मधला difference explain कर.
+
+Format असं हवं:
+- पहिल्यांदा दोन्ही separately 3-4 lines मध्ये explain कर
+- मग एक comparison table दे (stages, chromosome number, purpose)
+- शेवटी 5 MCQs दे board exam pattern मध्ये, answers सोबत
+
+Simple language वापर, पण scientific terms accurately वापर.</pre>
+      </div>
+      <p>बघा — Task (explain + compare + quiz), Context (12th Science), Constraints (simple language, accurate terms), Format (explanation + table + MCQs) — सगळं clear आहे.</p>
+    </section>
+
+    <!-- Key Principle -->
+    <section>
+      <h2>Important: Iterate करा</h2>
+      <p>First prompt चा output perfect नसतो — आणि तो perfect असायला नको. AI शी conversation करा:</p>
+      <ul>
+        <li>"हे खूप complex आहे, अजून simple कर"</li>
+        <li>"table format मध्ये दे"</li>
+        <li>"आता याच topic वर 5 short answer questions दे"</li>
+        <li>"हे answer चुकीचं वाटतंय, verify कर"</li>
+      </ul>
+      <p>2-3 follow-ups नंतर output significantly better होतो. हा iterative approach शिकणं — हे prompting मधलं सगळ्यात important skill आहे.</p>
+    </section>
+
+    <!-- Exercises -->
+    <section>
+      <h2>Exercises</h2>
+
+      <h3>Exercise 1: Vague vs Better Prompt</h3>
+      <p>खालचे दोन्ही prompts Gemini मध्ये try करा आणि outputs compare करा:</p>
+
+      <div class="exercise">
+        <h4>Vague prompt:</h4>
+        <pre>Indian economy बद्दल सांग</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Better prompt:</h4>
+        <pre>मी 12th Commerce student आहे. मला Indian economy चे 5 major sectors सांग, प्रत्येक sector चा GDP मधला approximate share सांग, आणि 2024 मध्ये कोणता sector सगळ्यात fast grow होतोय ते सांग. Bullet points मध्ये दे, 200 words मध्ये.</pre>
+      </div>
+      <p>दोन्ही outputs side by side बघा. फरक लक्षात येईल.</p>
+
+      <h3>Exercise 2: Bad Prompt Improve करा</h3>
+      <p>हा bad prompt घ्या आणि TCCF formula वापरून improve करा:</p>
+      <div class="exercise">
+        <h4>Bad prompt:</h4>
+        <pre>Shakespeare बद्दल essay लिहा</pre>
+      </div>
+      <p><strong>Hint:</strong> कोणता play/sonnet? किती words? कोणत्या aspect बद्दल — language, themes, historical context? कोणत्या level साठी?</p>
+
+      <h3>Exercise 3: Same Task, 3 Formats</h3>
+      <p>एकच topic घ्या (e.g., "Water cycle") आणि 3 different formats मध्ये output मागा:</p>
+      <div class="exercise">
+        <pre>Water cycle explain कर — 10th std level, मराठी-English mix मध्ये.
+Format 1: एक short summary (100 words)
+Format 2: step-by-step bullet points
+Format 3: 10 quiz questions with answers</pre>
+      </div>
+      <p>तिन्ही separately try करा किंवा एकदम तिन्ही मागा — बघा AI कसं handle करतो.</p>
+    </section>
+
+    <!-- Copy-paste Prompts -->
+    <section>
+      <h2>Copy-Paste Prompts</h2>
+      <p>हे ready-to-use prompts आहेत. [ ] मधला text तुमच्या details ने replace करा.</p>
+
+      <div class="exercise">
+        <h4>Topic Explanation</h4>
+        <pre>मला [topic] समजावून सांग. मी [10th / 12th / college] student आहे. Simple language मध्ये explain कर, examples दे, आणि शेवटी 5 quiz questions दे.</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Paragraph Rewrite</h4>
+        <pre>हा paragraph rewrite कर — same meaning, पण clearer structure आणि simpler words. Paragraph: [paste your paragraph here]</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Multiple Perspectives</h4>
+        <pre>या topic वर 3 different perspectives दे: [topic]. प्रत्येक perspective साठी — argument, evidence, weakness सांग.</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Exam Preparation</h4>
+        <pre>[Subject] च्या [chapter name] वरचे 10 most important questions सांग — [board/university] exam pattern मध्ये. Short answer आणि long answer दोन्ही include कर, model answers सोबत दे.</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Concept Comparison</h4>
+        <pre>[Concept A] आणि [Concept B] मधला difference explain कर. Table format मध्ये comparison दे, मग real-life example दे, शेवटी 3 tricky MCQs दे जे दोन्ही concepts test करतात.</pre>
+      </div>
+    </section>
+
+    <div class="tip">
+      <strong>Key Takeaway:</strong> Prompting ही skill आहे — practice ने improve होते. TCCF formula लक्षात ठेवा: Task + Context + Constraints + Format. आणि always iterate करा — first output हा starting point आहे, final answer नाही.
+    </div>
+
+    <p style="margin-top: 1rem;">
+      <a href="/aimarathi/blog/prompt-engineering-copywriting/">Prompt Engineering बद्दल अजून वाचा &rarr;</a>
+    </p>
+
+    <!-- Page Navigation -->
+    <nav style="display: flex; justify-content: space-between; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+      <a href="/aimarathi/vidyarthi/">&larr; मागे: Overview</a>
+      <a href="/aimarathi/vidyarthi/samjun-ghya/">पुढे: समजून घ्या &rarr;</a>
+    </nav>
+
+  </main>
+
+  <footer>
+    <p><strong>AIMarathi</strong> — AI शिका, मराठीत. Free and open.</p>
+    <p>A project by <a href="https://instamarathi.github.io">InstaMarathi</a></p>
+    <p><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener" style="color: inherit;">CC BY-NC-ND 4.0</a> — share freely, credit required, no commercial use, no derivatives.</p>
+  </footer>
+
+  <script>
+    (function() {
+      var toggle = document.getElementById('themeToggle');
+      var stored = localStorage.getItem('aimarathi-theme');
+      if (stored) document.documentElement.setAttribute('data-theme', stored);
+      function updateIcon() {
+        toggle.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u2600' : '\u263E';
+      }
+      updateIcon();
+      toggle.addEventListener('click', function() {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('aimarathi-theme', next);
+        updateIcon();
+      });
+      document.getElementById('navHamburger').addEventListener('click', function() {
+        document.getElementById('navLinks').classList.toggle('open');
+      });
+      document.querySelectorAll('.dropdown-label').forEach(function(label) {
+        label.addEventListener('click', function(e) {
+          if (window.innerWidth <= 767) {
+            e.preventDefault();
+            this.parentElement.classList.toggle('mobile-open');
+          }
+        });
+      });
+      // Copy buttons on prompt-block and exercise boxes
+      document.querySelectorAll('.prompt-block, .exercise').forEach(function(el) {
+        el.classList.add('copy-wrap');
+        var btn = document.createElement('button');
+        btn.className = 'copy-btn';
+        btn.textContent = 'Copy';
+        btn.addEventListener('click', function() {
+          var text = el.textContent.replace(/^Copy(ed!)?/, '').trim();
+          // Remove the label text (e.g. "Command Prompt", exercise h4)
+          var label = el.querySelector('.label, h4');
+          if (label) text = text.replace(label.textContent, '').trim();
+          navigator.clipboard.writeText(text).then(function() {
+            btn.textContent = 'Copied!';
+            btn.classList.add('copied');
+            setTimeout(function() {
+              btn.textContent = 'Copy';
+              btn.classList.remove('copied');
+            }, 1500);
+          });
+        });
+        el.appendChild(btn);
+      });
+    })();
+  </script>
+
+</body>
+</html>

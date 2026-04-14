@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompting शिका — AI Marathi</title>
+  <meta name="description" content="AI ला चांगले prompts कसे लिहायचे? Task + Context + Constraints + Format — simple formula शिका.">
+  <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+{{NAV}}
+
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo; <a href="/aimarathi/vidyarthi/">विद्यार्थी</a> &rsaquo; Prompting
+      </div>
+      <h1>Prompting शिका</h1>
+      <p>AI ला नक्की काय हवं ते सांगायला शिका — एक simple formula वापरून.</p>
+    </div>
+
+    <!-- Objective -->
+    <section>
+      <h2>Objective</h2>
+      <p>या module नंतर तुम्ही clear, specific prompts लिहू शकाल जे consistently चांगले results देतात.</p>
+    </section>
+
+    <!-- Formula -->
+    <section>
+      <h2>Prompting Formula: TCCF</h2>
+      <p>चांगला prompt लिहायला 4 गोष्टी लागतात:</p>
+
+      <div class="step">
+        <span class="step-number">T</span>
+        <h3>Task — काय करायचं आहे?</h3>
+        <p>AI ला clearly सांगा — explain करायचं आहे, summarize करायचं आहे, compare करायचं आहे, quiz बनवायचा आहे? Specific verb वापरा.</p>
+      </div>
+
+      <div class="step">
+        <span class="step-number">C</span>
+        <h3>Context — background काय आहे?</h3>
+        <p>तुम्ही कोण आहात, कोणत्या level ला आहात, कशासाठी हवं आहे. "मी 12th Science student आहे" हे सांगितलं तर AI output पूर्ण बदलतो.</p>
+      </div>
+
+      <div class="step">
+        <span class="step-number">C</span>
+        <h3>Constraints — काय नको, किती हवं?</h3>
+        <p>Word limit, language, difficulty level, काय include करू नये — या सगळ्या constraints आहेत. "200 words मध्ये", "technical terms avoid कर", "Hindi वापरू नकोस" — अशा गोष्टी.</p>
+      </div>
+
+      <div class="step">
+        <span class="step-number">F</span>
+        <h3>Format — output कसा दिसायला हवा?</h3>
+        <p>Bullet points, paragraph, table, quiz, step-by-step — format सांगितलं तर AI exactly त्या format मध्ये देतो.</p>
+      </div>
+    </section>
+
+    <!-- Demo -->
+    <section>
+      <h2>Demo: Biology Exam Question</h2>
+
+      <div class="exercise">
+        <h4>&#10060; वाईट prompt:</h4>
+        <pre>cell division explain कर</pre>
+      </div>
+      <p>हा prompt खूप vague आहे. AI ला माहीत नाही — mitosis का meiosis? कोणत्या level साठी? किती detail हवं? Output generic येतो.</p>
+
+      <div class="exercise">
+        <h4>&#9989; चांगला prompt:</h4>
+        <pre>मी 12th Science (Biology) चा student आहे. मला mitosis आणि meiosis मधला difference explain कर.
+
+Format असं हवं:
+- पहिल्यांदा दोन्ही separately 3-4 lines मध्ये explain कर
+- मग एक comparison table दे (stages, chromosome number, purpose)
+- शेवटी 5 MCQs दे board exam pattern मध्ये, answers सोबत
+
+Simple language वापर, पण scientific terms accurately वापर.</pre>
+      </div>
+      <p>बघा — Task (explain + compare + quiz), Context (12th Science), Constraints (simple language, accurate terms), Format (explanation + table + MCQs) — सगळं clear आहे.</p>
+    </section>
+
+    <!-- Key Principle -->
+    <section>
+      <h2>Important: Iterate करा</h2>
+      <p>First prompt चा output perfect नसतो — आणि तो perfect असायला नको. AI शी conversation करा:</p>
+      <ul>
+        <li>"हे खूप complex आहे, अजून simple कर"</li>
+        <li>"table format मध्ये दे"</li>
+        <li>"आता याच topic वर 5 short answer questions दे"</li>
+        <li>"हे answer चुकीचं वाटतंय, verify कर"</li>
+      </ul>
+      <p>2-3 follow-ups नंतर output significantly better होतो. हा iterative approach शिकणं — हे prompting मधलं सगळ्यात important skill आहे.</p>
+    </section>
+
+    <!-- Exercises -->
+    <section>
+      <h2>Exercises</h2>
+
+      <h3>Exercise 1: Vague vs Better Prompt</h3>
+      <p>खालचे दोन्ही prompts Gemini मध्ये try करा आणि outputs compare करा:</p>
+
+      <div class="exercise">
+        <h4>Vague prompt:</h4>
+        <pre>Indian economy बद्दल सांग</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Better prompt:</h4>
+        <pre>मी 12th Commerce student आहे. मला Indian economy चे 5 major sectors सांग, प्रत्येक sector चा GDP मधला approximate share सांग, आणि 2024 मध्ये कोणता sector सगळ्यात fast grow होतोय ते सांग. Bullet points मध्ये दे, 200 words मध्ये.</pre>
+      </div>
+      <p>दोन्ही outputs side by side बघा. फरक लक्षात येईल.</p>
+
+      <h3>Exercise 2: Bad Prompt Improve करा</h3>
+      <p>हा bad prompt घ्या आणि TCCF formula वापरून improve करा:</p>
+      <div class="exercise">
+        <h4>Bad prompt:</h4>
+        <pre>Shakespeare बद्दल essay लिहा</pre>
+      </div>
+      <p><strong>Hint:</strong> कोणता play/sonnet? किती words? कोणत्या aspect बद्दल — language, themes, historical context? कोणत्या level साठी?</p>
+
+      <h3>Exercise 3: Same Task, 3 Formats</h3>
+      <p>एकच topic घ्या (e.g., "Water cycle") आणि 3 different formats मध्ये output मागा:</p>
+      <div class="exercise">
+        <pre>Water cycle explain कर — 10th std level, मराठी-English mix मध्ये.
+Format 1: एक short summary (100 words)
+Format 2: step-by-step bullet points
+Format 3: 10 quiz questions with answers</pre>
+      </div>
+      <p>तिन्ही separately try करा किंवा एकदम तिन्ही मागा — बघा AI कसं handle करतो.</p>
+    </section>
+
+    <!-- Copy-paste Prompts -->
+    <section>
+      <h2>Copy-Paste Prompts</h2>
+      <p>हे ready-to-use prompts आहेत. [ ] मधला text तुमच्या details ने replace करा.</p>
+
+      <div class="exercise">
+        <h4>Topic Explanation</h4>
+        <pre>मला [topic] समजावून सांग. मी [10th / 12th / college] student आहे. Simple language मध्ये explain कर, examples दे, आणि शेवटी 5 quiz questions दे.</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Paragraph Rewrite</h4>
+        <pre>हा paragraph rewrite कर — same meaning, पण clearer structure आणि simpler words. Paragraph: [paste your paragraph here]</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Multiple Perspectives</h4>
+        <pre>या topic वर 3 different perspectives दे: [topic]. प्रत्येक perspective साठी — argument, evidence, weakness सांग.</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Exam Preparation</h4>
+        <pre>[Subject] च्या [chapter name] वरचे 10 most important questions सांग — [board/university] exam pattern मध्ये. Short answer आणि long answer दोन्ही include कर, model answers सोबत दे.</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Concept Comparison</h4>
+        <pre>[Concept A] आणि [Concept B] मधला difference explain कर. Table format मध्ये comparison दे, मग real-life example दे, शेवटी 3 tricky MCQs दे जे दोन्ही concepts test करतात.</pre>
+      </div>
+    </section>
+
+    <div class="tip">
+      <strong>Key Takeaway:</strong> Prompting ही skill आहे — practice ने improve होते. TCCF formula लक्षात ठेवा: Task + Context + Constraints + Format. आणि always iterate करा — first output हा starting point आहे, final answer नाही.
+    </div>
+
+    <p style="margin-top: 1rem;">
+      <a href="/aimarathi/blog/prompt-engineering-copywriting/">Prompt Engineering बद्दल अजून वाचा &rarr;</a>
+    </p>
+
+    <!-- Page Navigation -->
+    <nav style="display: flex; justify-content: space-between; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+      <a href="/aimarathi/vidyarthi/">&larr; मागे: Overview</a>
+      <a href="/aimarathi/vidyarthi/samjun-ghya/">पुढे: समजून घ्या &rarr;</a>
+    </nav>
+
+  </main>
+
+{{FOOTER}}
+
+</body>
+</html>
