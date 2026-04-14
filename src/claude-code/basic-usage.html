@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code — Basic Usage Guide | AI Marathi</title>
+  <meta name="description" content="Claude Code कसं वापरायचं? Basic usage guide in Marathi for beginners.">
+  <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- Navigation -->
+{{NAV}}
+
+  <main class="container">
+
+    <!-- Breadcrumb + Header -->
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo;
+        <a href="/aimarathi/claude-code/">Claude Code</a> &rsaquo;
+        Basic Usage
+      </div>
+      <h1>Claude Code &mdash; Basic Usage Guide</h1>
+      <p class="subtitle" style="color: var(--color-text-light); font-size: 1.05rem;">
+        Install झालं? आता शिका कसं वापरायचं
+      </p>
+    </div>
+
+    <!-- Section 1: Starting Claude Code -->
+    <h2>1. Claude Code कसं start करायचं</h2>
+
+    <p>Claude Code हे terminal (Command Prompt / PowerShell / Mac Terminal) मध्ये चालतं. Start करणं खूप simple आहे:</p>
+
+    <div class="step">
+      <span class="step-number">1</span>
+      <h3>तुमच्या project folder मध्ये जा</h3>
+      <p>Command Prompt उघडा आणि <code>cd</code> command वापरून तुमच्या project folder मध्ये जा:</p>
+      <div class="prompt-block">
+        <span class="label">Terminal</span>cd path\to\your\folder</div>
+      <p>Example: <code>cd Desktop\my-website</code></p>
+    </div>
+
+    <div class="step">
+      <span class="step-number">2</span>
+      <h3><code>claude</code> type करा</h3>
+      <p>Terminal मध्ये फक्त <code>claude</code> type करा आणि Enter दाबा &mdash; Claude start होईल!</p>
+      <div class="prompt-block">
+        <span class="label">Terminal</span>claude</div>
+    </div>
+
+    <div class="tip">
+      <strong>Tip:</strong> जिथे तुमचा project आहे तिथे <code>cd</code> करा &mdash; Claude ला तुमच्या files चा context मिळतो. म्हणजे Claude ला कळतं तुम्ही कशावर काम करत आहात.
+    </div>
+
+    <!-- Section 2: How to talk to Claude -->
+    <h2>2. Claude शी कसं बोलायचं</h2>
+
+    <p>Claude ला natural language मध्ये सांगा काय करायचं &mdash; English किंवा Marathi दोन्ही चालतं. एखाद्या माणसाला सांगतो तसं सांगा.</p>
+
+    <p><strong>Specific असा!</strong> "make a website" पेक्षा खालील prompt जास्त चांगलं काम करतो:</p>
+
+    <div class="prompt-block">
+      <span class="label">Example prompt</span>Make a portfolio website with dark theme and 3 sections: about, projects, contact</div>
+
+    <p>आणखी काही examples:</p>
+
+    <div class="prompt-block">
+      <span class="label">Prompt</span>Create a new file called index.html with a basic webpage</div>
+
+    <div class="prompt-block">
+      <span class="label">Prompt</span>Read the file app.py and explain what it does</div>
+
+    <div class="prompt-block">
+      <span class="label">Prompt</span>Fix the error in server.js — it shows 'cannot read property of undefined'</div>
+
+    <div class="prompt-block">
+      <span class="label">Prompt</span>Add a contact form to my website</div>
+
+    <!-- Section 3: Understanding Claude's responses -->
+    <h2>3. Claude चं response कसं समजून घ्यायचं</h2>
+
+    <p>Claude code लिहितो तेव्हा तो <strong>diff format</strong> मध्ये दाखवतो:</p>
+
+    <ul>
+      <li><span style="color: var(--color-green); font-weight: 600;">हिरवा (green)</span> = नवीन code added</li>
+      <li><span style="color: var(--color-warning-border); font-weight: 600;">लाल (red)</span> = जुना code removed</li>
+    </ul>
+
+    <p><strong>Permission system:</strong></p>
+    <ul>
+      <li>Claude file edit करायच्या <strong>आधी permission मागतो</strong> &mdash; <code>Y</code> (yes) किंवा <code>N</code> (no) press करा</li>
+      <li>Claude terminal commands run करायच्या आधी पण permission मागतो &mdash; command वाचा, मग approve करा</li>
+    </ul>
+
+    <div class="tip">
+      <strong>Tip:</strong> Permission prompt वर नीट वाचा काय होतंय &mdash; especially जेव्हा Claude file delete किंवा system command run करायला सांगतो.
+    </div>
+
+    <!-- Section 4: Key commands -->
+    <h2>4. Key Commands</h2>
+
+    <p>Claude Code मध्ये काही important commands आहेत:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Command</th>
+          <th>काय करतो</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>/help</code></td>
+          <td>Help menu दाखवतो</td>
+        </tr>
+        <tr>
+          <td><code>/clear</code></td>
+          <td>Conversation reset करा (नवीन topic साठी)</td>
+        </tr>
+        <tr>
+          <td><code>/compact</code></td>
+          <td>Conversation compress करा (लांब session मध्ये useful)</td>
+        </tr>
+        <tr>
+          <td><code>Ctrl+C</code></td>
+          <td>Current generation stop करा</td>
+        </tr>
+        <tr>
+          <td><code>exit</code> किंवा <code>Ctrl+D</code></td>
+          <td>Claude Code बंद करा</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 5: Tips for beginners -->
+    <h2>5. Beginners साठी Tips</h2>
+
+    <div class="tip">
+      <strong>Tip:</strong> एकदम perfect prompt लिहायची गरज नाही &mdash; Claude ला follow-up करता येतो. आधी basic सांगा, मग refine करा.
+    </div>
+
+    <div class="tip">
+      <strong>Tip:</strong> चुकलं तर घाबरू नका &mdash; Claude undo करू शकतो, आणि <code>git revert</code> आहेच backup म्हणून.
+    </div>
+
+    <div class="tip">
+      <strong>Tip:</strong> मोठं काम असेल तर छोट्या steps मध्ये सांगा. एकदम "build me a full app" पेक्षा step by step approach चांगला.
+    </div>
+
+    <!-- Section 6: Exercise -->
+    <div class="exercise">
+      <h4>Try it yourself!</h4>
+      <p>एक नवीन folder बनवा, त्यात Claude start करा, आणि सांगा:</p>
+      <div class="prompt-block">
+        <span class="label">Prompt</span>Create a simple HTML page that says Hello World with a nice design</div>
+      <p>बघा काय बनतं! Claude ने बनवलेली file browser मध्ये उघडा आणि enjoy करा.</p>
+    </div>
+
+    <!-- Page Navigation -->
+    <div class="page-nav">
+      <a href="/aimarathi/claude-code/installation.html" class="prev">
+        <small>&#8592; Previous</small><br>
+        Installation Guide
+      </a>
+      <a href="/aimarathi/claude-code/demos.html" class="next">
+        <small>Next &#8594;</small><br>
+        Demos
+      </a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>AI Marathi &mdash; AI शिका, मराठीत.</p>
+  </footer>
+
+  <!-- Theme toggle + Hamburger JS -->
+  <script>
+    (function() {
+      var toggle = document.getElementById('themeToggle');
+      var stored = localStorage.getItem('aimarathi-theme');
+      if (stored) document.documentElement.setAttribute('data-theme', stored);
+      function updateIcon() {
+        toggle.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u2600' : '\u263E';
+      }
+      updateIcon();
+      toggle.addEventListener('click', function() {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('aimarathi-theme', next);
+        updateIcon();
+      });
+      document.getElementById('navHamburger').addEventListener('click', function() {
+        document.getElementById('navLinks').classList.toggle('open');
+      });
+      document.querySelectorAll('.dropdown-label').forEach(function(label) {
+        label.addEventListener('click', function() {
+          this.parentElement.classList.toggle('mobile-open');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="mr" data-theme="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Higgsfield — AI Marathi</title>
-  <meta name="description" content="Higgsfield — एकाच platform वर multiple AI models वापरा. एक plan, सगळे tools.">
-  <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
-  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
-</head>
-<body>
-
-    <nav>
+  <nav>
     <div class="nav-inner">
       <a href="/aimarathi/" class="logo">
         <img src="/aimarathi/assets/logo.svg" alt="AI Marathi logo">
@@ -84,59 +72,10 @@
         <li>
           <span class="dropdown-label">&#128221; Blog &#9662;</span>
           <ul class="dropdown">
-            <li><a href="/aimarathi/blog/higgsfield/">Higgsfield</a></li>
+            <li><a href="/aimarathi/blog/aggregators/">AI Aggregators</a></li>
           </ul>
         </li>
       </ul>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#9790;</button>
     </div>
   </nav>
-
-  <main class="container">
-    <div class="page-header">
-      <div class="breadcrumb">
-        <a href="/aimarathi/">AIMarathi</a> &rsaquo; Blog &rsaquo; Higgsfield
-      </div>
-      <h1>Higgsfield</h1>
-    </div>
-
-    <p>एकाच platform वर multiple AI models वापरा — video generation, image creation, आणि बरंच काही. एक plan, सगळे tools.</p>
-
-    <div class="tip">
-      <p><strong>Coming Soon!</strong> हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial</a> बघा — तो आत्ता ready आहे!</p>
-    </div>
-  </main>
-
-  <footer>
-    <p><strong>AIMarathi</strong> — AI शिका, मराठीत. Free and open.</p>
-    <p>A project by <a href="https://instamarathi.github.io">InstaMarathi</a></p>
-  </footer>
-
-  <script>
-    (function() {
-      var toggle = document.getElementById('themeToggle');
-      var stored = localStorage.getItem('aimarathi-theme');
-      if (stored) document.documentElement.setAttribute('data-theme', stored);
-      function updateIcon() {
-        toggle.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u2600' : '\u263E';
-      }
-      updateIcon();
-      toggle.addEventListener('click', function() {
-        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('aimarathi-theme', next);
-        updateIcon();
-      });
-      document.getElementById('navHamburger').addEventListener('click', function() {
-        document.getElementById('navLinks').classList.toggle('open');
-      });
-      document.querySelectorAll('.dropdown-label').forEach(function(label) {
-        label.addEventListener('click', function() {
-          this.parentElement.classList.toggle('mobile-open');
-        });
-      });
-    })();
-  </script>
-
-</body>
-</html>

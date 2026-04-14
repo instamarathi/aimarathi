@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT — AI Marathi</title>
+  <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+</head>
+<body>
+{{NAV}}
+
+<main class="container">
+  <p class="breadcrumb"><a href="/aimarathi/">AIMarathi</a> &rsaquo; LLM &rsaquo; ChatGPT</p>
+  <h1>ChatGPT</h1>
+  <p>OpenAI चा popular AI chatbot. काहीही विचारा — essays लिहा, ideas brainstorm करा, homework solve करा.</p>
+  <div class="tip">
+    <strong>Coming Soon!</strong> हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial बघा!</a>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 AI Marathi</p>
+</footer>
+
+<script>
+  (function() {
+    var toggle = document.getElementById('themeToggle');
+    var stored = localStorage.getItem('aimarathi-theme');
+    if (stored) document.documentElement.setAttribute('data-theme', stored);
+    function updateIcon() {
+      toggle.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u2600' : '\u263E';
+    }
+    updateIcon();
+    toggle.addEventListener('click', function() {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('aimarathi-theme', next);
+      updateIcon();
+    });
+    document.getElementById('navHamburger').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('.dropdown-label').forEach(function(label) {
+      label.addEventListener('click', function() {
+        this.parentElement.classList.toggle('mobile-open');
+      });
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code Tips & Tricks — AI Marathi</title>
+  <meta name="description" content="Claude Code मधून maximum output काढायला या tips आणि tricks वापरा. CLAUDE.md, specific prompts, /compact, git integration आणि बरंच काही — सोप्या Marathi मध्ये.">
+  <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- Navigation -->
+{{NAV}}
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo; <a href="/aimarathi/claude-code/">Claude Code</a> &rsaquo; Tips &amp; Tricks
+      </div>
+      <h1>Tips &amp; Tricks</h1>
+      <p class="subtitle" style="color: var(--color-text-light); font-size: 1.05rem;">Claude Code मधून maximum काढायला या tips वापरा</p>
+    </div>
+
+    <!-- Tip 1: CLAUDE.md -->
+    <div class="tip">
+      <h4>Tip 1: CLAUDE.md file वापरा</h4>
+      <p>Project root मध्ये <code>CLAUDE.md</code> नावाची file बनवा. त्यात project बद्दल instructions लिहा — Claude <strong>प्रत्येक वेळी</strong> हे file वाचतो session सुरू करताना.</p>
+      <p>Example:</p>
+      <div class="prompt-block"><span class="label">CLAUDE.md</span>This is a React project. Use TypeScript. Follow existing code style.
+Always write tests for new features.</div>
+      <p>हे म्हणजे Claude ला एकदाच सांगा, तो लक्षात ठेवतो. पुन्हा पुन्हा same instructions द्यायची गरज नाही!</p>
+    </div>
+
+    <!-- Tip 2: Specific prompts -->
+    <h2>Tip 2: Specific prompts लिहा</h2>
+    <p>Claude ला जेवढं specific सांगाल, तेवढं चांगलं output मिळेल. Bad vs Good prompts बघा:</p>
+
+    <div class="prompt-block" style="border-left: 4px solid var(--color-warning-border);">
+      <span class="label">Bad prompt</span>Fix this</div>
+    <p style="font-size: 0.9rem; color: var(--color-text-light);">Claude ला काय fix करायचं ते कळत नाही — कोणता error? कोणती file?</p>
+
+    <div class="prompt-block" style="border-left: 4px solid var(--color-green);">
+      <span class="label">Good prompt</span>Fix the login error — when I click submit, it shows 'undefined is not a function' in console</div>
+
+    <div class="prompt-block" style="border-left: 4px solid var(--color-warning-border);">
+      <span class="label">Bad prompt</span>Make it better</div>
+    <p style="font-size: 0.9rem; color: var(--color-text-light);">काय better? Speed? Design? Readability? Claude ला guess करायला लागतं.</p>
+
+    <div class="prompt-block" style="border-left: 4px solid var(--color-green);">
+      <span class="label">Good prompt</span>Make the homepage load faster by lazy-loading images</div>
+
+    <!-- Tip 3: /compact -->
+    <h2>Tip 3: /compact वापरा</h2>
+    <p>लांब conversation मध्ये Claude चा context window भरतो — response slow होतात आणि accuracy कमी होते.</p>
+    <div class="prompt-block"><span class="label">Claude Code prompt</span>/compact</div>
+    <p><code>/compact</code> ने conversation compress होते — Claude faster आणि accurately respond करतो. जुने messages summarize होतात, पण important context टिकतो.</p>
+    <div class="tip">
+      <h4>Rule of thumb</h4>
+      <p>20+ messages झाले की <code>/compact</code> करा. Conversation खूप लांब गेली असं वाटलं तर लगेच करा.</p>
+    </div>
+
+    <!-- Tip 4: Git integration -->
+    <h2>Tip 4: Git integration</h2>
+    <p>Claude Code git बरोबर deeply integrate आहे. तुम्ही git commands manually लिहायची गरज नाही — natural language मध्ये सांगा:</p>
+
+    <div class="prompt-block"><span class="label">Claude Code prompt</span>Commit my changes with a good message</div>
+    <p>Claude descriptive commit message लिहितो — changed files बघून automatic.</p>
+
+    <div class="prompt-block"><span class="label">Claude Code prompt</span>Create a new branch called feature-login and switch to it</div>
+
+    <div class="prompt-block"><span class="label">Claude Code prompt</span>Show me what changed since yesterday</div>
+
+    <div class="tip">
+      <h4>Git init नसेल तर?</h4>
+      <p>Project मध्ये git init नसेल तर Claude ला सांगा: <code>"Initialize git in this project"</code> — तो setup करेल.</p>
+    </div>
+
+    <!-- Tip 5: Multiple files -->
+    <h2>Tip 5: Multiple files एकदम handle करा</h2>
+    <p>Claude ला whole project context असतो — एक file नाही, <strong>सगळ्या files</strong>. म्हणून batch operations सहज होतात:</p>
+
+    <div class="prompt-block"><span class="label">Claude Code prompt</span>Rename all .js files to .ts and update imports</div>
+    <p>Claude सगळ्या files बदलतो — imports, references सगळं update करतो.</p>
+
+    <div class="prompt-block"><span class="label">Claude Code prompt</span>Add error handling to all API calls in the src folder</div>
+    <p>एकेक file उघडून बदलायची गरज नाही — Claude एकदम सगळं करतो.</p>
+
+    <!-- Tip 6: Learn from Claude -->
+    <h2>Tip 6: Learn from Claude</h2>
+    <p>Claude Code हा फक्त code लिहायचा tool नाही — हे coding शिकायचा <strong>fastest way</strong> आहे. Personalized tutor!</p>
+
+    <div class="prompt-block"><span class="label">Claude Code prompt</span>Explain what you just wrote, line by line</div>
+    <p>Code लिहिल्यावर हे विचारा — प्रत्येक line काय करते ते समजेल.</p>
+
+    <div class="prompt-block"><span class="label">Claude Code prompt</span>Why did you choose this approach instead of using a for loop?</div>
+
+    <div class="prompt-block"><span class="label">Claude Code prompt</span>What are the potential bugs in this code?</div>
+    <p>Claude तुम्हाला code review पण करून देतो — bugs, edge cases, improvements सगळं सांगतो.</p>
+
+    <!-- Tip 7: Cost-saving tips -->
+    <div class="warning">
+      <h4>Tip 7: Cost-saving tips</h4>
+      <ul>
+        <li><strong>Free tier limited आहे</strong> — मोठे projects साठी Pro plan ($20/month) किंवा Max plan ($100/month) लागतो</li>
+        <li><strong>/compact वापरा</strong> — कमी tokens = कमी cost</li>
+        <li><strong>Clear, specific prompts</strong> = कमी back-and-forth = कमी usage</li>
+        <li><strong>छोटे tasks</strong> free tier मध्ये सहज होतात — experiments करा</li>
+      </ul>
+    </div>
+
+    <!-- Tip 8: Common mistakes -->
+    <div class="warning">
+      <h4>Tip 8: Common mistakes avoid करा</h4>
+      <ul>
+        <li><strong>Sensitive information</strong> (passwords, API keys) Claude ला देऊ नका — ते Anthropic च्या servers वर जातं</li>
+        <li><strong>Production server</strong> वर directly Claude Code run करू नका — development environment वापरा</li>
+        <li>Claude चं सगळं output <strong>blindly trust करू नका</strong> — review करा, test करा</li>
+        <li>Important files चा <strong>backup ठेवा</strong> — changes करण्याआधी git commit करा</li>
+      </ul>
+    </div>
+
+    <!-- Summary -->
+    <div class="exercise">
+      <h4>Summary — Quick Checklist</h4>
+      <ul>
+        <li><code>CLAUDE.md</code> file बनवा — project instructions एकदाच लिहा</li>
+        <li>Specific prompts लिहा — "Fix this" ऐवजी detail द्या</li>
+        <li><code>/compact</code> वापरा — लांब conversations compress करा</li>
+        <li>Git वापरा — Claude ला natural language मध्ये git commands सांगा</li>
+        <li>Claude कडून शिका — "Explain this" विचारा</li>
+        <li>Cost manage करा — specific prompts + /compact = कमी tokens</li>
+        <li>Safe राहा — passwords देऊ नका, output review करा, backup ठेवा</li>
+      </ul>
+    </div>
+
+    <!-- Page Navigation -->
+    <div class="page-nav">
+      <a href="/aimarathi/claude-code/demos.html" class="prev">
+        &larr; Previous<br>
+        <strong>Demos</strong>
+      </a>
+      <div class="card" style="flex: 1; text-align: center;">
+        <p style="margin-bottom: 0.5rem; font-size: 1rem;">सगळं शिकलात? आता try करा!</p>
+        <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 0;">कोणताही project सुरू करा आणि Claude Code ला सोबत घ्या.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+{{FOOTER}}
+
+</body>
+</html>
