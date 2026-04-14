@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT vs Claude vs Gemini — कोणता कधी वापरायचा? — AI Marathi</title>
+  <meta name="description" content="ChatGPT, Claude, आणि Gemini — कोणता AI tool कधी वापरायचा? Writing, coding, research, image generation साठी practical comparison मराठीत.">
+  <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DSX7QN8HXY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DSX7QN8HXY');
+  </script>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/aimarathi/" class="logo">
+        <img src="/aimarathi/assets/logo.svg" alt="AI Marathi logo">
+        <span>AI</span> Marathi
+      </a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <a class="dropdown-label" href="/aimarathi/suruvaat/" style="color: var(--color-accent);">&#127937; &#x0938;&#x0941;&#x0930;&#x0941;&#x0935;&#x093E;&#x0924;</a>
+        </li>
+        <li>
+          <a class="dropdown-label" href="/aimarathi/likha/">&#9997; &#x0932;&#x093F;&#x0939;&#x093E; &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/likha/copywriting/">Copywriting</a></li>
+            <li><a href="/aimarathi/likha/creative-writing/">Creative Writing</a></li>
+            <li><a href="/aimarathi/likha/research/">Research</a></li>
+            <li><a href="/aimarathi/likha/planning/">Planning</a></li>
+            <li><a href="/aimarathi/likha/translation/">Translation</a></li>
+            <li class="dropdown-more"><a href="/aimarathi/likha/">&#x2026;</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="dropdown-label" href="/aimarathi/code/">&lt;/&gt; Code &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/code/website-banva/">Website &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/code/app-banva/">App &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/code/debug/">Debug &amp; Fix</a></li>
+            <li><a href="/aimarathi/code/automation/">Automation</a></li>
+            <li><a href="/aimarathi/code/data-analysis/">Data Analysis</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="dropdown-label" href="/aimarathi/bagha/">&#127912; &#x092C;&#x0918;&#x093E; &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/bagha/images/">Images &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/bagha/videos/">Videos &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/bagha/lipsync/">Lipsync</a></li>
+            <li><a href="/aimarathi/bagha/photo-editing/">Photo Editing</a></li>
+            <li><a href="/aimarathi/bagha/presentations/">Presentations</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="dropdown-label" href="/aimarathi/aika/">&#127911; &#x0910;&#x0915;&#x093E; &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/aika/voice/">Voice Generation</a></li>
+            <li><a href="/aimarathi/aika/music/">Music &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/aika/voice-cloning/">Voice Cloning</a></li>
+            <li><a href="/aimarathi/aika/podcast/">Podcast &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/aika/transcription/">Transcription</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="dropdown-label" href="/aimarathi/tools/">&#128295; Tools &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/claude/">Claude</a></li>
+            <li><a href="/aimarathi/chatgpt/">ChatGPT</a></li>
+            <li><a href="/aimarathi/gemini/">Gemini</a></li>
+            <li><a href="/aimarathi/perplexity/">Perplexity</a></li>
+            <li><a href="/aimarathi/claude-code/">Claude Code</a></li>
+            <li class="dropdown-more"><a href="/aimarathi/tools/">&#x2026;</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="dropdown-label" href="/aimarathi/blog/">&#128221; Blog &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/blog/chatgpt-vs-claude-vs-gemini/">ChatGPT vs Claude vs Gemini</a></li>
+            <li><a href="/aimarathi/blog/ai-youtube-video-workflow/">YouTube Video AI Workflow</a></li>
+            <li><a href="/aimarathi/blog/aggregators/">AI Aggregators</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-copywriting/">Prompt Engineering: Copywriting</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-ad-images/">Prompt Engineering: Ad Images</a></li>
+            <li class="dropdown-more"><a href="/aimarathi/blog/">&#x2026;</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#9790;</button>
+    </div>
+  </nav>
+
+
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo; <a href="/aimarathi/blog/">Blog</a> &rsaquo; ChatGPT vs Claude vs Gemini
+      </div>
+      <h1>ChatGPT vs Claude vs Gemini — कोणता कधी वापरायचा?</h1>
+    </div>
+
+    <section>
+      <p>हा प्रश्न सगळ्यांना पडतो — "कोणता AI tool best आहे?" आणि honest answer हा आहे: <strong>सगळे चांगले आहेत, पण different situations मध्ये different tools better काम करतात.</strong></p>
+      <p>हा post spec sheet comparison नाही — "कोणाचा context window किती" हे technical details useful नाहीत तुम्हाला. हा एक practical guide आहे — तुम्हाला X करायचं आहे, तर Y tool वापरा.</p>
+      <p>तिन्ही tools regularly वापरल्यावर जे observations आले ते इथे share करतोय.</p>
+    </section>
+
+    <!-- ===== Quick Answer ===== -->
+    <section>
+      <h2>Quick Answer — वेळ नसेल तर हे वाचा</h2>
+      <table>
+        <thead>
+          <tr><th>तुम्हाला हवंय</th><th>हे वापरा</th><th>का?</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Writing / Content creation</strong></td>
+            <td>Claude</td>
+            <td>Long-form writing मध्ये सगळ्यात nuanced output, tone consistency उत्तम</td>
+          </tr>
+          <tr>
+            <td><strong>Free मध्ये सुरू करायचंय</strong></td>
+            <td>Gemini</td>
+            <td>Google account असेल तर free — सगळ्या Android phones वर available</td>
+          </tr>
+          <tr>
+            <td><strong>All-rounder हवंय</strong></td>
+            <td>ChatGPT</td>
+            <td>सगळं थोडं-थोडं चांगलं करतो, plugins/GPTs चा ecosystem मोठा</td>
+          </tr>
+          <tr>
+            <td><strong>Search/Research</strong></td>
+            <td>Gemini / Perplexity</td>
+            <td>Real-time search built-in, citations देतो</td>
+          </tr>
+          <tr>
+            <td><strong>Coding</strong></td>
+            <td>Claude</td>
+            <td>Claude Code agent-style coding करतो — files edit करतो, tests run करतो</td>
+          </tr>
+          <tr>
+            <td><strong>Image generation</strong></td>
+            <td>Gemini / ChatGPT</td>
+            <td>Gemini free मध्ये images बनवतो, ChatGPT चा DALL-E text handling उत्तम</td>
+          </tr>
+          <tr>
+            <td><strong>Marathi मध्ये काम</strong></td>
+            <td>Gemini</td>
+            <td>Marathi support सगळ्यात चांगला, voice input/output पण</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>पण nuances आहेत — detailed comparison खाली वाचा.</p>
+    </section>
+
+    <!-- ===== Writing ===== -->
+    <section>
+      <h2>1. Writing आणि Content Creation</h2>
+      <p>हा सगळ्यात common use case आहे — blog posts, emails, captions, scripts, essays.</p>
+
+      <h3>Claude — Writing साठी best</h3>
+      <p>Claude चं writing genuinely वेगळं वाटतं. Long-form content मध्ये — articles, essays, detailed guides — Claude ची output quality consistently चांगली आहे. Tone maintain करतो, repetitive होत नाही, आणि nuance समजतो.</p>
+      <p>एक specific advantage: Claude ला तुम्ही 50-page document paste करू शकता आणि त्यावर काम करू शकता. Long context handling मध्ये Claude genuinely ahead आहे.</p>
+
+      <h3>ChatGPT — Versatile option</h3>
+      <p>ChatGPT चं writing solid आहे, especially structured content साठी — listicles, product descriptions, email templates. Custom GPTs बनवता येतात specific writing styles साठी. पण sometimes output formulaic वाटतं — "In conclusion..." type patterns येतात.</p>
+
+      <h3>Gemini — Free आणि short-form साठी good</h3>
+      <p>Gemini free मध्ये unlimited writing करता येतं — social media captions, short replies, quick drafts साठी perfect. Long-form मध्ये Claude/ChatGPT इतका consistency नाही, पण free tier मध्ये हे सगळ्यात चांगलं option आहे.</p>
+
+      <div class="tip">
+        <p><strong>Verdict:</strong> Serious writing करायचं असेल (blog, newsletter, reports) तर Claude paid plan worth it आहे. Casual/short-form साठी Gemini free पुरेसं आहे.</p>
+      </div>
+    </section>
+
+    <!-- ===== Coding ===== -->
+    <section>
+      <h2>2. Coding आणि Technical Work</h2>
+
+      <h3>Claude — Agentic coding मध्ये leader</h3>
+      <p>Claude Code हा game-changer आहे. हा फक्त "code लिहून दे" नाही — हा agent आहे. तुमच्या codebase मध्ये files read करतो, edits करतो, tests run करतो, errors fix करतो. Complex multi-file changes एका conversation मध्ये होतात.</p>
+      <p>Web वरच्या Claude ला पण code विचारू शकता — explanations, debugging, code review मध्ये excellent आहे.</p>
+
+      <h3>ChatGPT — Code Interpreter powerful</h3>
+      <p>ChatGPT चा Code Interpreter (Advanced Data Analysis) एक unique feature आहे — Python code directly run होतो. Data analysis, charts बनवणं, CSV process करणं — या tasks साठी ChatGPT ला alternative नाही. File upload करा, results download करा.</p>
+
+      <h3>Gemini — Free option + Google integration</h3>
+      <p>Gemini code लिहू शकतो, explain करू शकतो. Google Colab मध्ये direct integration आहे. Free मध्ये coding help हवी असेल तर solid option आहे. पण complex, multi-step coding tasks मध्ये Claude/ChatGPT ahead आहेत.</p>
+
+      <div class="tip">
+        <p><strong>Verdict:</strong> Professional coding — Claude (especially Claude Code). Data analysis — ChatGPT Code Interpreter. Learning/quick help — Gemini free.</p>
+      </div>
+    </section>
+
+    <!-- ===== Research ===== -->
+    <section>
+      <h2>3. Research आणि Information Gathering</h2>
+
+      <h3>Gemini — Search built-in</h3>
+      <p>Gemini चा सगळ्यात मोठा advantage हा आहे — Google Search directly integrated आहे. "2024 मधल्या best smartphones" विचारलं तर real-time data येतो, links येतात, sources cite होतात. Research साठी हे invaluable आहे.</p>
+
+      <h3>Perplexity — Research specialist</h3>
+      <p>Perplexity technically या तिघांपैकी नाही, पण research specifically करायची असेल तर Perplexity सगळ्यात चांगलं tool आहे. Every answer ला sources attached असतात. Academic research, fact-checking, deep dives — Perplexity best आहे.</p>
+
+      <h3>ChatGPT — Web browsing available</h3>
+      <p>ChatGPT ला web browsing आहे (paid plan मध्ये). Gemini इतकं seamless नाही, पण काम चालतं. Plus, GPT Store मध्ये research-specific GPTs आहेत.</p>
+
+      <h3>Claude — No search, पण analysis best</h3>
+      <p>Claude ला real-time search नाही — हा एक genuine limitation आहे. पण तुम्ही data paste केलं तर analysis मध्ये Claude सगळ्यात thorough आहे. Research papers, reports — paste करा आणि deep analysis मागा.</p>
+
+      <div class="tip">
+        <p><strong>Verdict:</strong> Real-time information हवी — Gemini किंवा Perplexity. Existing data चं deep analysis — Claude. General research — ChatGPT with browsing.</p>
+      </div>
+    </section>
+
+    <!-- ===== Images ===== -->
+    <section>
+      <h2>4. Image Generation</h2>
+
+      <h3>Gemini — Free मध्ये images!</h3>
+      <p>Gemini free tier मध्ये image generation देतो — हा huge advantage आहे. Quality decent आहे, social media posts, presentations, quick visuals साठी पुरेसं आहे. "एक bakery चं poster बनव Diwali theme मध्ये" — Gemini free मध्ये करेल.</p>
+
+      <h3>ChatGPT — DALL-E integration</h3>
+      <p>ChatGPT चा DALL-E 3 integration excellent आहे, especially text-in-images साठी. Posters, banners, memes — text accurately render होतो. Paid plan लागतो, पण quality consistently high आहे.</p>
+
+      <h3>Claude — Image generation नाही</h3>
+      <p>Claude images generate करू शकत नाही — हे clearly सांगायला हवं. Claude images analyze करू शकतो (upload करा, describe/analyze करेल), पण create नाही. Image generation हवी असेल तर Gemini किंवा ChatGPT.</p>
+
+      <div class="tip">
+        <p><strong>Verdict:</strong> Free image generation — Gemini. Best quality text-in-images — ChatGPT (DALL-E). Professional/artistic — <a href="/aimarathi/bagha/midjourney/">Midjourney</a> वेगळं वापरा.</p>
+      </div>
+    </section>
+
+    <!-- ===== Marathi ===== -->
+    <section>
+      <h2>5. Marathi Language Support</h2>
+
+      <h3>Gemini — Marathi मध्ये best</h3>
+      <p>Gemini चा Marathi support सगळ्यात चांगला आहे. Natural Marathi generate करतो, Marathi voice input/output support करतो, आणि Google Translate चं integration असल्यामुळे Marathi content creation smooth होतं. Android phones वर Google Assistant मधून direct access.</p>
+
+      <h3>Claude — Decent Marathi</h3>
+      <p>Claude ला Marathi येतं, आणि content quality चांगली आहे. Complex Marathi writing — letters, formal documents, creative writing — मध्ये Claude चांगलं काम करतो. पण sometimes English-dominant output येतं.</p>
+
+      <h3>ChatGPT — Okay Marathi</h3>
+      <p>ChatGPT Marathi मध्ये respond करतो, पण quality inconsistent आहे. Sometimes Hindi-influenced Marathi येतं (जे real Marathi speakers ना खटकतं). Simple tasks साठी ठीक, पण nuanced Marathi साठी Gemini better.</p>
+
+      <div class="tip">
+        <p><strong>Verdict:</strong> Marathi content primarily हवं असेल तर Gemini first choice. Claude second (quality writing). ChatGPT third.</p>
+      </div>
+    </section>
+
+    <!-- ===== Pricing ===== -->
+    <section>
+      <h2>Pricing Comparison</h2>
+      <table>
+        <thead>
+          <tr><th>Tool</th><th>Free Tier</th><th>Paid Plan</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Gemini</strong></td>
+            <td>Generous free tier</td>
+            <td>Gemini Advanced ~$20/month (Google One AI Premium)</td>
+            <td>Free tier मध्ये बरंच काम होतं — image gen, search, code</td>
+          </tr>
+          <tr>
+            <td><strong>ChatGPT</strong></td>
+            <td>Limited free tier</td>
+            <td>Plus $20/month, Pro $200/month</td>
+            <td>Free tier restricted — GPT-4o limited access, DALL-E paid only</td>
+          </tr>
+          <tr>
+            <td><strong>Claude</strong></td>
+            <td>Limited free tier</td>
+            <td>Pro $20/month, Max $100/month</td>
+            <td>Free tier usage limits tight — serious use साठी paid हवं</td>
+          </tr>
+          <tr>
+            <td><strong>Perplexity</strong></td>
+            <td>Free tier (limited Pro searches)</td>
+            <td>Pro $20/month</td>
+            <td>Research-specific — free tier मध्येही useful</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Recommendation ===== -->
+    <section>
+      <h2>आमची Recommendation</h2>
+
+      <h3>Step 1: Gemini ने सुरू करा (Free)</h3>
+      <p>तुम्ही AI ला नवीन असाल तर Gemini ने सुरुवात करा. Free आहे, Android वर built-in आहे, Marathi support चांगला आहे, image generation पण free मिळतं. Daily tasks — emails, replies, quick research, translations — Gemini free मध्ये सहज होतात.</p>
+
+      <h3>Step 2: Paid plan — गरजेनुसार निवडा</h3>
+      <p>Free tier ने comfortable झाल्यावर, तुमच्या primary use case नुसार paid plan घ्या:</p>
+      <ul>
+        <li><strong>Writing/Content heavy work</strong> — Claude Pro ($20/month). Blog posts, reports, long documents साठी Claude चं output genuinely superior आहे.</li>
+        <li><strong>All-round usage + data analysis</strong> — ChatGPT Plus ($20/month). Code Interpreter, DALL-E, plugins — versatility हवी असेल तर ChatGPT.</li>
+        <li><strong>Research heavy</strong> — Perplexity Pro ($20/month). Academic work, journalism, fact-based content creation.</li>
+      </ul>
+
+      <div class="tip">
+        <p><strong>Pro tip: Friends/family सोबत share करा!</strong> $20/month म्हणजे ~1650 रुपये — एकट्याला जड वाटत असेल तर 2-3 मित्र/family members सोबत account share करा. Cost split होतो आणि सगळ्यांना access मिळतो. AI tools ने generate होणारी value subscription cost पेक्षा कितीतरी जास्त आहे — एक महिना try करा, तुम्हालाच कळेल.</p>
+      </div>
+
+      <h3>Step 3: Multiple tools वापरायला शिका</h3>
+      <p>Experienced users एकच tool वापरत नाहीत — situation नुसार switch करतात. Research Perplexity वर, writing Claude वर, image generation Gemini वर, data analysis ChatGPT वर. हे "AI workflow" build करणं हा real skill आहे.</p>
+    </section>
+
+    <section>
+      <h2>Final Thought</h2>
+      <p>"Best AI tool" हा प्रश्न "best vehicle कोणतं?" इतकाच broad आहे — city commute साठी bike, family trip साठी car, goods साठी truck. Context matter करतो.</p>
+      <p>तीनही tools continuously improve होत आहेत — आज जो behind आहे तो उद्या ahead असू शकतो. <strong>Important हे आहे की तुम्ही AI वापरायला सुरुवात करा</strong> — कोणतंही tool घ्या, daily use मध्ये आणा, आणि productivity boost अनुभवा.</p>
+      <p>Gemini free ने आजच सुरू करा. बाकी सगळं follow होईल.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>AIMarathi</strong> — AI शिका, मराठीत. Free and open.</p>
+    <p>A project by <a href="https://instamarathi.github.io">InstaMarathi</a></p>
+    <p><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener" style="color: inherit;">CC BY-NC-ND 4.0</a> — share freely, credit required, no commercial use, no derivatives.</p>
+  </footer>
+
+  <script>
+    (function() {
+      var toggle = document.getElementById('themeToggle');
+      var stored = localStorage.getItem('aimarathi-theme');
+      if (stored) document.documentElement.setAttribute('data-theme', stored);
+      function updateIcon() {
+        toggle.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u2600' : '\u263E';
+      }
+      updateIcon();
+      toggle.addEventListener('click', function() {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('aimarathi-theme', next);
+        updateIcon();
+      });
+      document.getElementById('navHamburger').addEventListener('click', function() {
+        document.getElementById('navLinks').classList.toggle('open');
+      });
+      document.querySelectorAll('.dropdown-label').forEach(function(label) {
+        label.addEventListener('click', function(e) {
+          if (window.innerWidth <= 767) {
+            e.preventDefault();
+            this.parentElement.classList.toggle('mobile-open');
+          }
+        });
+      });
+      // Copy buttons on prompt-block and exercise boxes
+      document.querySelectorAll('.prompt-block, .exercise').forEach(function(el) {
+        el.classList.add('copy-wrap');
+        var btn = document.createElement('button');
+        btn.className = 'copy-btn';
+        btn.textContent = 'Copy';
+        btn.addEventListener('click', function() {
+          var text = el.textContent.replace(/^Copy(ed!)?/, '').trim();
+          // Remove the label text (e.g. "Command Prompt", exercise h4)
+          var label = el.querySelector('.label, h4');
+          if (label) text = text.replace(label.textContent, '').trim();
+          navigator.clipboard.writeText(text).then(function() {
+            btn.textContent = 'Copied!';
+            btn.classList.add('copied');
+            setTimeout(function() {
+              btn.textContent = 'Copy';
+              btn.classList.remove('copied');
+            }, 1500);
+          });
+        });
+        el.appendChild(btn);
+      });
+    })();
+  </script>
+
+</body>
+</html>
