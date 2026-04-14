@@ -196,6 +196,8 @@ nav .nav-links .dropdown {
   border-radius: 6px;
   padding: 0.5rem 0 0.4rem;
   min-width: 180px;
+  max-height: 70vh;
+  overflow-y: auto;
   z-index: 200;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   list-style: none;
