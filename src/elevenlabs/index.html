@@ -4,48 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ElevenLabs — AI Marathi</title>
+  <meta name="description" content="ElevenLabs tutorial मराठीत. सगळ्यात realistic AI voices — text-to-speech, voice cloning, dubbing. Voiceovers बनवा कोणत्याही आवाजात.">
   <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
 </head>
 <body>
+
 {{NAV}}
 
-<main class="container">
-  <p class="breadcrumb"><a href="/aimarathi/">AIMarathi</a> &rsaquo; Audio &rsaquo; ElevenLabs</p>
-  <h1>ElevenLabs</h1>
-  <p>AI voice generation. कोणत्याही आवाजात text-to-speech. Voiceovers, dubbing, podcasts.</p>
-  <div class="tip">
-    <strong>Coming Soon!</strong> हा tutorial लवकरच येतोय.
-  </div>
-</main>
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo; Audio &rsaquo; ElevenLabs
+      </div>
+      <h1>ElevenLabs</h1>
+    </div>
 
-<footer>
-  <p>&copy; 2026 AI Marathi</p>
-</footer>
+    <p>सगळ्यात realistic AI voices बनवणारं tool. Text टाका — human-level quality चा audio मिळतो. YouTube voiceovers, podcasts, audiobooks, dubbing — सगळ्यासाठी वापरता येतं.</p>
 
-<script>
-  (function() {
-    var toggle = document.getElementById('themeToggle');
-    var stored = localStorage.getItem('aimarathi-theme');
-    if (stored) document.documentElement.setAttribute('data-theme', stored);
-    function updateIcon() {
-      toggle.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u2600' : '\u263E';
-    }
-    updateIcon();
-    toggle.addEventListener('click', function() {
-      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('aimarathi-theme', next);
-      updateIcon();
-    });
-    document.getElementById('navHamburger').addEventListener('click', function() {
-      document.getElementById('navLinks').classList.toggle('open');
-    });
-    document.querySelectorAll('.dropdown-label').forEach(function(label) {
-      label.addEventListener('click', function() {
-        this.parentElement.classList.toggle('mobile-open');
-      });
-    });
-  })();
-</script>
+    <p>ElevenLabs चं specialty म्हणजे <strong>voice cloning</strong> — तुमच्या स्वतःच्या आवाजाचा sample द्या, आणि AI तुमच्या आवाजात काहीही बोलेल. Plus 30+ languages support आहे.</p>
+
+    <!-- काय करता येतं -->
+    <section>
+      <h2>काय करता येतं?</h2>
+      <ul>
+        <li><strong>Text-to-Speech:</strong> कोणताही text टाका — natural sounding audio मिळतो. Robotic वाटत नाही, अगदी human सारखं</li>
+        <li><strong>Voice Cloning:</strong> तुमच्या आवाजाचा 1-minute sample upload करा — AI तुमच्या आवाजात कोणताही text वाचेल</li>
+        <li><strong>Dubbing:</strong> Video चा audio automatically दुसऱ्या language मध्ये convert करा — lip sync सुद्धा adjust होतो</li>
+        <li><strong>Voice Library:</strong> 1000+ pre-made voices available — male, female, different accents, different ages</li>
+        <li><strong>API Access:</strong> Developers साठी API available — तुमच्या app मध्ये AI voice integrate करा</li>
+      </ul>
+    </section>
+
+    <!-- Pricing -->
+    <section>
+      <h2>किती खर्च येतो?</h2>
+      <table>
+        <thead>
+          <tr><th>Plan</th><th>Price</th><th>काय मिळतं</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Free</strong></td>
+            <td>$0</td>
+            <td>10,000 characters/month — test करायला पुरेसं, voice cloning नाही</td>
+          </tr>
+          <tr>
+            <td><strong>Starter</strong></td>
+            <td>$5/month</td>
+            <td>30,000 characters/month, 3 custom voices, voice cloning available</td>
+          </tr>
+          <tr>
+            <td><strong>Creator</strong></td>
+            <td>$22/month</td>
+            <td>1,00,000 characters/month, dubbing, professional voice cloning</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Free tier ने सुरुवात करा — short voiceovers साठी बरंच पुरतं. Regular YouTube videos साठी Starter plan लागेल.</p>
+      <div class="tip">
+        <strong>Starter plan फक्त $5 आहे</strong> — एक महिना try करा. एक YouTube video चा voiceover बनवला तरी तुमचा वेळ आणि quality बघता subscription वसूल होतो. Content creator मित्रांसोबत account share केलात तर cost negligible होतो.
+      </div>
+    </section>
+
+    <!-- कसं सुरू करायचं -->
+    <section>
+      <h2>कसं सुरू करायचं?</h2>
+      <ol>
+        <li><a href="https://elevenlabs.io" target="_blank">elevenlabs.io</a> वर जा आणि free account बनवा (Google sign-in चालतो)</li>
+        <li>"Speech Synthesis" section मध्ये जा — voice निवडा आणि text box मध्ये तुमचा text टाका</li>
+        <li>Voice settings adjust करा — stability (consistency) आणि clarity slider वापरा</li>
+        <li>"Generate" बटण दाबा — काही seconds मध्ये audio ready!</li>
+      </ol>
+    </section>
+
+    <!-- Example Prompts -->
+    <section>
+      <h2>Try करा — Examples</h2>
+
+      <div class="exercise">
+        <h4>YouTube Voiceover</h4>
+        <pre>नमस्कार मित्रांनो! आजच्या video मध्ये आपण बघणार आहोत
+की AI tools वापरून तुम्ही तुमचं काम कसं 10 पट faster
+करू शकता. चला तर मग सुरू करूया!</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Podcast Intro</h4>
+        <pre>Welcome to Tech Talks Marathi — the podcast where we
+break down the latest in technology, in a language
+you think in. I'm your host, and today we're diving
+into the world of artificial intelligence.</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Audiobook Narration</h4>
+        <pre>सकाळचा सूर्य नुकताच वर आला होता. गावाच्या वेशीवरून
+एक तरुण शहराकडे निघाला होता — खिशात फक्त शंभर रुपये
+आणि डोक्यात हजार स्वप्नं.</pre>
+      </div>
+    </section>
+
+    <div class="tip">
+      <strong>Pro tip:</strong> Hindi voices वापरून Marathi text वाचवला तर बऱ्यापैकी चांगलं output येतं — dedicated Marathi voice अजून limited आहे, पण Hindi voice Devanagari script ओळखतो. Pronunciation perfect नसेल पण usable असतं!
+    </div>
+
+  </main>
+
+{{FOOTER}}
+
 </body>
 </html>

@@ -69,6 +69,7 @@
             <li><a href="/aimarathi/claude-code/">Claude Code</a></li>
             <li><a href="/aimarathi/cursor/">Cursor</a></li>
             <li><a href="/aimarathi/windsurf/">Windsurf</a></li>
+            <li><a href="/aimarathi/antigravity/">Antigravity</a></li>
             <li><a href="/aimarathi/github-copilot/">GitHub Copilot</a></li>
             <li><a href="/aimarathi/midjourney/">Midjourney</a></li>
             <li><a href="/aimarathi/canva-ai/">Canva AI</a></li>
@@ -85,6 +86,11 @@
           <span class="dropdown-label">&#128221; Blog &#9662;</span>
           <ul class="dropdown">
             <li><a href="/aimarathi/blog/aggregators/">AI Aggregators</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-copywriting/">Prompt Engineering: Copywriting</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-ad-images/">Prompt Engineering: Ad Images</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-app/">Prompt Engineering: App बनवा</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-music/">Prompt Engineering: Music</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-voice/">Prompt Engineering: Voice</a></li>
           </ul>
         </li>
       </ul>
@@ -102,22 +108,33 @@
 
     <section>
       <h2>AI Aggregator म्हणजे काय?</h2>
-      <p>प्रत्येक AI tool चं वेगळं subscription घ्यायचं म्हणजे महिन्याला खूप पैसे जातात — ChatGPT चं $20, Midjourney चं $10, Runway चं $15... एकेक tool साठी वेगळा plan.</p>
+      <p>प्रत्येक AI tool चं वेगळं subscription घ्यायचं म्हणजे महिन्याला खूप पैसे जातात — ChatGPT चं $20, Claude चं $20, Midjourney चं $10... एकेक tool साठी वेगळा plan. महिन्याला $50-100 सहज जातात.</p>
 
-      <p><strong>AI Aggregators</strong> हे solve करतात. एकाच platform वर तुम्हाला multiple AI models मिळतात — एक subscription, सगळे tools. Netflix सारखं — एक plan, सगळे shows.</p>
+      <p><strong>AI Aggregators</strong> हे solve करतात. एकाच platform वरून तुम्हाला multiple AI models access मिळतो. काही aggregators flat subscription देतात (Netflix model), तर काही pay-per-use आहेत — जितकं वापराल तितकं pay करा.</p>
 
       <div class="tip">
-        <p><strong>Simple example:</strong> Aggregator वर तुम्ही एकाच dashboard मधून ChatGPT, Claude, Midjourney, Stable Diffusion — सगळे वापरू शकता. Tool बदलायला नवीन tab उघडायची गरज नाही.</p>
+        <p><strong>Simple example:</strong> OpenRouter वर तुम्ही एकाच API key ने GPT-4o, Claude, Gemini, Llama, Mistral — सगळे models वापरू शकता. प्रत्येकाचा वेगळा account बनवायची गरज नाही.</p>
       </div>
+    </section>
+
+    <section>
+      <h2>दोन प्रकारचे Aggregators</h2>
+
+      <h3>1. Chat Aggregators (end-users साठी)</h3>
+      <p>हे directly browser मध्ये chat interface देतात — तुम्ही type करा, model निवडा, answer मिळतो. Technical knowledge लागत नाही. ChatGPT सारखंच interface, पण multiple models available.</p>
+
+      <h3>2. API Routers (developers साठी)</h3>
+      <p>हे API level वर काम करतात — एक API key, multiple models. तुमच्या app मध्ये integrate करायला perfect. Pay-per-token pricing असतं, subscription नाही.</p>
     </section>
 
     <section>
       <h2>Aggregators का वापरावेत?</h2>
       <ul>
         <li><strong>पैसे वाचतात</strong> — 5 वेगवेगळे subscriptions घेण्यापेक्षा एक aggregator plan स्वस्त पडतो</li>
-        <li><strong>Compare करता येतो</strong> — same prompt वेगवेगळ्या models ला द्या, कोणता चांगला output देतो ते बघा</li>
+        <li><strong>Compare करता येतो</strong> — same prompt वेगवेगळ्या models ला द्या, कोणाचं output चांगलं ते तुम्हीच बघा</li>
         <li><strong>एक interface</strong> — 10 tabs उघडायची गरज नाही, सगळं एकाच ठिकाणी</li>
-        <li><strong>नवीन models try करता येतात</strong> — नवीन AI आलं की aggregator वर लगेच available होतं</li>
+        <li><strong>नवीन models instant access</strong> — नवीन AI model launch झालं की aggregator वर लगेच available होतं</li>
+        <li><strong>Fallback option</strong> — एक model down असेल तर दुसरा automatically वापरता येतो</li>
       </ul>
     </section>
 
@@ -126,15 +143,91 @@
 
       <div class="section-cards">
         <div class="card">
+          <h3>OpenRouter</h3>
+          <p>सगळ्यात popular API router. GPT-4o, Claude, Gemini, Llama, Mistral — 100+ models एकाच API key ने वापरा. Pay-per-token pricing, no subscription. Developers साठी best option. काही models फुकट सुद्धा available आहेत!</p>
+          <p><strong>Website:</strong> <a href="https://openrouter.ai" target="_blank">openrouter.ai</a></p>
+          <p><strong>Pricing:</strong> Pay-per-use — model नुसार rate वेगवेगळा. GPT-4o साठी roughly $2.50/million tokens.</p>
+        </div>
+
+        <div class="card">
+          <h3>Poe by Quora</h3>
+          <p>Chat-style aggregator — ChatGPT, Claude, Gemini, Llama सगळे एकाच app मध्ये. Clean interface, mobile app available. Non-technical users साठी सगळ्यात सोपं. Custom bots बनवता येतात.</p>
+          <p><strong>Website:</strong> <a href="https://poe.com" target="_blank">poe.com</a></p>
+          <p><strong>Pricing:</strong> Free tier limited; $20/month subscription ने सगळे premium models unlimited.</p>
+        </div>
+
+        <div class="card">
+          <h3>T3 Chat</h3>
+          <p>Newer aggregator with a clean UI. Multiple LLM models एकाच interface मध्ये chat करा. Model comparison feature built-in — same prompt दोन models ला पाठवा side-by-side.</p>
+          <p><strong>Website:</strong> <a href="https://t3.chat" target="_blank">t3.chat</a></p>
+          <p><strong>Pricing:</strong> Free tier available; paid plans $8/month पासून.</p>
+        </div>
+
+        <div class="card">
           <h3>Higgsfield</h3>
-          <p>Video generation focused aggregator. Multiple video AI models एकाच ठिकाणी — Runway, Kling, Pika सगळे वापरा एकाच plan मध्ये.</p>
+          <p>Video generation focused aggregator. Runway, Kling, Pika सारखे multiple video AI models एकाच ठिकाणी. Video बनवायचं असेल तर प्रत्येक tool चं subscription घेण्यापेक्षा Higgsfield वापरा.</p>
+          <p><strong>Website:</strong> <a href="https://higgsfield.ai" target="_blank">higgsfield.ai</a></p>
+          <p><strong>Pricing:</strong> Plans vary — video generation credits based.</p>
+        </div>
+
+        <div class="card">
+          <h3>TypingMind</h3>
+          <p>One-time purchase chat client — तुमची own API key टाका (OpenAI, Anthropic, Google ची) आणि सगळे models एकाच ठिकाणी वापरा. Monthly subscription नाही, एकदा pay करा. Privacy-focused — तुमचा data third-party servers वर जात नाही.</p>
+          <p><strong>Website:</strong> <a href="https://www.typingmind.com" target="_blank">typingmind.com</a></p>
+          <p><strong>Pricing:</strong> $39 one-time (bring your own API keys).</p>
         </div>
       </div>
-
-      <div class="tip">
-        <p>या space मध्ये नवीन aggregators येत राहतात. आम्ही हा list update करत राहू.</p>
-      </div>
     </section>
+
+    <section>
+      <h2>कोणता Aggregator कधी वापरायचा?</h2>
+      <table>
+        <thead>
+          <tr><th>तुमची गरज</th><th>Best Option</th><th>का?</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Simple chatting, non-technical</td>
+            <td><strong>Poe</strong></td>
+            <td>सगळ्यात सोपं interface, mobile app आहे</td>
+          </tr>
+          <tr>
+            <td>Developer, API access हवं</td>
+            <td><strong>OpenRouter</strong></td>
+            <td>100+ models, pay-per-use, no commitment</td>
+          </tr>
+          <tr>
+            <td>Privacy concern, own keys</td>
+            <td><strong>TypingMind</strong></td>
+            <td>Data तुमच्याकडेच राहतो, one-time purchase</td>
+          </tr>
+          <tr>
+            <td>Video generation</td>
+            <td><strong>Higgsfield</strong></td>
+            <td>Multiple video AI models एकत्र</td>
+          </tr>
+          <tr>
+            <td>Model comparison</td>
+            <td><strong>T3 Chat</strong></td>
+            <td>Side-by-side comparison built-in</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>कसं सुरू करायचं?</h2>
+      <ol>
+        <li><strong>Non-technical असाल:</strong> <a href="https://poe.com" target="_blank">Poe</a> वर free account बनवा — लगेच multiple models try करता येतील</li>
+        <li><strong>Developer असाल:</strong> <a href="https://openrouter.ai" target="_blank">OpenRouter</a> वर sign up करा — free credits मिळतात सुरुवातीला</li>
+        <li>2-3 different models ला same question विचारा आणि outputs compare करा</li>
+        <li>तुमच्या use case साठी कोणतं model consistently चांगलं output देतं ते ओळखा</li>
+      </ol>
+    </section>
+
+    <div class="tip">
+      <p><strong>आमची recommendation:</strong> जर तुम्ही first time AI वापरत असाल तर aggregator पेक्षा directly <a href="/aimarathi/gemini/">Google Gemini</a> (free!) वापरा. Aggregators त्या लोकांसाठी best आहेत ज्यांना multiple models regularly compare करायचे आहेत किंवा developers ज्यांना API access हवं.</p>
+    </div>
   </main>
 
   <footer>

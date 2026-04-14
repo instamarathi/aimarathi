@@ -69,6 +69,7 @@
             <li><a href="/aimarathi/claude-code/">Claude Code</a></li>
             <li><a href="/aimarathi/cursor/">Cursor</a></li>
             <li><a href="/aimarathi/windsurf/">Windsurf</a></li>
+            <li><a href="/aimarathi/antigravity/">Antigravity</a></li>
             <li><a href="/aimarathi/github-copilot/">GitHub Copilot</a></li>
             <li><a href="/aimarathi/midjourney/">Midjourney</a></li>
             <li><a href="/aimarathi/canva-ai/">Canva AI</a></li>
@@ -85,6 +86,11 @@
           <span class="dropdown-label">&#128221; Blog &#9662;</span>
           <ul class="dropdown">
             <li><a href="/aimarathi/blog/aggregators/">AI Aggregators</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-copywriting/">Prompt Engineering: Copywriting</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-ad-images/">Prompt Engineering: Ad Images</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-app/">Prompt Engineering: App बनवा</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-music/">Prompt Engineering: Music</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-voice/">Prompt Engineering: Voice</a></li>
           </ul>
         </li>
       </ul>
@@ -100,13 +106,104 @@
       <h1>Claude</h1>
     </div>
 
-    <p>Anthropic चा AI assistant. Writing, research, analysis, math, coding — सगळ्यासाठी वापरता येतो. Browser मध्ये claude.ai वर चालतो — account बनवा आणि सुरू करा.</p>
+    <p>Anthropic चा AI assistant. Long documents वाचणे, careful analysis, nuanced writing — या गोष्टींमध्ये Claude सगळ्यात पुढे आहे. Browser मध्ये <a href="https://claude.ai" target="_blank">claude.ai</a> वर चालतो.</p>
 
-    <p>Claude हा ChatGPT सारखाच AI chatbot आहे — पण काही गोष्टींमध्ये बराच पुढे आहे. Especially long documents वाचणे, careful analysis, आणि nuanced writing.</p>
+    <p>Claude ची सगळ्यात मोठी strength म्हणजे 200K context window — म्हणजे एका वेळी एक पूर्ण book upload करून त्यावर प्रश्न विचारता येतात. Writing quality पण excellent आहे — formal letters पासून creative writing पर्यंत.</p>
 
     <div class="tip">
-      <p><strong>Coming Soon!</strong> हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial</a> बघा — तो आत्ता ready आहे!</p>
+      <strong>Document analysis साठी best:</strong> तुम्हाला एखादा मोठा PDF, legal document, किंवा research paper analyze करायचा असेल तर Claude हा सगळ्यात चांगला option आहे. 200K tokens म्हणजे साधारण 500 pages एका वेळी!
     </div>
+
+    <!-- काय करता येतं -->
+    <section>
+      <h2>Claude ने काय काय करता येतं?</h2>
+      <ul>
+        <li><strong>Long Document Analysis:</strong> 500 pages पर्यंतचे documents upload करा — summarize, analyze, compare सगळं करतो</li>
+        <li><strong>Nuanced Writing:</strong> Essays, articles, reports — tone आणि style exactly तुम्हाला हवं तसं adjust करतो</li>
+        <li><strong>Careful Reasoning:</strong> Math problems, logic puzzles, complex analysis — step-by-step विचार करतो, चुका कमी</li>
+        <li><strong>Code Writing:</strong> Python, JavaScript, HTML — code लिहितो, debug करतो, explain करतो</li>
+        <li><strong>Research Help:</strong> Multiple sources compare करा, pros-cons analyze करा, balanced perspective मिळवा</li>
+      </ul>
+    </section>
+
+    <!-- Pricing -->
+    <section>
+      <h2>किती खर्च येतो?</h2>
+      <table>
+        <thead>
+          <tr><th>Plan</th><th>Price</th><th>काय मिळतं</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Free</strong></td>
+            <td>₹0</td>
+            <td>Claude Sonnet model, limited daily messages (साधारण 10-15)</td>
+          </tr>
+          <tr>
+            <td><strong>Claude Pro</strong></td>
+            <td>$20/month (~₹1,700)</td>
+            <td>5x more messages, Opus model access, priority access</td>
+          </tr>
+          <tr>
+            <td><strong>Team</strong></td>
+            <td>$25/person/month</td>
+            <td>Pro features + team sharing, admin dashboard</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Free tier मध्ये messages कमी मिळतात — पण quality test करायला पुरेसे आहेत. एकदा try करा, आवडलं तर Pro घ्या.</p>
+      <div class="tip">
+        <strong>Paid plan महाग वाटतो?</strong> एक महिना try करा — तुम्ही Claude ने generate कराल ती value subscription पेक्षा कितीतरी जास्त असेल. आणि मित्रांसोबत account share केलात तर cost अजून कमी होतो.
+      </div>
+    </section>
+
+    <!-- कसं सुरू करायचं -->
+    <section>
+      <h2>कसं सुरू करायचं?</h2>
+      <ol>
+        <li><a href="https://claude.ai" target="_blank">claude.ai</a> उघडा → "Sign up" वर click करा (Google account ने sign up करता येतं)</li>
+        <li>Email verify करा आणि login करा</li>
+        <li>Chat box मध्ये type करा किंवा file upload करा (📎 icon वापरा)</li>
+        <li>Long document analyze करायचं असेल तर PDF directly drag-and-drop करा</li>
+      </ol>
+    </section>
+
+    <!-- Example Prompts -->
+    <section>
+      <h2>Try करा — Copy-Paste Prompts</h2>
+
+      <div class="exercise">
+        <h4>Document Analysis: PDF summarize करा</h4>
+        <pre>हा PDF upload करतोय — हा माझ्या flat purchase चा agreement आहे.
+1. Important clauses मराठीत summarize कर
+2. कुठे काही risky clause आहे ते highlight कर
+3. Registration आणि stamp duty बद्दल काय लिहिलंय ते सांग</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Writing: Professional content</h4>
+        <pre>माझ्या small bakery business साठी Instagram bio आणि
+5 post captions लिहून दे.
+Business name: "आईच्या हातचं"
+Location: नाशिक
+Specialty: traditional Maharashtrian sweets
+Tone: warm, homely, modern twist</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Research: Compare &amp; Analyze</h4>
+        <pre>मला mutual funds मध्ये invest करायचंय — beginner आहे.
+SIP vs lump sum — काय फरक आहे?
+₹5,000/month SIP सुरू करायचं असेल तर
+कोणत्या type चे funds बघावे? Risk profile: moderate.
+मराठीत समजावून सांग.</pre>
+      </div>
+    </section>
+
+    <div class="tip">
+      <strong>Pro tip:</strong> Claude ला "Artifacts" feature आहे — code, documents, diagrams असं visual content वेगळ्या panel मध्ये दाखवतो. "Create an artifact" म्हणा आणि बघा — presentations आणि reports बनवायला perfect आहे.
+    </div>
+
   </main>
 
   <footer>

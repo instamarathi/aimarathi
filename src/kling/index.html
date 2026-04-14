@@ -4,48 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kling — AI Marathi</title>
+  <meta name="description" content="Kling AI tutorial मराठीत. AI video generation tool — text prompt द्या, realistic video बनतो. High quality motion, cinematic output.">
   <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
 </head>
 <body>
+
 {{NAV}}
 
-<main class="container">
-  <p class="breadcrumb"><a href="/aimarathi/">AIMarathi</a> &rsaquo; Visual &rsaquo; Kling</p>
-  <h1>Kling</h1>
-  <p>AI video generation tool. Text लिहा, video बनतो. Incredible quality.</p>
-  <div class="tip">
-    <strong>Coming Soon!</strong> हा tutorial लवकरच येतोय.
-  </div>
-</main>
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo; Video &rsaquo; Kling
+      </div>
+      <h1>Kling</h1>
+    </div>
 
-<footer>
-  <p>&copy; 2026 AI Marathi</p>
-</footer>
+    <p>Kuaishou चा AI video generation tool. Text prompt द्या किंवा image द्या — realistic video बनतो. Motion quality आणि consistency मध्ये Kling top tier आहे.</p>
 
-<script>
-  (function() {
-    var toggle = document.getElementById('themeToggle');
-    var stored = localStorage.getItem('aimarathi-theme');
-    if (stored) document.documentElement.setAttribute('data-theme', stored);
-    function updateIcon() {
-      toggle.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u2600' : '\u263E';
-    }
-    updateIcon();
-    toggle.addEventListener('click', function() {
-      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('aimarathi-theme', next);
-      updateIcon();
-    });
-    document.getElementById('navHamburger').addEventListener('click', function() {
-      document.getElementById('navLinks').classList.toggle('open');
-    });
-    document.querySelectorAll('.dropdown-label').forEach(function(label) {
-      label.addEventListener('click', function() {
-        this.parentElement.classList.toggle('mobile-open');
-      });
-    });
-  })();
-</script>
+    <section>
+      <h2>काय करता येतं</h2>
+      <ul>
+        <li><strong>Text-to-video</strong> — prompt लिहा, AI video generate करतो — realistic motion, proper physics</li>
+        <li><strong>Image-to-video</strong> — still image द्या, AI त्याला animate करतो — photo जिवंत होतो</li>
+        <li><strong>High quality motion</strong> — characters चालतात, पाणी वाहतं, कपडे हलतात — natural दिसतं</li>
+        <li><strong>Multiple durations</strong> — 5 seconds ते longer clips — project नुसार निवडा</li>
+        <li><strong>Camera controls</strong> — zoom, pan, tilt — cinematic camera movements specify करता येतात</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Pricing</h2>
+      <table>
+        <tr><th>Plan</th><th>Price</th><th>काय मिळतं</th></tr>
+        <tr><td>Free</td><td>₹0</td><td>Daily free credits, standard quality, watermark</td></tr>
+        <tr><td>Standard</td><td>~$8/month</td><td>More credits, higher quality, no watermark</td></tr>
+        <tr><td>Pro</td><td>~$25/month</td><td>Maximum credits, highest quality, priority generation</td></tr>
+      </table>
+      <p><strong>Free credits मिळतात!</strong> रोज काही free generations मिळतात — try करायला पैसे लागत नाहीत.</p>
+    </section>
+
+    <section>
+      <h2>कसं सुरू करायचं</h2>
+      <ol>
+        <li><a href="https://klingai.com" target="_blank">klingai.com</a> वर जा आणि account बनवा</li>
+        <li>"Create Video" वर click करा, text-to-video किंवा image-to-video निवडा</li>
+        <li>Prompt लिहा — scene, action, camera movement describe करा</li>
+        <li>Generate करा, काही minutes थांबा, video download करा</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Example Prompts वापरून बघा</h2>
+
+      <div class="exercise">
+        <strong>Nature scene:</strong>
+        <p><code>A serene river flowing through lush green Sahyadri mountains, morning mist rising, birds flying across, slow camera pan right, cinematic 4K</code></p>
+      </div>
+
+      <div class="exercise">
+        <strong>Product showcase:</strong>
+        <p><code>A steaming cup of masala chai on a wooden table, camera slowly zooms in, steam rises naturally, warm golden lighting, shallow depth of field</code></p>
+      </div>
+
+      <div class="exercise">
+        <strong>Creative animation:</strong>
+        <p><code>A traditional Warli art painting coming to life, figures start dancing, white figures on terracotta background, smooth animation, artistic style</code></p>
+      </div>
+    </section>
+
+    <div class="tip">
+      <p><strong>Pro tip:</strong> Video prompts मध्ये camera movement describe करा — "slow zoom in", "pan left to right", "dolly forward". यामुळे video cinematic दिसतो. आणि image-to-video feature वापरा — Midjourney मध्ये image बनवा, Kling मध्ये animate करा. Combo deadly आहे.</p>
+    </div>
+  </main>
+
+{{FOOTER}}
+
 </body>
 </html>

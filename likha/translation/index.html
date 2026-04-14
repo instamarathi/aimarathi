@@ -69,6 +69,7 @@
             <li><a href="/aimarathi/claude-code/">Claude Code</a></li>
             <li><a href="/aimarathi/cursor/">Cursor</a></li>
             <li><a href="/aimarathi/windsurf/">Windsurf</a></li>
+            <li><a href="/aimarathi/antigravity/">Antigravity</a></li>
             <li><a href="/aimarathi/github-copilot/">GitHub Copilot</a></li>
             <li><a href="/aimarathi/midjourney/">Midjourney</a></li>
             <li><a href="/aimarathi/canva-ai/">Canva AI</a></li>
@@ -85,6 +86,11 @@
           <span class="dropdown-label">&#128221; Blog &#9662;</span>
           <ul class="dropdown">
             <li><a href="/aimarathi/blog/aggregators/">AI Aggregators</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-copywriting/">Prompt Engineering: Copywriting</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-ad-images/">Prompt Engineering: Ad Images</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-app/">Prompt Engineering: App बनवा</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-music/">Prompt Engineering: Music</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-voice/">Prompt Engineering: Voice</a></li>
           </ul>
         </li>
       </ul>
@@ -102,15 +108,73 @@
 
     <p>English ते Marathi, Marathi ते English, कोणत्याही language. Long documents चे summary मिनिटात.</p>
 
-    <div class="tip">
-      <h4>कोणते tools वापरता येतात?</h4>
-      <p><strong>Claude, ChatGPT, Gemini</strong></p>
-      <p>प्रत्येक tool चे detailed tutorial लवकरच येतोय.</p>
+    <h2>कोणते Tools वापरायचे?</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Free / Paid</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Gemini</strong></td>
+          <td>Free</td>
+          <td>सगळ्या Android phones वर free. मराठी support चांगला आहे — natural वाटणारं translation देतो. <strong>Recommended.</strong></td>
+        </tr>
+        <tr>
+          <td><strong>ChatGPT</strong></td>
+          <td>Free / Paid</td>
+          <td>Translation quality solid आहे. Context समजून घेऊन translate करतो.</td>
+        </tr>
+        <tr>
+          <td><strong>Claude</strong></td>
+          <td>Free / Paid</td>
+          <td>Nuanced translation साठी चांगला — tone आणि formality level maintain करतो.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Copy-Paste Prompts</h2>
+    <p>हे prompts directly तुमच्या AI tool मध्ये paste करा. [ ] मधला text तुमच्या content ने replace करा.</p>
+
+    <div class="exercise">
+      <h4>English to Marathi — Natural Translation</h4>
+      <p>हा English text मराठीत translate कर: "[तुमचा English text paste करा]". Translation natural मराठीत हवं — Google Translate सारखं word-by-word नको. जसं एक educated मराठी माणूस बोलतो तसं हवं. Technical terms English मध्येच ठेव.</p>
     </div>
 
-    <div class="urgency">
-      <h4>Coming Soon!</h4>
-      <p>हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial</a> बघा — तो आत्ता ready आहे!</p>
+    <div class="exercise">
+      <h4>Marathi to English — Professional Tone</h4>
+      <p>हा मराठी text English मध्ये translate कर: "[तुमचा मराठी text paste करा]". Translation professional English मध्ये हवं — formal email किंवा report मध्ये वापरता येईल असं. Grammar perfect असावं.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Document Summary + Translation</h4>
+      <p>हा English article / document मराठीत summarize कर: "[text paste करा]". Full translation नको — फक्त main points मराठीत सांग. 5-7 bullet points मध्ये summary दे. Important numbers आणि facts include कर.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Tone-Specific Translation</h4>
+      <p>हा text मराठीत translate कर, पण tone [casual / formal / humorous / emotional] ठेव: "[text paste करा]". Example: जर casual tone हवा असेल तर जसं friends शी बोलतो तसं लिही. Formal हवं असेल तर office email सारखं.</p>
+    </div>
+
+    <h2>Tips</h2>
+
+    <div class="tip">
+      <h4>Google Translate पेक्षा AI का चांगलं?</h4>
+      <p>Google Translate word-by-word translate करतो — त्यामुळे मराठी अनेकदा अजब वाटतं. AI ला context समजतो. "It's raining cats and dogs" चं Google Translate "मांजरी आणि कुत्रे पडत आहेत" करेल — AI "मुसळधार पाऊस पडतोय" असं सांगेल.</p>
+    </div>
+
+    <div class="tip">
+      <h4>Context सांगा — चांगलं translation मिळेल</h4>
+      <p>फक्त text paste करून "translate कर" म्हणण्यापेक्षा सांगा: "हे एका wedding invitation साठी आहे" किंवा "हे office email आहे" किंवा "हे WhatsApp message आहे". Context दिल्यावर AI योग्य tone आणि formality level वापरतो.</p>
+    </div>
+
+    <div class="tip">
+      <h4>Mixed language ठेवा — हरकत नाही</h4>
+      <p>मराठी translation मध्ये सगळे English words मराठीत convert करायची गरज नाही. "Meeting", "email", "deadline" हे शब्द मराठीत तसेच वापरा — कारण real life मध्ये आपण तसंच बोलतो. AI ला सांगा: "Technical terms English मध्येच ठेव."</p>
     </div>
   </main>
 

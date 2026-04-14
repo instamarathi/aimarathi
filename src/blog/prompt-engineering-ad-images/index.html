@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ad Images साठी AI Prompts — AI Marathi</title>
+  <meta name="description" content="AI ने ad images generate करायचे असतील तर prompts कसे लिहायचे? Midjourney, Gemini वापरून professional ad visuals बनवायला शिका मराठीत.">
+  <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+{{NAV}}
+
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo; <a href="/aimarathi/blog/">Blog</a> &rsaquo; Prompt Engineering: Ad Images
+      </div>
+      <h1>Ad Images साठी AI Prompts — perfect visual कसं generate करायचं?</h1>
+    </div>
+
+    <section>
+      <p>AI image generation tools आता खूपच powerful झाले आहेत — पण tool powerful असलं तरी तुमचा <strong>prompt weak</strong> असेल तर output useless येतो. "बनव मला एक poster" म्हटलं तर AI काहीतरी random देतं. Professional-level ad image हवं असेल तर prompt engineering शिकायला लागतं.</p>
+
+      <p>हा tutorial specifically <strong>advertising आणि marketing images</strong> साठी आहे. इथे तुम्हाला शिकायला मिळेल — prompt कसा structure करायचा, काय include करायचं, काय avoid करायचं, आणि actual workflow काय असतो professionals चा.</p>
+
+      <div class="tip">
+        <p><strong>Tools:</strong> Primary tool म्हणून <a href="https://midjourney.com" target="_blank">Midjourney</a> वापरू (best image quality for ads). पण prompt ideas brainstorm करायला <a href="/aimarathi/gemini/">Gemini</a> free आहे — आधी Gemini ला विचारा "suggest me 5 Midjourney prompts for X", मग best prompt Midjourney मध्ये टाका.</p>
+      </div>
+    </section>
+
+    <!-- ==================== PART 1: Deep-dive walkthrough ==================== -->
+
+    <section>
+      <h2>Part 1: Prompt कसा evolve होतो — step by step</h2>
+      <p>एक real project घेऊ. Imagine करा तुमचा client आहे <strong>"रंगरेषा" (Rangrekha)</strong> — एक Marathi clothing brand. त्यांना Diwali sale साठी Instagram post हवं आहे. बघू तीन levels चे prompts — bad, better, आणि great.</p>
+    </section>
+
+    <section>
+      <h3>Step 1: Bad Prompt</h3>
+
+      <div class="warning">
+        <p><strong>Prompt:</strong> "Create a Diwali sale poster for a clothing brand"</p>
+      </div>
+
+      <p><strong>हे का काम करत नाही:</strong></p>
+      <ul>
+        <li><strong>Style नाही</strong> — AI ला कळत नाही तुम्हाला realistic हवं की illustration की minimalist</li>
+        <li><strong>Colors specify नाहीत</strong> — AI random color palette निवडेल जे तुमच्या brand शी match नाही होणार</li>
+        <li><strong>Composition सांगितली नाही</strong> — model कुठे असेल, text कुठे येईल, layout काय असेल</li>
+        <li><strong>Brand feel नाही</strong> — premium brand आहे की budget? traditional आहे की modern?</li>
+        <li><strong>Text placement</strong> — AI text generate करतं ते almost always gibberish असतं. Text साठी space सोडायला सांगितलं नाही</li>
+      </ul>
+      <p>या prompt ने तुम्हाला generic, stock-photo-quality image मिळेल जे कोणत्याही brand साठी असू शकतं. Useless for actual advertising.</p>
+    </section>
+
+    <section>
+      <h3>Step 2: Better Prompt</h3>
+
+      <div class="tip">
+        <p><strong>Prompt:</strong> "Modern minimalist Diwali sale poster, deep purple and gold color palette, Indian woman wearing festive kurta in center, clean empty space on left side for text overlay, premium luxury brand feel, soft bokeh lights in background, studio lighting"</p>
+      </div>
+
+      <p><strong>काय improve झालं:</strong></p>
+      <ul>
+        <li><strong>Style defined</strong> — "modern minimalist" म्हटलं, AI ला direction मिळाली</li>
+        <li><strong>Colors specific</strong> — deep purple + gold = premium Diwali vibe</li>
+        <li><strong>Composition</strong> — model center मध्ये, text space left side ला</li>
+        <li><strong>Brand mood</strong> — "premium luxury brand feel" ने tone set झाला</li>
+        <li><strong>Lighting</strong> — "soft bokeh" + "studio lighting" ने professional look येतो</li>
+      </ul>
+      <p>हे बरंच चांगलं आहे — पण अजून Midjourney-specific parameters नाहीत, aspect ratio नाही, negative prompts नाहीत. चला final level बघू.</p>
+    </section>
+
+    <section>
+      <h3>Step 3: Great Prompt (Production-ready)</h3>
+
+      <div class="exercise">
+<p><strong>Prompt:</strong></p>
+<pre><code>Modern minimalist festive sale campaign photo,
+Indian woman model in center wearing elegant silk kurta
+with paithani-inspired gold zari border pattern,
+deep purple and burnished gold color palette,
+warm glowing Diwali diya lamp light casting soft
+golden highlights on fabric,
+large clean negative space on left third of frame
+for text overlay,
+subtle bokeh of fairy lights in dark background,
+premium luxury fashion brand aesthetic,
+editorial magazine quality photography,
+shot on 85mm lens with shallow depth of field
+--ar 4:5 --v 6 --style raw --no text, words, letters,
+watermark, logo, deformed hands</code></pre>
+      </div>
+
+      <p><strong>प्रत्येक element काय करतो:</strong></p>
+      <ul>
+        <li><strong>"paithani-inspired gold zari border"</strong> — specific Indian textile detail. Generic "festive dress" पेक्षा हे AI ला actual reference देतं</li>
+        <li><strong>"warm glowing Diwali diya lamp light"</strong> — lighting direction आणि mood एकदम specific. "Good lighting" म्हणण्यापेक्षा हे 10x better</li>
+        <li><strong>"large clean negative space on left third"</strong> — text overlay साठी deliberately space ठेवतो. हे crucial आहे — AI ने text generate करू नका, text Canva मध्ये add कराल</li>
+        <li><strong>"editorial magazine quality photography"</strong> — quality benchmark set करतो</li>
+        <li><strong>"shot on 85mm lens with shallow depth of field"</strong> — camera lens specify केल्यावर AI ला realistic photography style कळतो</li>
+        <li><strong><code>--ar 4:5</code></strong> — Instagram post चा aspect ratio. Platform ठरवा आधी, मग aspect ratio set करा</li>
+        <li><strong><code>--v 6</code></strong> — Midjourney version 6 (latest, best quality)</li>
+        <li><strong><code>--style raw</code></strong> — कमी "AI-processed" look, more photorealistic</li>
+        <li><strong><code>--no text, words, letters, watermark, logo, deformed hands</code></strong> — negative prompts. AI ला explicitly सांगतो काय नको. Text especially important — AI-generated text almost always gibberish असतो</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Step 4: The Complete Workflow</h3>
+      <p>Professionals एक tool वापरून ad बनवत नाहीत. Actual workflow असा असतो:</p>
+
+      <ol>
+        <li><strong>Gemini मध्ये brainstorm (Free)</strong> — "I need to create a Diwali sale poster for a premium Marathi clothing brand called Rangrekha. Suggest 5 detailed Midjourney prompts with different visual concepts." Gemini तुम्हाला 5 detailed prompts देईल — best एक निवडा</li>
+        <li><strong>Midjourney मध्ये generate</strong> — prompt टाका, 4 variations येतील. Best variation select करा, upscale करा. Perfect नसेल तर prompt tweak करा आणि re-generate करा. 2-3 iterations लागतात normally</li>
+        <li><strong>Canva मध्ये text overlay</strong> — Midjourney चं image Canva मध्ये import करा. "रंगरेषा", "Diwali Sale", "Up to 50% Off" — हे सगळं text Canva मध्ये add करा. Fonts, sizes, placement — सगळं तुमच्या control मध्ये</li>
+      </ol>
+
+      <div class="tip">
+        <p><strong>का तीन tools?</strong> Gemini = idea generation (free + fast). Midjourney = best image quality. Canva = text + final design control. प्रत्येक tool त्याच्या strength साठी वापरा.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3>Step 5: Key Takeaways</h3>
+      <ul>
+        <li><strong>Style specify करा</strong> — "minimalist", "editorial", "cinematic", "flat illustration" — AI ला visual language सांगा</li>
+        <li><strong>Composition plan करा</strong> — text कुठे येणार ते आधीच ठरवा, prompt मध्ये negative space मागा</li>
+        <li><strong>Aspect ratio set करा</strong> — Instagram post = 4:5, Story = 9:16, Facebook cover = 16:9, YouTube thumbnail = 16:9</li>
+        <li><strong>Negative prompts वापरा</strong> — <code>--no text, watermark</code> almost प्रत्येक ad image prompt मध्ये लागतो</li>
+        <li><strong>Text कधीही AI ने generate करू नका</strong> — always Canva/Photoshop मध्ये add करा</li>
+        <li><strong>Lighting direction सांगा</strong> — "golden hour sunlight from left", "soft studio lighting", "warm lamp glow" — lighting image चा mood define करतो</li>
+      </ul>
+    </section>
+
+    <!-- ==================== PART 2: Ready-to-use prompts ==================== -->
+
+    <section>
+      <h2>Part 2: Ready-to-Use Prompts (copy करा, directly वापरा)</h2>
+      <p>हे prompts Midjourney साठी optimized आहेत. तुमच्या product/brand नुसार details बदला.</p>
+    </section>
+
+    <section>
+      <h3>1. E-commerce Product Photo (White Background)</h3>
+      <div class="exercise">
+<pre><code>Professional product photography of [तुमचं product],
+centered on pure white seamless background,
+soft diffused studio lighting from above and sides,
+sharp focus with high detail on product texture,
+clean commercial e-commerce style,
+no shadows, no props, product fills 70% of frame,
+8K resolution, photorealistic
+--ar 1:1 --v 6 --style raw
+--no text, watermark, background elements, people</code></pre>
+        <p><strong>Use case:</strong> Amazon, Flipkart, Shopify product listings. <code>[तुमचं product]</code> च्या जागी "handcrafted leather wallet", "silver jhumka earrings" वगैरे टाका.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3>2. Social Media Story / Reel Thumbnail</h3>
+      <div class="exercise">
+<pre><code>Vibrant eye-catching vertical composition,
+[तुमचा subject/scene],
+bold saturated colors with high contrast,
+dynamic angle slightly from below,
+large empty space in top 30% for headline text,
+trendy Gen-Z aesthetic with gradient color wash,
+energetic and youthful mood,
+motion blur on edges for dynamic feel
+--ar 9:16 --v 6
+--no text, words, letters, watermark</code></pre>
+        <p><strong>Use case:</strong> Instagram/YouTube Reels, Stories. <code>--ar 9:16</code> vertical format essential आहे stories साठी.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3>3. Restaurant Menu Item / Food Photography</h3>
+      <div class="exercise">
+<pre><code>Overhead flat lay food photography of [dish name],
+beautifully plated on rustic dark ceramic plate,
+garnished with fresh herbs and microgreens,
+warm moody restaurant lighting from top left,
+dark wooden table surface with subtle texture,
+small props scattered naturally -- spice bowls,
+linen napkin, vintage fork,
+shallow depth of field, steam rising from dish,
+editorial food magazine quality
+--ar 4:5 --v 6 --style raw
+--no text, watermark, hands, people</code></pre>
+        <p><strong>Use case:</strong> Restaurant menus, Zomato/Swiggy listings, food blog posts. "Overhead flat lay" म्हटलं की classic food photo angle मिळतो.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3>4. Real Estate Property Showcase</h3>
+      <div class="exercise">
+<pre><code>Professional real estate interior photography,
+spacious modern [room type -- living room/bedroom/kitchen]
+with large windows letting in warm natural daylight,
+contemporary Indian home decor with neutral earth tones,
+clean organized space with minimal tasteful furniture,
+wide angle 16mm lens perspective showing full room,
+bright airy atmosphere, polished marble flooring,
+architectural photography style
+--ar 16:9 --v 6 --style raw
+--no text, watermark, people, clutter, dark shadows</code></pre>
+        <p><strong>Use case:</strong> 99acres, MagicBricks listings, builder brochures. "Wide angle 16mm" rooms मोठे दिसतात — real estate photography चा standard trick.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3>5. Event / Festival Poster Background</h3>
+      <div class="exercise">
+<pre><code>Abstract festive background for [festival name] event poster,
+rich [color 1] and [color 2] color palette,
+flowing silk fabric textures with soft folds,
+scattered golden bokeh particles and light rays,
+ornamental mandala patterns subtly blended in background,
+ethereal dreamy atmosphere with gentle gradient,
+large central empty space for event details overlay,
+luxurious and celebratory mood
+--ar 3:4 --v 6
+--no text, words, letters, people, faces, watermark</code></pre>
+        <p><strong>Use case:</strong> Diwali, Ganesh Chaturthi, Navratri, wedding invites. हा फक्त background generate करतो — event details (date, venue, text) Canva मध्ये add करा.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3>6. Logo Concept / Brand Identity</h3>
+      <div class="exercise">
+<pre><code>Minimalist modern logo design concept for
+[brand name] -- a [business type] brand,
+clean geometric lettermark using initials [XX],
+[color 1] and [color 2] color scheme,
+flat vector style on pure white background,
+balanced symmetrical composition,
+professional corporate identity aesthetic,
+simple enough to work at small sizes,
+inspired by Swiss design principles
+--ar 1:1 --v 6 --style raw
+--no realistic textures, gradients, 3D effects,
+photorealism, complex details, text below logo</code></pre>
+        <p><strong>Use case:</strong> Logo ideation साठी. <strong>Important:</strong> AI-generated logo directly वापरू नका — हे concept/inspiration म्हणून treat करा. Final logo professional designer कडून vectorize करून घ्या. AI logos copyright-clear असतात पण refinement लागतं.</p>
+      </div>
+    </section>
+
+    <!-- ==================== PART 3: Common mistakes ==================== -->
+
+    <section>
+      <h2>Part 3: Common Mistakes (करू नका हे)</h2>
+    </section>
+
+    <section>
+      <h3>1. AI image मध्ये text generate करणं</h3>
+      <div class="warning">
+        <p><strong>Mistake:</strong> Prompt मध्ये "write SALE 50% OFF on the poster" असं टाकणं.</p>
+      </div>
+      <p>AI-generated text almost always garbled, misspelled, किंवा gibberish असतो. "SALE" ऐवजी "SAIE" किंवा "SLAE" येतं. <strong>Solution:</strong> <code>--no text, words, letters</code> वापरा आणि text नेहमी Canva/Photoshop मध्ये add करा. तुम्हाला font, size, placement — सगळ्यावर control मिळतो.</p>
+    </section>
+
+    <section>
+      <h3>2. Platform साठी aspect ratio set न करणं</h3>
+      <div class="warning">
+        <p><strong>Mistake:</strong> Default square image generate करणं आणि मग crop करणं.</p>
+      </div>
+      <p>Crop केल्यावर composition बिघडतो — important elements कापले जातात. <strong>आधीच ठरवा</strong> image कुठे जाणार:</p>
+      <ul>
+        <li>Instagram Post: <code>--ar 4:5</code></li>
+        <li>Instagram Story/Reels: <code>--ar 9:16</code></li>
+        <li>Facebook Cover: <code>--ar 16:9</code></li>
+        <li>YouTube Thumbnail: <code>--ar 16:9</code></li>
+        <li>Print Poster (A4): <code>--ar 3:4</code></li>
+        <li>Square (Profile pic, etc.): <code>--ar 1:1</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>3. एका prompt मध्ये खूप elements टाकणं</h3>
+      <div class="warning">
+        <p><strong>Mistake:</strong> "A woman holding a phone near a car with a dog and a sunset and mountains and a city skyline and fireworks and a rainbow..."</p>
+      </div>
+      <p>AI confused होतो — elements overlap होतात, काही गायब होतात, composition chaotic होतो. <strong>Rule of thumb:</strong> एका image मध्ये 1 main subject + 1 background + 1 mood/lighting. बाकी सगळं separate images मध्ये करा.</p>
+    </section>
+
+    <section>
+      <h3>4. Negative prompts वापरायला विसरणं</h3>
+      <div class="warning">
+        <p><strong>Mistake:</strong> <code>--no</code> parameter न वापरणं.</p>
+      </div>
+      <p>Negative prompts सांगतात AI ला काय <strong>नको</strong>. हे almost प्रत्येक ad image साठी लागतात:</p>
+      <ul>
+        <li><code>--no text, words, letters</code> — gibberish text avoid करा</li>
+        <li><code>--no watermark, logo</code> — unwanted marks</li>
+        <li><code>--no deformed hands, extra fingers</code> — AI चा classic problem</li>
+        <li><code>--no blurry, low quality</code> — quality enforce करा</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>5. पहिल्या generation वर settle होणं</h3>
+      <div class="warning">
+        <p><strong>Mistake:</strong> पहिलं output आलं, "चालेल" म्हणून वापरणं.</p>
+      </div>
+      <p>Professional work मध्ये <strong>2-3 iterations minimum</strong> लागतात. Midjourney 4 variations देतो — best निवडा, vary करा, upscale करा. Prompt tweak करा — एखादा word बदलला तरी output dramatically बदलतो. पहिलं generation हे draft आहे, final product नाही.</p>
+
+      <div class="tip">
+        <p><strong>Pro tip:</strong> Midjourney मध्ये <code>/describe</code> command वापरा — तुमची reference image upload करा, Midjourney त्या image चं prompt सुचवतो. Existing ad style replicate करायला हे best trick आहे.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>सुरुवात कशी करायची?</h2>
+      <ol>
+        <li><a href="/aimarathi/gemini/">Gemini</a> उघडा (free आहे) — "suggest 5 Midjourney prompts for [तुमचा use case]" असं विचारा</li>
+        <li>Best prompt copy करा, Midjourney मध्ये टाका (Discord किंवा web app)</li>
+        <li>Output बघा, prompt tweak करा, 2-3 rounds iterate करा</li>
+        <li>Final image Canva मध्ये import करा, text आणि branding add करा</li>
+        <li>Done — professional quality ad image तयार</li>
+      </ol>
+
+      <div class="tip">
+        <p><strong>Midjourney subscription नाही?</strong> Gemini (free) आणि Microsoft Copilot Image Creator (free) ने पण decent images बनतात. Prompting technique same आहे — फक्त <code>--ar</code>, <code>--v</code>, <code>--no</code> parameters Midjourney-specific आहेत, बाकीच्या tools ना ते काढून टाका.</p>
+      </div>
+    </section>
+
+  </main>
+
+{{FOOTER}}
+
+</body>
+</html>

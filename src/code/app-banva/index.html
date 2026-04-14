@@ -23,14 +23,90 @@
     <p>Mobile app, web app, desktop tool — AI तुमची idea working app मध्ये convert करतो.</p>
 
     <div class="tip">
-      <h4>कोणते tools वापरता येतात?</h4>
-      <p><strong>Claude Code, Cursor, GitHub Copilot</strong></p>
-      <p>प्रत्येक tool चे detailed tutorial लवकरच येतोय.</p>
+      <h4>AI ला नक्की काय सांगायचं?</h4>
+      <p>App बनवताना prompts कसे द्यायचे याचा detailed guide: <a href="/aimarathi/blog/prompt-engineering-app/">Prompt Engineering: App बनवा</a> — idea पासून working app पर्यंतचा step-by-step process.</p>
     </div>
 
-    <div class="urgency">
-      <h4>Coming Soon!</h4>
-      <p>हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial</a> बघा — तो आत्ता ready आहे!</p>
+    <h2>कोणते Tools वापरायचे?</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Free / Paid</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Claude Code</strong></td>
+          <td>Paid ($20/mo)</td>
+          <td>Terminal-based, full app लिहितो. Complex logic, database, API — सगळं handle करतो. Best quality.</td>
+        </tr>
+        <tr>
+          <td><strong>Cursor</strong></td>
+          <td>Free tier + Paid</td>
+          <td>VS Code-based, code real-time दिसतो. App बनवताना changes live बघता येतात.</td>
+        </tr>
+        <tr>
+          <td><strong>Windsurf</strong></td>
+          <td>Free tier + Paid</td>
+          <td>Cursor सारखंच, पण AI flow थोडा वेगळा. Try करून बघा कोणतं आवडतं.</td>
+        </tr>
+        <tr>
+          <td><strong>Antigravity</strong></td>
+          <td>Free (preview)</td>
+          <td>Google चा AI IDE — multiple agents एकत्र काम करतात. Browser-based, Gemini + Claude models.</td>
+        </tr>
+        <tr>
+          <td><strong>Bolt.new</strong></td>
+          <td>Free tier available</td>
+          <td>Browser मध्ये app बनवा, install काहीच नाही. Quick prototypes साठी perfect.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="tip">
+      <h4>कुठून सुरुवात करायची?</h4>
+      <p>Quick prototype बनवायचं असेल तर <strong>Bolt.new</strong> वापरा. Serious app बनवायचं असेल — database, login, API — तर <strong>Claude Code</strong> वापरा. <strong>Antigravity</strong> सध्या free आहे आणि multiple agents एकत्र वापरता येतात — paid tool घेण्यापूर्वी नक्की try करा.</p>
+    </div>
+
+    <h2>Copy-Paste Prompts</h2>
+    <p>हे prompts direct tool मध्ये paste करा. Details तुमच्या गरजेनुसार बदला.</p>
+
+    <div class="exercise">
+      <h4>Todo App</h4>
+      <p>Build a todo app with these features: Add tasks with title and due date, mark tasks as complete, delete tasks, filter by (All, Active, Completed), tasks persist in local storage. Use clean minimal UI with dark mode support. Add smooth animations when adding/removing tasks. Tech: HTML, CSS, JavaScript (no frameworks needed).</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Expense Tracker</h4>
+      <p>Create an expense tracker app. Features: Add expenses with amount (₹), category (Food, Transport, Shopping, Bills, Other), and date. Show monthly total, category-wise breakdown with pie chart, and recent transactions list. Filter by month and category. Store data in local storage. Use Chart.js for graphs. Clean, modern UI.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Small Business Inventory App</h4>
+      <p>Build an inventory management app for a small shop. Features: Add products with name, price (₹), quantity, and category. Edit and delete products. Low stock alert when quantity below 5. Search and filter products. Show total inventory value. Export data as CSV. Use a clean dashboard layout with cards showing key stats at top.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Daily Habit Tracker</h4>
+      <p>Create a habit tracking app. Features: Add habits with name and target frequency (daily/weekly). Check off habits each day on a calendar grid. Show streak count for each habit. Weekly and monthly progress view with bar charts. Motivational message when streak reaches 7, 30, 100 days. Data in local storage. Colorful, engaging design.</p>
+    </div>
+
+    <div class="tip">
+      <h4>Pro Tips</h4>
+      <ul>
+        <li>पहिल्यांदा <strong>simple version</strong> बनवा. काम करतं का बघा. मग features add करा — "add user login", "add dark mode".</li>
+        <li>App मध्ये bug आलं तर error message copy करा आणि AI ला paste करा — तो fix करतो.</li>
+        <li>"Make it a PWA" सांगा — तुमचं web app phone वर install करता येईल, native app सारखं.</li>
+        <li>Data persist करायचं असेल तर "use local storage" किंवा "add SQLite database" सांगा.</li>
+      </ul>
+    </div>
+
+    <div class="warning">
+      <h4>लक्षात ठेवा</h4>
+      <p>AI बनवलेली app ही working prototype असते. Production app साठी security (login, data validation), proper database, आणि hosting लागेल. पण personal use किंवा small business साठी AI output बरेचदा directly चालतो.</p>
     </div>
   </main>
 

@@ -22,15 +22,70 @@
 
     <p>Audio आणि video चे text मध्ये रूपांतर करा. Lectures, meetings, interviews, podcasts — कोणत्याही audio चे accurate transcription मिनिटात. मराठी, Hindi, English — सगळ्या languages support होतात.</p>
 
-    <div class="tip">
-      <h4>कोणते tools वापरता येतात?</h4>
-      <p><strong>WhisperFlow, OpenAI Whisper, Otter.ai</strong></p>
-      <p>प्रत्येक tool चे detailed tutorial लवकरच येतोय.</p>
+    <h2>Tool Comparison</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Free / Paid</th>
+          <th>Key Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Gemini</strong></td>
+          <td>Free</td>
+          <td>Google Gemini मध्ये audio file upload करा, transcription मागा. मराठी audio चांगलं समजतो. Free आहे आणि summary पण एकदम करतो. सगळ्यात easy method.</td>
+        </tr>
+        <tr>
+          <td><strong>Whisper (OpenAI)</strong></td>
+          <td>Free, open source</td>
+          <td>सगळ्यात accurate transcription engine. Local machine वर run करता येतो (privacy साठी best). मराठी support आहे. Technical setup लागतो — Python knowledge हवं.</td>
+        </tr>
+        <tr>
+          <td><strong>Otter.ai</strong></td>
+          <td>Free tier (300 min/month), Pro $17/month</td>
+          <td>English transcription साठी best. Real-time transcription करतो — meeting मध्ये live captions. Speaker identification feature आहे. मराठी support limited आहे.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Copy-Paste Prompts</h2>
+
+    <div class="exercise">
+      <h4>Gemini ने Audio Transcribe करा</h4>
+      <p>Gemini (gemini.google.com) वर जा → audio file upload करा → हा prompt द्या:<br><br>
+      "Transcribe this audio file accurately. The audio is in Marathi. Keep the original Marathi text in Devanagari script. Add paragraph breaks where there are natural pauses. If there are multiple speakers, label them as Speaker 1, Speaker 2, etc."</p>
     </div>
 
-    <div class="urgency">
-      <h4>Coming Soon!</h4>
-      <p>हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial</a> बघा — तो आत्ता ready आहे!</p>
+    <div class="exercise">
+      <h4>Transcription Clean Up करा</h4>
+      <p>Transcription झाल्यावर Gemini ला हा prompt द्या:<br><br>
+      "Clean up this transcription: remove filler words (um, uh, बरं, म्हणजे repeated), fix obvious errors, add proper punctuation. Keep the meaning exactly the same — don't rephrase. Output in the same language as the original."</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Meeting Notes बनवा Transcription मधून</h4>
+      <p>Meeting recording transcribe केल्यावर हा prompt वापरा:<br><br>
+      "From this meeting transcription, create structured notes: 1) Key decisions made, 2) Action items with who is responsible, 3) Important points discussed, 4) Next steps. Keep it concise. Output in the same language as the meeting."</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Lecture Notes — Transcript मधून Study Material</h4>
+      <p>"Convert this lecture transcription into well-organized study notes. Add headings for each topic discussed. Highlight key concepts and definitions. Create a brief summary at the end. Keep technical terms as-is but explain them in simple Marathi where possible."</p>
+    </div>
+
+    <h2>Tips</h2>
+
+    <div class="tip">
+      <h4>Best Transcription Results कसे मिळवायचे?</h4>
+      <ul>
+        <li><strong>Gemini सगळ्यात easy आहे:</strong> फक्त audio upload करा आणि "transcribe this" म्हणा. Free आहे, setup नाही, account बनवलं की झालं.</li>
+        <li><strong>मराठी audio साठी:</strong> Gemini किंवा Whisper best आहे. Otter.ai English साठी चांगला पण मराठी साठी अजून तितका accurate नाही.</li>
+        <li><strong>Audio quality matters:</strong> Clear audio = accurate transcription. Background noise असेल तर accuracy कमी होते.</li>
+        <li><strong>Long recordings split करा:</strong> 2 तासांपेक्षा मोठी recording असेल तर smaller parts मध्ये split करा — accuracy चांगली राहते.</li>
+        <li><strong>Privacy sensitive content:</strong> Whisper locally run करता येतो — तुमचा data कुठेही upload होत नाही. Confidential meetings साठी best option.</li>
+      </ul>
     </div>
   </main>
 

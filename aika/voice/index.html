@@ -69,6 +69,7 @@
             <li><a href="/aimarathi/claude-code/">Claude Code</a></li>
             <li><a href="/aimarathi/cursor/">Cursor</a></li>
             <li><a href="/aimarathi/windsurf/">Windsurf</a></li>
+            <li><a href="/aimarathi/antigravity/">Antigravity</a></li>
             <li><a href="/aimarathi/github-copilot/">GitHub Copilot</a></li>
             <li><a href="/aimarathi/midjourney/">Midjourney</a></li>
             <li><a href="/aimarathi/canva-ai/">Canva AI</a></li>
@@ -85,6 +86,11 @@
           <span class="dropdown-label">&#128221; Blog &#9662;</span>
           <ul class="dropdown">
             <li><a href="/aimarathi/blog/aggregators/">AI Aggregators</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-copywriting/">Prompt Engineering: Copywriting</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-ad-images/">Prompt Engineering: Ad Images</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-app/">Prompt Engineering: App बनवा</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-music/">Prompt Engineering: Music</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-voice/">Prompt Engineering: Voice</a></li>
           </ul>
         </li>
       </ul>
@@ -100,17 +106,82 @@
       <h1>Voice Generation</h1>
     </div>
 
-    <p>Text लिहा, natural आवाजात बोलतो. Voiceovers, narration, dubbing — कोणत्याही language मध्ये.</p>
+    <p>Text लिहा, AI natural आवाजात बोलतो — voiceovers, audiobooks, YouTube narration, presentations, सगळ्यासाठी. मराठी text द्या, मराठी आवाजात output मिळतो. आता कोणालाही professional voiceover artist hire करायची गरज नाही.</p>
 
     <div class="tip">
-      <h4>कोणते tools वापरता येतात?</h4>
-      <p><strong>ElevenLabs, Play.ht, LMNT</strong></p>
-      <p>प्रत्येक tool चे detailed tutorial लवकरच येतोय.</p>
+      <h4>Voice generation साठी prompting tips</h4>
+      <p>Natural-sounding voice output मिळवायचं असेल तर हा guide नक्की वाचा: <a href="/aimarathi/blog/prompt-engineering-voice/">Prompt Engineering: Voice</a> — settings, pauses, आणि tone control step-by-step.</p>
     </div>
 
-    <div class="urgency">
-      <h4>Coming Soon!</h4>
-      <p>हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial</a> बघा — तो आत्ता ready आहे!</p>
+    <h2>Tool Comparison</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Free / Paid</th>
+          <th>Key Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>ElevenLabs</strong></td>
+          <td>Free tier (10 min/month), Starter $5/month</td>
+          <td>सगळ्यात natural आवाज. मराठी support उत्तम आहे. 30+ voices available. Emotion, pace control करता येतो. Voice cloning पण आहे.</td>
+        </tr>
+        <tr>
+          <td><strong>Google TTS</strong></td>
+          <td>Free (Google Translate मधून)</td>
+          <td>Completely free. Google Translate मध्ये मराठी text टाका आणि speaker icon दाबा. Quality basic आहे पण quick use साठी perfect. API पण available आहे.</td>
+        </tr>
+        <tr>
+          <td><strong>NaturalReader</strong></td>
+          <td>Free tier, Plus $10/month</td>
+          <td>PDF, docs, web pages — सगळं read aloud करतो. Chrome extension आहे — कोणतीही webpage ऐकता येते. मराठी voices available आहेत.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Copy-Paste Prompts</h2>
+
+    <div class="exercise">
+      <h4>YouTube Video साठी Marathi Narration</h4>
+      <p>ElevenLabs वर जा → Text to Speech → मराठी voice निवडा → हा text paste करा:<br><br>
+      "नमस्कार मित्रांनो, आजच्या video मध्ये आपण बघणार आहोत AI चा वापर करून तुमचं daily काम कसं सोपं करायचं. हे सगळे tools free आहेत आणि कोणीही वापरू शकतो. चला तर मग सुरू करूया."<br><br>
+      Settings: Stability 50%, Clarity 75%, Speed normal ठेवा.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Audiobook Style Narration</h4>
+      <p>ElevenLabs मध्ये "Rachel" किंवा शांत voice निवडा → हा sample try करा:<br><br>
+      "सकाळचे सहा वाजले होते. गावाच्या वेशीवर एक म्हातारा बसला होता. त्याच्या डोळ्यांत एक वेगळीच चमक होती — जणू काही वर्षांपूर्वीच्या आठवणी पुन्हा जिवंत झाल्या होत्या."<br><br>
+      Settings: Stability 70% (consistent tone साठी), Clarity 80%, Speed थोडा slow करा.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Presentation Voiceover</h4>
+      <p>Slides साठी professional voiceover बनवा:<br><br>
+      "या presentation मध्ये आपण तीन गोष्टी बघणार आहोत. पहिली — AI म्हणजे नक्की काय. दुसरी — AI चा आपल्या daily life मध्ये कसा वापर होतो. आणि तिसरी — AI शिकायला कुठून सुरुवात करायची."<br><br>
+      Tip: प्रत्येक slide साठी separate audio generate करा — editing सोपी होते.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Gemini ने Script लिहा, ElevenLabs ने बोला</h4>
+      <p>Gemini ला हा prompt द्या:<br><br>
+      "Write a 2-minute voiceover script in Marathi for a YouTube video about [तुमचा topic]. Conversational tone, simple language. Include a hook in the first line. Break into short paragraphs — each paragraph is one scene. Use Marathi-English mix naturally."<br><br>
+      Gemini चा output ElevenLabs मध्ये paste करा — done!</p>
+    </div>
+
+    <h2>Tips</h2>
+
+    <div class="tip">
+      <h4>Natural आवाज कसा मिळवायचा?</h4>
+      <ul>
+        <li><strong>Punctuation matters:</strong> comma ला pause येतो, full stop ला मोठा pause. तुम्हाला pause हवा तिथे "..." किंवा "—" वापरा.</li>
+        <li><strong>Short paragraphs:</strong> एकदम लांब text देऊ नका. 2-3 वाक्यांचे paragraphs द्या — output natural वाटतो.</li>
+        <li><strong>ElevenLabs free tier:</strong> 10 minutes पुरेसे नसतील तर दुसरा email ने नवीन account बनवा, किंवा Google TTS ने basic काम करा.</li>
+        <li><strong>Multiple voices mix करा:</strong> Dialogue style content साठी दोन वेगळे voices वापरा — एक narrator, एक character. Export करून audio editor मध्ये combine करा.</li>
+        <li><strong>Speed adjust करा:</strong> ElevenLabs मध्ये speed control आहे. Tutorial content साठी थोडा slow ठेवा, intro/outro साठी normal pace.</li>
+      </ul>
     </div>
   </main>
 

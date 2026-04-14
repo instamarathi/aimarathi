@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gemini — AI Marathi</title>
+  <meta name="description" content="Google Gemini मराठीत शिका. Android phone वर FREE AI assistant — search, image generation, file upload सगळं करता येतं.">
   <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
 </head>
 <body>
+
   <nav>
     <div class="nav-inner">
       <a href="/aimarathi/" class="logo">
@@ -66,6 +69,7 @@
             <li><a href="/aimarathi/claude-code/">Claude Code</a></li>
             <li><a href="/aimarathi/cursor/">Cursor</a></li>
             <li><a href="/aimarathi/windsurf/">Windsurf</a></li>
+            <li><a href="/aimarathi/antigravity/">Antigravity</a></li>
             <li><a href="/aimarathi/github-copilot/">GitHub Copilot</a></li>
             <li><a href="/aimarathi/midjourney/">Midjourney</a></li>
             <li><a href="/aimarathi/canva-ai/">Canva AI</a></li>
@@ -82,6 +86,11 @@
           <span class="dropdown-label">&#128221; Blog &#9662;</span>
           <ul class="dropdown">
             <li><a href="/aimarathi/blog/aggregators/">AI Aggregators</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-copywriting/">Prompt Engineering: Copywriting</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-ad-images/">Prompt Engineering: Ad Images</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-app/">Prompt Engineering: App बनवा</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-music/">Prompt Engineering: Music</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-voice/">Prompt Engineering: Voice</a></li>
           </ul>
         </li>
       </ul>
@@ -89,43 +98,132 @@
     </div>
   </nav>
 
-<main class="container">
-  <p class="breadcrumb"><a href="/aimarathi/">AIMarathi</a> &rsaquo; LLM &rsaquo; Gemini</p>
-  <h1>Gemini</h1>
-  <p>Google चा AI model. Search, coding, analysis — Google ecosystem शी integrate.</p>
-  <div class="tip">
-    <strong>Coming Soon!</strong> हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial बघा!</a>
-  </div>
-</main>
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo; LLM &rsaquo; Gemini
+      </div>
+      <h1>Google Gemini</h1>
+    </div>
 
-<footer>
-  <p>&copy; 2026 AI Marathi</p>
-</footer>
+    <p>Google चा AI assistant. तुमच्या Android phone वर <strong>already free available</strong> आहे — Google app उघडा आणि Gemini tab वर जा. Beginners साठी हा सगळ्यात सोपा आणि best option आहे.</p>
 
-<script>
-  (function() {
-    var toggle = document.getElementById('themeToggle');
-    var stored = localStorage.getItem('aimarathi-theme');
-    if (stored) document.documentElement.setAttribute('data-theme', stored);
-    function updateIcon() {
-      toggle.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u2600' : '\u263E';
-    }
-    updateIcon();
-    toggle.addEventListener('click', function() {
-      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('aimarathi-theme', next);
+    <p>Gemini Google Search शी directly connected आहे, त्यामुळे latest information instantly मिळते. Images generate करता येतात, files upload करता येतात, आणि Gmail, Docs, Drive सगळ्या Google apps मध्ये integrated आहे.</p>
+
+    <div class="tip">
+      <strong>Beginners साठी #1 recommendation:</strong> तुमच्याकडे Android phone असेल तर आत्ताच Google app उघडा — Gemini tab तिथेच आहे, काहीही install करायला नको शिवाय sign-in!
+    </div>
+
+    <!-- काय करता येतं -->
+    <section>
+      <h2>Gemini ने काय काय करता येतं?</h2>
+      <ul>
+        <li><strong>Smart Search:</strong> Google Search + AI एकत्र — "पुण्यात weekend ला कुठे फिरायला जावं?" असं विचारा, detailed plan मिळेल</li>
+        <li><strong>Image Generation:</strong> "Draw a Warli art style poster for Ganesh Chaturthi" — images directly generate करतो</li>
+        <li><strong>File Upload &amp; Analysis:</strong> PDF, images, documents upload करा — summarize, translate, analyze सगळं करतो</li>
+        <li><strong>Google Apps Integration:</strong> Gmail मधले emails summarize करा, Docs मध्ये content लिहा, Sheets मध्ये data analyze करा</li>
+        <li><strong>Multilingual Support:</strong> मराठीत विचारा, मराठीत उत्तर देतो. Hindi, English — कोणत्याही language मध्ये चालतं</li>
+      </ul>
+    </section>
+
+    <!-- Pricing -->
+    <section>
+      <h2>किती खर्च येतो?</h2>
+      <table>
+        <thead>
+          <tr><th>Plan</th><th>Price</th><th>काय मिळतं</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Free</strong></td>
+            <td>₹0</td>
+            <td>Gemini 2.0 Flash — बरंच generous आहे, daily use साठी पुरेसं</td>
+          </tr>
+          <tr>
+            <td><strong>Gemini Advanced</strong></td>
+            <td>₹1,950/month</td>
+            <td>Gemini Ultra model, 1M token context, Google One 2TB storage included</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Free tier खूपच generous आहे — बऱ्याच लोकांना paid plan ची गरजच भासणार नाही.</p>
+    </section>
+
+    <!-- कसं सुरू करायचं -->
+    <section>
+      <h2>कसं सुरू करायचं?</h2>
+      <ol>
+        <li><strong>Phone वर:</strong> Google app उघडा → Gemini tab वर tap करा. किंवा Play Store वरून "Gemini" app install करा</li>
+        <li><strong>Computer वर:</strong> <a href="https://gemini.google.com" target="_blank">gemini.google.com</a> उघडा आणि Google account ने sign in करा</li>
+        <li>मराठीत किंवा English मध्ये तुमचा प्रश्न type करा</li>
+        <li>Image upload करायचं असेल तर camera/attachment icon वापरा</li>
+      </ol>
+    </section>
+
+    <!-- Example Prompts -->
+    <section>
+      <h2>Try करा — Copy-Paste Prompts</h2>
+
+      <div class="exercise">
+        <h4>Daily Use: Travel Planning</h4>
+        <pre>मी पुण्याहून गोव्याला 3 दिवसांसाठी जायचं plan करतोय.
+Budget: ₹15,000 per person.
+Best route, stay options, आणि must-visit places सांग.
+Day-wise itinerary बनव.</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Study Help: Exam Preparation</h4>
+        <pre>मला 10th class Science चा "Light: Reflection and Refraction" chapter
+समजावून सांग मराठीत. Important formulas list कर, आणि
+5 practice questions दे with answers.</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Work: Email Draft</h4>
+        <pre>माझ्या boss ला एक professional email लिहून दे.
+Subject: requesting work from home for next week.
+Reason: family function in Kolhapur.
+Tone: polite but confident. English मध्ये लिहा.</pre>
+      </div>
+    </section>
+
+    <div class="tip">
+      <strong>Pro tip:</strong> Gemini ला "@Gmail" किंवा "@Drive" वापरून directly तुमच्या Google data वर काम करायला सांगता येतं. उदा: "@Gmail माझे last week चे unread emails summarize कर" — हे फक्त Gemini ला जमतं!
+    </div>
+
+  </main>
+
+  <footer>
+    <p><strong>AIMarathi</strong> — AI शिका, मराठीत. Free and open.</p>
+    <p>A project by <a href="https://instamarathi.github.io">InstaMarathi</a></p>
+  </footer>
+
+  <script>
+    (function() {
+      var toggle = document.getElementById('themeToggle');
+      var stored = localStorage.getItem('aimarathi-theme');
+      if (stored) document.documentElement.setAttribute('data-theme', stored);
+      function updateIcon() {
+        toggle.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u2600' : '\u263E';
+      }
       updateIcon();
-    });
-    document.getElementById('navHamburger').addEventListener('click', function() {
-      document.getElementById('navLinks').classList.toggle('open');
-    });
-    document.querySelectorAll('.dropdown-label').forEach(function(label) {
-      label.addEventListener('click', function() {
-        this.parentElement.classList.toggle('mobile-open');
+      toggle.addEventListener('click', function() {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('aimarathi-theme', next);
+        updateIcon();
       });
-    });
-  })();
-</script>
+      document.getElementById('navHamburger').addEventListener('click', function() {
+        document.getElementById('navLinks').classList.toggle('open');
+      });
+      document.querySelectorAll('.dropdown-label').forEach(function(label) {
+        label.addEventListener('click', function() {
+          this.parentElement.classList.toggle('mobile-open');
+        });
+      });
+    })();
+  </script>
+
 </body>
 </html>

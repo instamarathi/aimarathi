@@ -69,6 +69,7 @@
             <li><a href="/aimarathi/claude-code/">Claude Code</a></li>
             <li><a href="/aimarathi/cursor/">Cursor</a></li>
             <li><a href="/aimarathi/windsurf/">Windsurf</a></li>
+            <li><a href="/aimarathi/antigravity/">Antigravity</a></li>
             <li><a href="/aimarathi/github-copilot/">GitHub Copilot</a></li>
             <li><a href="/aimarathi/midjourney/">Midjourney</a></li>
             <li><a href="/aimarathi/canva-ai/">Canva AI</a></li>
@@ -85,6 +86,11 @@
           <span class="dropdown-label">&#128221; Blog &#9662;</span>
           <ul class="dropdown">
             <li><a href="/aimarathi/blog/aggregators/">AI Aggregators</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-copywriting/">Prompt Engineering: Copywriting</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-ad-images/">Prompt Engineering: Ad Images</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-app/">Prompt Engineering: App बनवा</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-music/">Prompt Engineering: Music</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-voice/">Prompt Engineering: Voice</a></li>
           </ul>
         </li>
       </ul>
@@ -100,17 +106,78 @@
       <h1>Automation & Scripts</h1>
     </div>
 
-    <p>Repetitive काम automate करा — file renaming, data processing, API calls, cron jobs. AI script लिहितो.</p>
+    <p>Repetitive काम automate करा — file renaming, data cleanup, email automation, cron jobs. AI ला सांगा काय करायचं, तो Python/Bash script लिहितो. रोज 2 तास वाचवा.</p>
+
+    <h2>कोणते Tools वापरायचे?</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Free / Paid</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Claude Code</strong></td>
+          <td>Paid ($20/mo)</td>
+          <td>Terminal-based — script लिहितो, test करतो, fix करतो. File system access असल्यामुळे automation साठी best.</td>
+        </tr>
+        <tr>
+          <td><strong>ChatGPT</strong></td>
+          <td>Free tier + Paid</td>
+          <td>Script लिहून देतो, explain करतो. Free tier मध्ये पण चांगलं काम करतो.</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini</strong></td>
+          <td>Free</td>
+          <td>Google चा AI — free आहे. Script लिहून देतो, Google Workspace integration साठी especially useful.</td>
+        </tr>
+      </tbody>
+    </table>
 
     <div class="tip">
-      <h4>कोणते tools वापरता येतात?</h4>
-      <p><strong>Claude Code, GitHub Copilot</strong></p>
-      <p>प्रत्येक tool चे detailed tutorial लवकरच येतोय.</p>
+      <h4>Recommend: Gemini ने सुरुवात करा</h4>
+      <p><strong>Gemini free आहे</strong> — simple scripts साठी चांगलं काम करतो. Complex automation लागलं (multiple files, error handling) तर <strong>Claude Code</strong> वापरा — तो directly तुमच्या system वर script run करतो.</p>
     </div>
 
-    <div class="urgency">
-      <h4>Coming Soon!</h4>
-      <p>हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial</a> बघा — तो आत्ता ready आहे!</p>
+    <h2>Copy-Paste Prompts</h2>
+    <p>हे prompts direct tool मध्ये paste करा. File paths आणि details तुमच्या गरजेनुसार बदला.</p>
+
+    <div class="exercise">
+      <h4>File Renaming Script</h4>
+      <p>Write a Python script that renames all files in a folder. Rules: 1) Convert filenames to lowercase, 2) Replace spaces with hyphens, 3) Add today's date as prefix (YYYY-MM-DD), 4) Handle duplicate names by adding -1, -2 suffix. Example: "My Report.pdf" becomes "2024-01-15-my-report.pdf". Add a dry-run mode that shows what will change without actually renaming. Print a summary of changes.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Email Automation Script</h4>
+      <p>Write a Python script that reads a CSV file with columns (Name, Email, Amount) and sends personalized payment reminder emails. Use SMTP. Email template: "Hi {Name}, this is a friendly reminder that ₹{Amount} is pending. Please pay by end of this week." Add: 1) Log which emails were sent, 2) Delay between emails to avoid spam filters, 3) Error handling for invalid emails. Include setup instructions for Gmail SMTP.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Data Cleanup Script</h4>
+      <p>Write a Python script to clean messy CSV data. Tasks: 1) Remove duplicate rows, 2) Fix phone numbers — ensure all are 10-digit format (remove +91, spaces, dashes), 3) Standardize date formats to YYYY-MM-DD, 4) Fill empty cells in "City" column with "Unknown", 5) Remove rows where email column is empty, 6) Save cleaned data as new CSV. Show before/after row count and summary of changes.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Folder Organizer Script</h4>
+      <p>Write a Python script that organizes files in my Downloads folder into subfolders by type. Rules: Images (.jpg, .png, .gif, .svg) go to "Images/", Documents (.pdf, .doc, .docx, .xlsx) to "Documents/", Videos (.mp4, .mkv, .avi) to "Videos/", Code (.py, .js, .html, .css) to "Code/", everything else to "Others/". Create folders if they don't exist. Show summary: how many files moved to each folder.</p>
+    </div>
+
+    <div class="tip">
+      <h4>Pro Tips</h4>
+      <ul>
+        <li>Script run करण्यापूर्वी <strong>dry-run mode</strong> मागा — आधी काय होणार ते बघा, मग actually run करा.</li>
+        <li>"Add error handling" सांगायला विसरू नका — real data messy असतो, script crash होता कामा नये.</li>
+        <li>AI ने दिलेला script आधी <strong>test data</strong> वर run करा, production data वर नाही.</li>
+        <li>Recurring task असेल तर "make it a cron job" किंवा "add scheduling" सांगा — script automatically run होईल.</li>
+      </ul>
+    </div>
+
+    <div class="warning">
+      <h4>लक्षात ठेवा</h4>
+      <p>Automation scripts तुमच्या files, emails, data ला touch करतात. कोणताही script run करण्यापूर्वी <strong>backup घ्या</strong>. Dry-run आधी करा. Password किंवा API keys script मध्ये hardcode करू नका — environment variables वापरा.</p>
     </div>
   </main>
 

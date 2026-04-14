@@ -20,10 +20,92 @@
       <h1>GitHub Copilot</h1>
     </div>
 
-    <p>GitHub चा AI coding assistant. VS Code मध्ये directly integrate होतो — code suggestions real-time मिळतात.</p>
+    <p>GitHub Copilot हा GitHub चा official AI coding assistant आहे. तुमच्या editor मध्ये directly बसतो — VS Code, JetBrains, Neovim — आणि real-time code suggestions देतो. GitHub ecosystem शी tight integration असल्यामुळे, repo context चांगला समजतो.</p>
+
+    <!-- काय करता येतं -->
+    <section>
+      <h2>काय करता येतं?</h2>
+      <ul>
+        <li><strong>Autocomplete (Ghost Text)</strong> — तुम्ही type करताना पुढच्या lines gray text मध्ये दिसतात. Tab press करा — done. Industry मधला best autocomplete experience आहे.</li>
+        <li><strong>Copilot Chat</strong> — VS Code sidebar मध्ये AI chat. Code explain करा, bugs शोधा, tests generate करा — सगळं chat मधून.</li>
+        <li><strong>Inline Chat</strong> — Ctrl+I press करा, directly code मध्ये AI ला instruction द्या. Select केलेला code edit करतो.</li>
+        <li><strong>GitHub Integration</strong> — Pull request summaries, code review suggestions, commit message generation. GitHub वर काम करत असाल तर हे seamless आहे.</li>
+        <li><strong>Multi-language Support</strong> — Python, JavaScript, TypeScript, Go, Java, C#, Ruby — practically सगळ्या languages support करतो.</li>
+      </ul>
+    </section>
+
+    <!-- Pricing -->
+    <section>
+      <h2>किती खर्च येतो?</h2>
+      <table>
+        <thead>
+          <tr><th>Plan</th><th>Price</th><th>काय मिळतं</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Free</td><td>$0</td><td>Limited completions आणि chat messages per month. Open source contributors आणि students ना free मिळतं.</td></tr>
+          <tr><td>Individual</td><td>$10/month</td><td>Unlimited completions, unlimited chat, सगळे editors support</td></tr>
+          <tr><td>Business</td><td>$19/user/month</td><td>Organization-wide policies, IP indemnity, admin controls</td></tr>
+        </tbody>
+      </table>
+      <div class="tip">
+        <strong>Tip:</strong> Student असाल तर <a href="https://github.com/education" target="_blank">GitHub Student Developer Pack</a> apply करा — Copilot Individual free मिळतं. .edu email लागतो. Student नसाल तर एक महिना $10 चा Individual plan try करा — Copilot ने save होणारा coding time बघता subscription लगेच वसूल होतो.
+      </div>
+    </section>
+
+    <!-- कसं सुरू करायचं -->
+    <section>
+      <h2>कसं सुरू करायचं?</h2>
+
+      <div class="step">
+        <span class="step-number">1</span>
+        <h3>GitHub account बनवा</h3>
+        <p><a href="https://github.com" target="_blank">github.com</a> वर account नसेल तर बनवा. Copilot हे GitHub चं product आहे, त्यामुळे GitHub account हवंच.</p>
+      </div>
+
+      <div class="step">
+        <span class="step-number">2</span>
+        <h3>Copilot activate करा</h3>
+        <p>GitHub Settings &gt; Copilot वर जा. Free plan select करा किंवा Individual plan subscribe करा. Student pack असेल तर automatically available होतं.</p>
+      </div>
+
+      <div class="step">
+        <span class="step-number">3</span>
+        <h3>VS Code extension install करा</h3>
+        <p>VS Code मध्ये Extensions tab उघडा, "GitHub Copilot" search करा, Install करा. GitHub login करा — extension automatically activate होईल.</p>
+      </div>
+
+      <div class="step">
+        <span class="step-number">4</span>
+        <h3>Code लिहायला सुरुवात करा</h3>
+        <p>कोणतीही file उघडा, type करायला सुरुवात करा — gray text मध्ये suggestions दिसतील. <strong>Tab</strong> — accept. <strong>Esc</strong> — dismiss. <strong>Ctrl+I</strong> — inline chat.</p>
+      </div>
+    </section>
+
+    <!-- Example Prompts -->
+    <section>
+      <h2>Try करा — Example Prompts</h2>
+
+      <div class="exercise">
+        <h3>Comment लिहा, code मिळवा:</h3>
+        <p><code>// function to validate email address and return true/false</code></p>
+        <p>हा comment लिहा आणि Enter press करा. Copilot पूर्ण function suggest करेल — Tab press करा.</p>
+      </div>
+
+      <div class="exercise">
+        <h3>Copilot Chat मध्ये विचारा:</h3>
+        <p><code>/explain what does this code do and are there any potential bugs?</code></p>
+        <p>Code select करा, Ctrl+I press करा, हे type करा. Copilot code explain करेल आणि bugs point out करेल.</p>
+      </div>
+
+      <div class="exercise">
+        <h3>Tests generate करा:</h3>
+        <p><code>/tests generate unit tests for this function with edge cases</code></p>
+        <p>Function select करा, Copilot Chat मध्ये हे type करा. Tests automatically generate होतील — file मध्ये paste करा.</p>
+      </div>
+    </section>
 
     <div class="tip">
-      <p><strong>Coming Soon!</strong> हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial</a> बघा — तो आत्ता ready आहे!</p>
+      <strong>Cursor vs Copilot?</strong> Copilot चा autocomplete experience सगळ्यात smooth आहे — tab-tab-tab करत code लिहिता येतो. पण Cursor चा chat आणि multi-file editing powerful आहे. दोन्ही try करा, तुम्हाला जे जास्त suit होतं ते वापरा.
     </div>
   </main>
 

@@ -20,17 +20,82 @@
       <h1>Podcast बनवा</h1>
     </div>
 
-    <p>Topic द्या, AI दोन माणसांची discussion बनवतो. NotebookLM चे podcast feature मस्त आहे.</p>
+    <p>AI वापरून podcast बनवणं आता खूप सोपं झालंय. Script लिहायला, editing करायला, show notes बनवायला, आणि अगदी AI hosts ची discussion बनवायला — सगळ्यासाठी tools आहेत. एकट्याने पण professional podcast चालवता येतो.</p>
 
-    <div class="tip">
-      <h4>कोणते tools वापरता येतात?</h4>
-      <p><strong>Google NotebookLM, ElevenLabs</strong></p>
-      <p>प्रत्येक tool चे detailed tutorial लवकरच येतोय.</p>
+    <h2>Tool Comparison</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Free / Paid</th>
+          <th>Key Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>NotebookLM (Google)</strong></td>
+          <td>Free</td>
+          <td>Documents upload करा, AI दोन hosts ची natural discussion बनवतो (Audio Overview feature). English मध्ये excellent. तुमचे notes, articles, PDFs — कशावरही podcast style conversation बनतो.</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini</strong></td>
+          <td>Free</td>
+          <td>Podcast scripts लिहायला best. Episode planning, show notes, guest questions — सगळं Gemini ने होतं. मराठी scripts पण लिहतो.</td>
+        </tr>
+        <tr>
+          <td><strong>Descript</strong></td>
+          <td>Free tier (1 hr/month), Hobbyist $24/month</td>
+          <td>Podcast editing magic. Text edit करा — audio automatically edit होतो. "Um", "uh" automatically काढतो. Filler word removal, studio sound — सगळं built-in.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Copy-Paste Prompts</h2>
+
+    <div class="exercise">
+      <h4>NotebookLM ने AI Podcast बनवा</h4>
+      <p>notebooklm.google.com वर जा → New Notebook → तुमचे documents upload करा (articles, notes, PDFs) → "Audio Overview" वर click करा → Generate.<br><br>
+      AI दोन hosts ची 10-15 minute natural discussion बनवतो तुमच्या content वर. English मध्ये output येतो. तुम्ही customization instructions पण देऊ शकता, जसे:<br><br>
+      "Focus on the practical applications. Keep the tone casual and fun. Explain technical concepts with simple analogies."</p>
     </div>
 
-    <div class="urgency">
-      <h4>Coming Soon!</h4>
-      <p>हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial</a> बघा — तो आत्ता ready आहे!</p>
+    <div class="exercise">
+      <h4>Gemini ने Podcast Script लिहा</h4>
+      <p>"Write a 15-minute podcast script in Marathi about [तुमचा topic]. Two hosts — one expert, one curious beginner. Conversational tone, not scripted-sounding. Include:<br>
+      - A catchy intro hook (30 seconds)<br>
+      - 3 main points with examples<br>
+      - A listener question segment<br>
+      - Outro with next episode teaser<br>
+      Mix Marathi and English naturally. Add [PAUSE], [LAUGH], [EMPHASIS] cues for recording."</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Episode Show Notes Generate करा</h4>
+      <p>Recording झाल्यावर transcript Gemini ला द्या आणि हा prompt वापरा:<br><br>
+      "From this podcast transcript, create show notes with: 1) Episode title — catchy, under 60 characters, 2) One-paragraph summary, 3) Key topics with timestamps (estimate based on position in text), 4) Links/resources mentioned, 5) 3 social media posts to promote this episode — one for Twitter, Instagram, and LinkedIn. Write in the same language as the transcript."</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Season Planning — 10 Episodes Plan करा</h4>
+      <p>"I'm starting a Marathi podcast about [तुमचा broad topic]. Plan 10 episodes for the first season. For each episode give me:<br>
+      - Episode title (catchy, Marathi-English mix)<br>
+      - 3-line description<br>
+      - 3 key talking points<br>
+      - 1 potential guest suggestion (type of expert, not specific person)<br>
+      Make sure episodes build on each other. Start simple, go deeper. Mix solo episodes with interview-style episodes."</p>
+    </div>
+
+    <h2>Tips</h2>
+
+    <div class="tip">
+      <h4>AI Podcast Workflow कसा असतो?</h4>
+      <ul>
+        <li><strong>NotebookLM हा shortcut आहे:</strong> तुम्हाला recording करायचं नसेल तर NotebookLM मध्ये documents टाका — AI पूर्ण podcast बनवतो. Blog posts चे podcast episodes बनवायला perfect.</li>
+        <li><strong>Script + Record + Edit:</strong> Gemini ने script लिहा → स्वतः record करा (phone वर पण चालतो) → Descript मध्ये edit करा. Professional output मिळतो.</li>
+        <li><strong>Descript चा magic:</strong> Recording मध्ये चुकलं तर Descript मध्ये text edit करा — audio automatically cut होतो. "Um" आणि filler words एका click ने निघतात.</li>
+        <li><strong>Consistency ठेवा:</strong> Intro आणि outro same ठेवा प्रत्येक episode ला. AI ने एकदा template बनवून घ्या, reuse करा.</li>
+        <li><strong>Free मध्ये सुरू करा:</strong> NotebookLM (free) + Gemini (free) + phone recording + Descript free tier — पहिले 10 episodes ला पैसे लागत नाहीत.</li>
+      </ul>
     </div>
   </main>
 

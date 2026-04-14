@@ -4,48 +4,121 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChatGPT — AI Marathi</title>
+  <meta name="description" content="ChatGPT tutorial मराठीत. OpenAI चा popular AI chatbot — writing, coding, image generation, voice mode सगळं शिका.">
   <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
 </head>
 <body>
+
 {{NAV}}
 
-<main class="container">
-  <p class="breadcrumb"><a href="/aimarathi/">AIMarathi</a> &rsaquo; LLM &rsaquo; ChatGPT</p>
-  <h1>ChatGPT</h1>
-  <p>OpenAI चा popular AI chatbot. काहीही विचारा — essays लिहा, ideas brainstorm करा, homework solve करा.</p>
-  <div class="tip">
-    <strong>Coming Soon!</strong> हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial बघा!</a>
-  </div>
-</main>
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo; LLM &rsaquo; ChatGPT
+      </div>
+      <h1>ChatGPT</h1>
+    </div>
 
-<footer>
-  <p>&copy; 2026 AI Marathi</p>
-</footer>
+    <p>OpenAI चा AI chatbot — जगात सगळ्यात popular AI tool. Essays लिहा, code debug करा, images generate करा, voice मध्ये बोला — ChatGPT सगळं करतो. Phone आणि computer दोन्हीवर चालतो.</p>
 
-<script>
-  (function() {
-    var toggle = document.getElementById('themeToggle');
-    var stored = localStorage.getItem('aimarathi-theme');
-    if (stored) document.documentElement.setAttribute('data-theme', stored);
-    function updateIcon() {
-      toggle.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u2600' : '\u263E';
-    }
-    updateIcon();
-    toggle.addEventListener('click', function() {
-      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('aimarathi-theme', next);
-      updateIcon();
-    });
-    document.getElementById('navHamburger').addEventListener('click', function() {
-      document.getElementById('navLinks').classList.toggle('open');
-    });
-    document.querySelectorAll('.dropdown-label').forEach(function(label) {
-      label.addEventListener('click', function() {
-        this.parentElement.classList.toggle('mobile-open');
-      });
-    });
-  })();
-</script>
+    <p>ChatGPT ने AI mainstream केलं. Plugin ecosystem खूप मोठं आहे, DALL-E ने images बनवता येतात, Code Interpreter ने data analysis करता येतो, आणि voice mode मध्ये directly बोलता येतं.</p>
+
+    <div class="tip">
+      <strong>सगळ्यात popular AI tool:</strong> तुमच्या friends पैकी कुणी AI वापरत असेल तर ते बहुतेक ChatGPT वापरतात. Community, tutorials, YouTube videos — सगळं सगळ्यात जास्त ChatGPT साठी available आहे.
+    </div>
+
+    <!-- काय करता येतं -->
+    <section>
+      <h2>ChatGPT ने काय काय करता येतं?</h2>
+      <ul>
+        <li><strong>Writing &amp; Brainstorming:</strong> Essays, emails, stories, cover letters — कोणत्याही प्रकारचं writing करतो. Tone adjust करता येतो</li>
+        <li><strong>Image Generation (DALL-E):</strong> "Draw a cute cat wearing a pagdi" — text वरून images generate करतो</li>
+        <li><strong>Code Interpreter:</strong> CSV/Excel file upload करा — charts बनवतो, data analyze करतो, Python code run करतो</li>
+        <li><strong>Voice Mode:</strong> Phone वर directly बोला — ChatGPT ऐकतो आणि बोलून answer देतो. Language practice साठी perfect</li>
+        <li><strong>Plugin Ecosystem:</strong> Web browsing, PDF reading, Canva integration — hundreds of plugins available आहेत</li>
+      </ul>
+    </section>
+
+    <!-- Pricing -->
+    <section>
+      <h2>किती खर्च येतो?</h2>
+      <table>
+        <thead>
+          <tr><th>Plan</th><th>Price</th><th>काय मिळतं</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Free</strong></td>
+            <td>₹0</td>
+            <td>GPT-4o mini model, basic features, limited messages per day</td>
+          </tr>
+          <tr>
+            <td><strong>ChatGPT Plus</strong></td>
+            <td>$20/month (~₹1,700)</td>
+            <td>GPT-4o full model, DALL-E, Code Interpreter, voice mode, plugins</td>
+          </tr>
+          <tr>
+            <td><strong>ChatGPT Team</strong></td>
+            <td>$25/person/month</td>
+            <td>Plus features + team workspace, admin controls</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Free tier मध्ये बरंच काम होतं. पण जर daily heavy use करायचं असेल तर Plus चा विचार करा.</p>
+      <div class="tip">
+        <strong>₹1,700 महिन्याला खूप वाटतं?</strong> फक्त एक महिना Plus घ्या आणि बघा — DALL-E, Code Interpreter, voice mode वापरून तुम्ही जे काम कराल त्याची value subscription पेक्षा कैक पट जास्त आहे. दोन-तीन मित्रांनी share केलं तर per person cost अजून कमी.
+      </div>
+    </section>
+
+    <!-- कसं सुरू करायचं -->
+    <section>
+      <h2>कसं सुरू करायचं?</h2>
+      <ol>
+        <li><strong>Computer वर:</strong> <a href="https://chatgpt.com" target="_blank">chatgpt.com</a> उघडा → "Sign up" करा (Google account ने होतं)</li>
+        <li><strong>Phone वर:</strong> Play Store / App Store वरून "ChatGPT" app download करा</li>
+        <li>Chat box मध्ये तुमचा प्रश्न type करा — मराठीत किंवा English मध्ये</li>
+        <li>Voice mode साठी headphone icon वर tap करा आणि directly बोला</li>
+      </ol>
+    </section>
+
+    <!-- Example Prompts -->
+    <section>
+      <h2>Try करा — Copy-Paste Prompts</h2>
+
+      <div class="exercise">
+        <h4>Creative Writing: कथा लिहा</h4>
+        <pre>एक short story लिहा मराठीत.
+Setting: पुण्यातला एक जुना वाडा.
+Genre: mystery.
+Length: 500 words.
+Language: मराठी with conversational tone.</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Data Analysis: Excel file analyze करा</h4>
+        <pre>ही Excel file upload करतोय — माझ्या दुकानाच्या 6 महिन्यांच्या sales चा data आहे.
+1. Month-wise sales trend chart बनव
+2. सगळ्यात जास्त विकला गेलेला product कोणता ते सांग
+3. Next month चा estimated sale काय असेल ते predict कर</pre>
+      </div>
+
+      <div class="exercise">
+        <h4>Learning: Concept समजून घ्या</h4>
+        <pre>मला "compound interest" हा concept समजावून सांग.
+मी 12th commerce चा student आहे.
+Real-life examples दे — जसं की FD, SIP, loan.
+मराठीत explain कर, formulas English मध्ये ठेव.</pre>
+      </div>
+    </section>
+
+    <div class="tip">
+      <strong>Pro tip:</strong> ChatGPT ला "Custom Instructions" set करता येतात. Settings मध्ये जा आणि सांगा "Always reply in Marathi unless I ask in English" — मग प्रत्येक वेळी सांगायला नको लागणार.
+    </div>
+
+  </main>
+
+{{FOOTER}}
+
 </body>
 </html>

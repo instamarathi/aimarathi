@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suno वर Marathi गाणी — Prompt Engineering | AI Marathi</title>
+  <meta name="description" content="Suno AI वर perfect Marathi गाणी generate करायला शिका — wedding songs, Ganpati songs, lo-fi beats. Step-by-step prompt engineering tutorial मराठीत.">
+  <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+{{NAV}}
+
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo; <a href="/aimarathi/blog/">Blog</a> &rsaquo; Prompt Engineering: Music
+      </div>
+      <h1>Suno वर Marathi गाणी — perfect song कसं generate करायचं?</h1>
+    </div>
+
+    <section>
+      <p>Suno AI ने music generation खूप सोपं केलंय — कोणीही text prompt टाकून गाणं बनवू शकतो. पण "सोपं" आणि "चांगलं" यात फरक आहे. बरेच लोक generic prompts टाकतात आणि मग output ऐकून disappoint होतात.</p>
+
+      <p>या tutorial मध्ये तुम्हाला शिकवतो की <strong>prompts कसे लिहायचे</strong> जे actually चांगली Marathi गाणी generate करतात. एक wedding song चं example घेऊन step-by-step बघू, आणि मग ready-to-use prompts देतो तुम्हाला.</p>
+    </section>
+
+    <!-- ==================== PART 1: Deep-dive walkthrough ==================== -->
+
+    <section>
+      <h2>Part 1: लग्नगीत बनवायचं — step by step</h2>
+      <p>समजा तुम्हाला एक traditional Marathi wedding song बनवायचंय. बघू तीन different levels चे prompts कसे वेगवेगळे results देतात.</p>
+
+      <h3>Level 1: Bad prompt</h3>
+      <div class="warning">
+        <p><strong>Prompt:</strong> "Make a Marathi wedding song"</p>
+        <p><strong>काय होतं:</strong> Suno ला कसलाच context नाही — genre काय? Mood काय? Instruments कोणते? Tempo काय? म्हणून AI एक generic Bollywood-ish गाणं बनवतो जे ना traditional वाटतं, ना specifically Marathi वाटतं. Auto-generated lyrics पण बहुतेक Hindi-mixed किंवा nonsense येतात.</p>
+      </div>
+
+      <h3>Level 2: Better prompt</h3>
+      <div class="tip">
+        <p><strong>Prompt:</strong> "A joyful Marathi wedding song, traditional style, with dholki and tasha beats, female vocals, celebratory mood"</p>
+        <p><strong>काय improve झालं:</strong> आता Suno ला mood (joyful), instruments (dholki, tasha), vocal type (female), आणि style (traditional) कळतंय. Output बरंच चांगलं येईल. पण still काही key details missing आहेत — tempo, specific genre feel, reference point.</p>
+      </div>
+
+      <h3>Level 3: Great prompts</h3>
+      <p>Best results साठी दोन approaches आहेत. कोणता वापरायचा ते तुमच्या गरजेवर depend करतो.</p>
+
+      <h4>Approach A — Description mode (lyrics Suno ला generate करू द्या)</h4>
+      <div class="exercise">
+        <p><strong>Prompt:</strong></p>
+        <p>"Upbeat Marathi lagna geet, traditional Maharashtrian wedding celebration, female lead vocal with group chorus, dholki + tasha + harmonium, tempo 130 BPM, joyful and energetic, folk-pop fusion, similar to traditional haldi ceremony songs"</p>
+      </div>
+      <p>हा prompt specific आहे कारण:</p>
+      <ul>
+        <li><strong>Genre:</strong> "lagna geet" + "folk-pop fusion" — AI ला exactly कोणता sound हवा ते कळतं</li>
+        <li><strong>Instruments:</strong> dholki, tasha, harmonium — generic "Indian music" नाही</li>
+        <li><strong>Tempo:</strong> 130 BPM — upbeat feel mathematically defined</li>
+        <li><strong>Vocal arrangement:</strong> female lead + group chorus — specific instruction</li>
+        <li><strong>Reference:</strong> "haldi ceremony songs" — AI ला context मिळतो</li>
+      </ul>
+
+      <h4>Approach B — Custom lyrics mode (स्वतःचे lyrics लिहा)</h4>
+      <p>जर तुम्हाला specific lyrics हवे असतील, तर Suno मध्ये "Custom" mode वापरा. <strong>Important: Romanized Marathi (English script मध्ये Marathi) वापरा, Devanagari नाही.</strong> Suno Romanized text बरोबर चांगलं pronounce करतो.</p>
+
+      <div class="exercise">
+        <p><strong>Lyrics field मध्ये:</strong></p>
+<pre>
+[Verse 1]
+Haldi lagli ga, haldi lagli
+Navri sajali, rang phulali
+Aai babanchi ladki aaj
+Sasarchya ghari nighali
+
+[Chorus]
+Dhol tashyacha gajar zala
+Aaj amchya ghari sohala
+Naach ga naach, gaav jaga
+Lagnachi dhoom machali
+
+[Verse 2]
+Ovalnya karun aarti keli
+Akshata lavun ashirvaad deli
+Dolyat paani, othat haasu
+Navri nandayla laagli
+
+[Bridge]
+Tasha vaajla, dhol vaajla
+Shehnai cha sur kaanaat aala
+
+[Chorus]
+Dhol tashyacha gajar zala
+Aaj amchya ghari sohala
+Naach ga naach, gaav jaga
+Lagnachi dhoom machali
+</pre>
+        <p><strong>Style description field मध्ये:</strong></p>
+        <p>"Traditional Maharashtrian lagna geet, female vocal, dholki beats, harmonium, 125 BPM, celebratory, folk-pop"</p>
+      </div>
+
+      <h3>Key takeaways</h3>
+      <ul>
+        <li><strong>Genre specificity:</strong> "Marathi lagna geet" &gt; "Indian wedding song" &gt; "wedding song"</li>
+        <li><strong>Instruments by name:</strong> tabla, dholki, tasha, harmonium, shehnai, sitar — specific instrument names लिहा</li>
+        <li><strong>BPM/Tempo:</strong> number द्या — 80 BPM (slow), 110 (medium), 130+ (fast/energetic)</li>
+        <li><strong>Vocal type:</strong> male/female, solo/duet/group chorus — specify करा</li>
+        <li><strong>Romanized Marathi:</strong> custom lyrics साठी English script मध्ये Marathi लिहा, Devanagari करू नका</li>
+        <li><strong>Structure tags:</strong> [Verse], [Chorus], [Bridge], [Outro] — हे tags Suno ला song structure समजायला मदत करतात</li>
+      </ul>
+    </section>
+
+    <!-- ==================== PART 2: Ready-to-use prompts ==================== -->
+
+    <section>
+      <h2>Part 2: Ready-to-use prompts</h2>
+      <p>हे prompts directly Suno मध्ये copy-paste करा. Style description field मध्ये टाका.</p>
+
+      <h3>1. Ganpati Visarjan Song</h3>
+      <div class="exercise">
+        <p><strong>Prompt:</strong></p>
+        <p>"Energetic Ganpati visarjan procession song, Maharashtrian dhol-tasha pathak style, heavy tasha and dhol beats, male group vocals chanting, tempo 140 BPM, high energy, powerful and celebratory, street festival vibe, similar to Pune Ganpati visarjan music"</p>
+      </div>
+
+      <h3>2. Lo-fi Study Beats (Indian touch)</h3>
+      <div class="exercise">
+        <p><strong>Prompt:</strong></p>
+        <p>"Lo-fi chill beats, soft sitar melody over mellow tabla rhythm, ambient Indian classical fusion, tempo 75 BPM, relaxing and meditative, study music, vinyl crackle texture, warm jazzy chords with tanpura drone in background"</p>
+      </div>
+
+      <h3>3. Marathi Rap / Hip-Hop</h3>
+      <div class="exercise">
+        <p><strong>Prompt:</strong></p>
+        <p>"Marathi hip-hop, Pune street style rap, aggressive flow with hard-hitting 808 bass, trap beats mixed with dholki samples, male rapper, tempo 90 BPM, confident and gritty, urban Maharashtrian vibe, modern production"</p>
+      </div>
+
+      <h3>4. Devotional Abhang</h3>
+      <div class="exercise">
+        <p><strong>Prompt:</strong></p>
+        <p>"Traditional Marathi abhang, devotional bhakti sangeet, Tukaram-Dnyaneshwar style, solo male vocal with veena and mridangam, pakhawaj rhythm, slow tempo 70 BPM, spiritual and meditative, Varkari tradition, simple melodic structure with devotional feeling"</p>
+      </div>
+
+      <h3>5. Cafe Lounge (Indian Elements)</h3>
+      <div class="exercise">
+        <p><strong>Prompt:</strong></p>
+        <p>"Cafe lounge background music, acoustic guitar with subtle sitar accents, light tabla groove, bossa nova meets Indian classical fusion, tempo 95 BPM, warm and relaxed, instrumental only, smooth and sophisticated, evening ambiance"</p>
+      </div>
+
+      <h3>6. Marathi Children's Nursery Rhyme</h3>
+      <div class="exercise">
+        <p><strong>Prompt:</strong></p>
+        <p>"Cheerful Marathi children's nursery rhyme, playful female vocal, simple catchy melody, acoustic guitar and xylophone with light dholki, tempo 110 BPM, happy and fun, sing-along style, bright and colorful sound, similar to traditional Marathi balgeet"</p>
+      </div>
+    </section>
+
+    <!-- ==================== PART 3: Common mistakes ==================== -->
+
+    <section>
+      <h2>Part 3: Common mistakes (करू नका हे)</h2>
+
+      <div class="warning">
+        <p><strong>Devanagari script वापरणे</strong></p>
+        <p>Suno ला Devanagari (मराठी) script मध्ये lyrics दिले तर pronunciation बरोबर येत नाही. Romanized Marathi (English letters मध्ये Marathi) वापरा — "Haldi lagli ga" हे "हळदी लागली गं" पेक्षा बरोबर pronounce होतं.</p>
+      </div>
+
+      <div class="warning">
+        <p><strong>BPM / Tempo specify करू नका</strong></p>
+        <p>Tempo न सांगितलं तर Suno random tempo निवडतो. तुम्हाला energetic गाणं हवं पण AI slow ballad बनवतो. BPM number द्या: 70-80 (slow/devotional), 100-115 (moderate), 125-140 (energetic/dance).</p>
+      </div>
+
+      <div class="warning">
+        <p><strong>"Indian music" म्हणणे</strong></p>
+        <p>"Indian music" म्हणजे Suno ला generic sitar + tabla mix समजतो. त्याऐवजी specific instruments लिहा: dholki, tasha, shehnai, harmonium, pakhawaj, tanpura. जितकं specific तितकं चांगलं.</p>
+      </div>
+
+      <div class="warning">
+        <p><strong>Structure tags न वापरणे</strong></p>
+        <p>Custom lyrics लिहिताना [Verse], [Chorus], [Bridge], [Outro] tags न दिले तर Suno ला कळत नाही कुठे verse संपतो आणि chorus सुरू होतो. Tags वापरले तर song structure professional वाटतो.</p>
+      </div>
+
+      <div class="warning">
+        <p><strong>पहिल्याच attempt मध्ये 3-4 minute song बनवणे</strong></p>
+        <p>Suno मध्ये लांब songs quality drop करतात. <strong>1 minute ने सुरू करा</strong>, आवडलं तर "Extend" button ने लांब करा. Short generations ची quality नेहमी चांगली असते.</p>
+      </div>
+    </section>
+
+    <div class="tip">
+      <p><strong>Pro tip:</strong> Suno मध्ये same prompt ने 2-3 variations generate करा. AI प्रत्येक वेळी वेगळं output देतो — सगळ्यात चांगलं version निवडा आणि मग extend करा. Iteration हा secret आहे.</p>
+    </div>
+  </main>
+
+{{FOOTER}}
+
+</body>
+</html>

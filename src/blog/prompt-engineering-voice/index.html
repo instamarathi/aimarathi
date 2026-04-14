@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElevenLabs Prompt Engineering: Voice — AI Marathi</title>
+  <meta name="description" content="ElevenLabs ने natural-sounding narration कसं मिळवायचं? Voice selection, text formatting, settings — सगळं शिका मराठीत. Ready-to-use templates included.">
+  <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+{{NAV}}
+
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo; <a href="/aimarathi/blog/">Blog</a> &rsaquo; Prompt Engineering: Voice
+      </div>
+      <h1>ElevenLabs ने narration — natural voice कसं मिळवायचं?</h1>
+    </div>
+
+    <section>
+      <p>ElevenLabs वर account बनवलं, text paste केलं, generate दाबलं — आणि आवाज robotic आला? तुम्ही एकटे नाही. बहुतेक लोकांचा पहिला experience असाच असतो.</p>
+
+      <p>Problem हा आहे की ElevenLabs मध्ये "prompt" म्हणजे फक्त text नाही. तुमचा real prompt म्हणजे <strong>चार गोष्टी एकत्र</strong>: voice selection, text formatting, SSML-like controls, आणि stability/clarity settings. या चारही गोष्टी बरोबर align झाल्या तरच natural-sounding output मिळतो.</p>
+
+      <p>या tutorial मध्ये आपण एक real project करणार — <strong>YouTube explainer video साठी narration</strong>. Step by step बघू की bad approach पासून great approach पर्यंत काय फरक पडतो.</p>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PART 1: DEEP-DIVE WALKTHROUGH                -->
+    <!-- ============================================ -->
+
+    <section>
+      <h2>Part 1: YouTube Narration — Bad ते Great</h2>
+
+      <div class="warning">
+        <h3>Bad Approach: Raw text paste करणं</h3>
+        <p>बरेच लोक असं करतात: Google Docs मधून paragraph copy करतात, ElevenLabs मध्ये paste करतात, random voice निवडतात, default settings ठेवतात, आणि Generate दाबतात.</p>
+        <p><strong>Result:</strong> Robotic pacing, चुकीचे emphasis, awkward pauses, आणि monotone delivery.</p>
+        <p><strong>का?</strong> ElevenLabs exactly तेच वाचतो जे तुम्ही देता — garbage in, garbage out. Long paragraphs ला तो एका breath मध्ये वाचायचा try करतो. Numbers "300" म्हणजे "three hundred" वाचतो (Marathi context मध्ये चुकीचं). Random voice चा accent तुमच्या content शी match होत नाही. Default settings generic असतात — narration साठी optimized नाहीत.</p>
+      </div>
+
+      <div class="tip">
+        <h3>Better Approach: Basic formatting + योग्य voice</h3>
+        <p>थोडं effort लावलं तर output dramatically improve होतो:</p>
+        <ul>
+          <li><strong>Hindi voice निवडा</strong> — ElevenLabs ला dedicated Marathi voices नाहीत अजून, पण Hindi voices accent-wise सगळ्यात जवळ आहेत. Voice library मध्ये "Hindi" filter लावा.</li>
+          <li><strong>Text लहान paragraphs मध्ये तोडा</strong> — 2-3 sentences max per paragraph. प्रत्येक paragraph मध्ये ElevenLabs natural pause घेतो.</li>
+          <li><strong>"..." वापरा pauses साठी</strong> — जिथे dramatic pause हवा तिथे तीन dots टाका. "आणि result काय आला... completely unexpected."</li>
+          <li><strong>Commas liberally वापरा</strong> — Commas = breathing room. "तर मित्रांनो, आज आपण बघणार आहोत, एक भन्नाट trick."</li>
+          <li><strong>Stability slider adjust करा</strong> — Lower stability (~0.3-0.4) = more expressive, emotional. Higher stability (~0.7-0.8) = more consistent, predictable. Narration साठी middle ground (~0.5) चांगलं.</li>
+        </ul>
+        <p>हा approach बराच बरा आहे, पण अजून professional-level narration साठी पुढचा step बघा.</p>
+      </div>
+
+      <div class="exercise">
+        <h3>Great Approach: Full Professional Workflow</h3>
+        <p>हा complete workflow follow करा — YouTube explainer video साठी narration.</p>
+
+        <h4>Step 1: Gemini मध्ये script लिहा (free!)</h4>
+        <p>ElevenLabs मध्ये directly text टाकण्यापेक्षा, आधी <a href="/aimarathi/gemini/">Gemini</a> ला script लिहायला सांगा. Gemini ला हा prompt द्या:</p>
+        <blockquote>
+          "Write a YouTube narration script about [topic]. Use Romanized Hindustani (Hindi-Marathi mix). Add '...' for dramatic pauses. Keep sentences short — 2-3 sentences per paragraph. Mark emphasis words in CAPS. Write numbers in words. Make it conversational, like talking to a friend."
+        </blockquote>
+        <p>Gemini free आहे आणि script writing ला चांगलं आहे. ElevenLabs चे credits script लिहायला waste करू नका.</p>
+
+        <h4>Step 2: Text formatting — हाच तुमचा real "prompt" आहे</h4>
+        <p>Gemini ने दिलेला script refine करा. या formatting tricks output completely बदलतात:</p>
+        <ul>
+          <li><strong>Short paragraphs (2-3 sentences max)</strong> — प्रत्येक paragraph = एक natural pause. लांब paragraphs मध्ये AI चा pacing बिघडतो.</li>
+          <li><strong>"..." dramatic pauses साठी</strong> — "Aani result kya aala... bilkul unexpected!" हा pause listener ला engage करतो.</li>
+          <li><strong>CAPS emphasis साठी</strong> — "He REALLY important aahe" मध्ये "REALLY" वर stress पडतो. पण जास्त CAPS वापरू नका — effect कमी होतो.</li>
+          <li><strong>Punctuation matters</strong> — "?" ने voice वर जातो (question intonation). "!" ने energy वाढतो. Period ने clean stop होतो. हे सगळे cues ElevenLabs वापरतो.</li>
+          <li><strong>Numbers शब्दांमध्ये लिहा</strong> — "तीनशे रुपये" लिहा, "300 रुपये" नाही. "पाच minutes" लिहा, "5 minutes" नाही. Numbers मध्ये AI confused होतो.</li>
+        </ul>
+
+        <h4>Step 3: Voice selection — वेळ घ्या इथे</h4>
+        <p>Voice selection ला shortcut करू नका. चुकीची voice निवडली तर बाकी सगळं perfect असलं तरी output बरोबर वाटणार नाही.</p>
+        <ul>
+          <li><strong>Hindi voices शोधा</strong> — Voice Library मध्ये language filter "Hindi" लावा. या voices चा accent Marathi content साठी सगळ्यात natural वाटतो.</li>
+          <li><strong>Energy level match करा</strong> — YouTube explainer साठी medium-high energy voice हवी. Audiobook साठी calm voice. Product review साठी confident voice.</li>
+          <li><strong>Age आणि gender</strong> — तुमच्या audience ला कोणता voice relatable वाटेल? Tech content साठी younger voice चांगला काम करतो. Educational content साठी mature voice authority देतो.</li>
+          <li><strong>Short test करा</strong> — एक-दोन sentences generate करा आधी. Full script generate करण्यापूर्वी voice check करा. Credits वाचतात.</li>
+        </ul>
+
+        <h4>Step 4: Settings tune करा</h4>
+        <ul>
+          <li><strong>Stability: ~0.50</strong> — Narration साठी balanced setting. खूप low (0.2) = voice unstable होतो, random variations येतात. खूप high (0.9) = robotic, monotone वाटतो.</li>
+          <li><strong>Clarity + Similarity Enhancement: ~0.75</strong> — Higher clarity = voice clear आणि original voice शी similar. Narration साठी 0.7-0.8 range ideal.</li>
+          <li><strong>Style exaggeration: low ठेवा</strong> — जास्त style exaggeration narration मध्ये unnatural वाटतो. 0 किंवा 0.1 ठेवा.</li>
+        </ul>
+
+        <h4>Step 5: Chunks मध्ये generate करा</h4>
+        <p>Full 10-minute script एकदम generate करू नका. Quality per chunk बरीच चांगली येते.</p>
+        <ul>
+          <li>Script ला logical sections मध्ये divide करा (intro, point 1, point 2, conclusion)</li>
+          <li>प्रत्येक section independently generate करा</li>
+          <li>एखादा chunk बरोबर आला नाही तर फक्त तोच regenerate करा — पूर्ण script नाही</li>
+          <li>Final audio एडिट करताना chunks एकत्र join करा (CapCut, Audacity — दोन्ही free)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li><strong>Text formatting IS your prompt</strong> — ElevenLabs मध्ये "prompt engineering" म्हणजे text कसं format केलं ते. Pauses, emphasis, punctuation — हे सगळे controls आहेत.</li>
+        <li><strong>Voice selection matters</strong> — चुकीच्या voice ने perfect text सुद्धा वाईट वाटतो. वेळ घ्या इथे.</li>
+        <li><strong>Settings affect personality</strong> — Stability आणि clarity sliders voice ची "personality" बदलतात. Experiment करा.</li>
+        <li><strong>Chunk your audio</strong> — लहान chunks = better quality + कमी credits waste.</li>
+      </ul>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PART 2: READY-TO-USE TEMPLATES               -->
+    <!-- ============================================ -->
+
+    <section>
+      <h2>Part 2: Ready-to-Use Text Templates</h2>
+      <p>खालचे templates directly ElevenLabs मध्ये paste करा. Formatting tricks (pauses, emphasis, punctuation) already baked in आहेत. फक्त <code>[brackets]</code> मधला content तुमच्या topic ने replace करा.</p>
+
+      <div class="exercise">
+        <h3>Template 1: YouTube Intro</h3>
+        <p>Energetic, hook-style intro. Viewer ला पहिल्या दहा seconds मध्ये engage करतो.</p>
+<pre>
+Namaskaar mitranno!
+
+Aaj aapan shiknar aahot ek BHANNAT trick...
+jyaane tumchya [topic] completely badlun jaail.
+
+Mi tumhala step by step daakhavnar...
+ekdam simple language madhe.
+
+Tar video LAST paryant bagha...
+kaaran BEST part shevatla aahe!
+</pre>
+      </div>
+
+      <div class="exercise">
+        <h3>Template 2: Product Review Narration</h3>
+        <p>Confident, honest tone. Pros and cons balanced delivery.</p>
+<pre>
+Aaj aapan review karnar aahot... [Product Name].
+
+Mi ha product [duration] vaaparlaa...
+aani honestly sangto, kahi goshti KHUP changlyaa aahet,
+tar kahi madhe improvement lagel.
+
+Aadhee positives baghu.
+
+Pahilaa point, [feature ekhada].
+Ha REALLY useful aahe kaaran [reason].
+Daily use madhe mala personally khup aavalaa.
+
+Pann... ek problem aahe.
+[Problem explain kara].
+Hya price range madhe he expected nahi.
+
+Tar FINAL verdict?
+Jar tumhala [use case] sathi ghyaycha asel...
+tar definitely worth aahe.
+Pan [alternative use case] sathi... thoda vichar kara.
+</pre>
+      </div>
+
+      <div class="exercise">
+        <h3>Template 3: Educational Explainer (Students)</h3>
+        <p>Patient, clear tone. Complex concepts simple language mध्ये.</p>
+<pre>
+Chala, aaj aapan samjun gheu... [concept name].
+
+Khup simple aahe, tension nakka gheu.
+
+[Concept] mhanje kaay?
+Simple bhashet sangaycha tar...
+[one line explanation].
+
+Ek example baghu.
+
+Samja tumhi [relatable everyday example].
+Tyaat [concept] kasa laagu hoto...
+[step by step explain kara].
+
+Bagha, kitee SIMPLE aahe!
+
+Aata ek important point...
+[key point CAPS madhe highlight kara].
+He exam madhe NAKKI yetaa... lakshaat theva.
+</pre>
+      </div>
+
+      <div class="exercise">
+        <h3>Template 4: Podcast Intro and Outro</h3>
+        <p>Warm, conversational. Listener la welcome kartaa.</p>
+<pre>
+INTRO:
+
+Namaskaar aani swaagatam... [Podcast Name] madhe!
+
+Mi aahe [tumcha naav]...
+aani aaj aapan bolnar aahot [topic] baddal.
+
+Aajchaa episode SPECIAL aahe...
+kaaran [reason why special].
+
+Tar chalaa suru karu!
+
+---
+
+OUTRO:
+
+Tar aaj aapan shikhlo [one line summary].
+
+Tumhala ha episode aavalaa asel tar...
+SUBSCRIBE nakki karaa.
+Aani comments madhe saangaa...
+tumhala kontyaa topic var episode havet.
+
+Bhetu pudchyaa episode madhe...
+[Podcast Name] madhe!
+Tithparyant... keep learning, keep growing.
+</pre>
+      </div>
+
+      <div class="exercise">
+        <h3>Template 5: Audiobook Paragraph (Dramatic Pacing)</h3>
+        <p>Slow, immersive. Listener la story mध्ये gheun jaato.</p>
+<pre>
+Tyaa diwashi sakaali...
+hawaa kahi veglichch hoti.
+
+[Character name] ubhaa hotaa [location] madhe...
+shaant, nishshabd.
+
+Ek awaaj aalaa... door kashaacha tari.
+Tyanee maagee waalun baghitlaa.
+
+Kaahi nahi.
+Fakta... shaantata.
+
+Pann tyaala MAAHIT hotaa...
+aaj kaahitari badlanar aahe.
+Aaj kaahitari GHADNAR aahe.
+
+Tyaanee ek deep breath ghetlaa...
+aani pudhe chaalaayla laagla.
+</pre>
+      </div>
+
+      <div class="exercise">
+        <h3>Template 6: Instagram Reel / WhatsApp Status Voiceover</h3>
+        <p>Short, punchy. Pahilya second la hook. Under paandharaa seconds.</p>
+<pre>
+EK minute!
+
+Tumhala MAAHIT aahe kaa...
+[interesting fact or hook]?
+
+Nahi naa?
+
+Tar aikaa...
+[fact explain in two sentences].
+
+SHARE karaa ha... lokanna KALALA pahije!
+</pre>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PART 3: COMMON MISTAKES                      -->
+    <!-- ============================================ -->
+
+    <section>
+      <h2>Part 3: Common Mistakes</h2>
+      <p>या चुका avoid केल्या तर तुमचे credits आणि वेळ दोन्ही वाचतात.</p>
+
+      <div class="warning">
+        <h3>Mistake 1: Raw text paste करणं</h3>
+        <p>Google Docs किंवा ChatGPT मधून directly copy-paste करू नका. त्या text मध्ये formatting नसतं — no pauses, no emphasis markers, long paragraphs. ElevenLabs ला कळत नाही कुठे stress द्यायचा, कुठे pause घ्यायचा. Result: flat, robotic narration.</p>
+        <p><strong>Fix:</strong> Part 1 मधल्या formatting rules follow करा. दोन-तीन minutes लागतात, पण output night and day difference असतो.</p>
+      </div>
+
+      <div class="warning">
+        <h3>Mistake 2: Devanagari script वापरणं</h3>
+        <p>Counterintuitive वाटेल, पण currently Romanized Hindi/Marathi (English letters मध्ये) बहुतेक वेळा BETTER sound करतं Devanagari पेक्षा. ElevenLabs चे Hindi models Romanized input ला चांगलं handle करतात. Devanagari मध्ये pronunciation errors जास्त येतात.</p>
+        <p><strong>Fix:</strong> Romanized text वापरा. "Namaskaar mitranno" लिहा, "नमस्कार मित्रांनो" नाही. Test करा दोन्ही — पण Romanized ने सुरू करा.</p>
+      </div>
+
+      <div class="warning">
+        <h3>Mistake 3: एक लांब audio generate करणं</h3>
+        <p>दहा-minute script एकदम generate केलं तर quality degrade होतो. Middle sections मध्ये pacing बिघडतो, voice inconsistent होतो, आणि एक चूक आली तर पूर्ण regenerate करावं लागतं.</p>
+        <p><strong>Fix:</strong> Script ला logical chunks मध्ये divide करा. प्रत्येक chunk independently generate करा. नंतर Audacity किंवा CapCut मध्ये join करा.</p>
+      </div>
+
+      <div class="warning">
+        <h3>Mistake 4: Stability setting चुकीचं ठेवणं</h3>
+        <p>Stability खूप high (0.8+) = robotic, monotone, AI सारखं वाटतं. Stability खूप low (0.2-) = voice unstable, random pitch changes, words गिळतो.</p>
+        <p><strong>Fix:</strong> Narration साठी ~0.50 ने सुरू करा. तिथून fine-tune करा. Expressive content (storytelling) साठी थोडं lower (0.4). Consistent content (news, tutorials) साठी थोडं higher (0.6).</p>
+      </div>
+
+      <div class="warning">
+        <h3>Mistake 5: Short test न करणं</h3>
+        <p>Full script generate केला आणि मग कळलं voice चांगली नाही — credits waste. Settings बरोबर नाहीत — credits waste. Text formatting चुकीचं — credits waste.</p>
+        <p><strong>Fix:</strong> ALWAYS पहिले दोन-तीन sentences generate करा. Voice, settings, formatting — सगळं check करा. Satisfied झाल्यावरच full script generate करा.</p>
+      </div>
+
+      <div class="warning">
+        <h3>Mistake 6: Voice selection ला वेळ न देणं</h3>
+        <p>पहिली voice दिसली ती निवडणं हे सगळ्यात common mistake आहे. चुकीच्या voice ने बाकी सगळं perfect असलं तरी output unnatural वाटतो. नंतर regenerate करावं लागतं = double credits.</p>
+        <p><strong>Fix:</strong> तीन-चार voices shortlist करा. प्रत्येकाने same दोन sentences generate करा. Compare करा. BEST voice निवडा. हा five-minute investment नंतरचे credits आणि वेळ वाचवतो.</p>
+      </div>
+    </section>
+
+    <div class="tip">
+      <p><strong>Quick summary:</strong> ElevenLabs मध्ये "prompt engineering" म्हणजे text formatting + voice selection + settings. या तीन गोष्टी बरोबर केल्या तर professional-quality narration मिळतो. Templates वापरा, chunks मध्ये generate करा, आणि ALWAYS short test आधी करा.</p>
+    </div>
+  </main>
+
+{{FOOTER}}
+
+</body>
+</html>

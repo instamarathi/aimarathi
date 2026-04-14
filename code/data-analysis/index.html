@@ -69,6 +69,7 @@
             <li><a href="/aimarathi/claude-code/">Claude Code</a></li>
             <li><a href="/aimarathi/cursor/">Cursor</a></li>
             <li><a href="/aimarathi/windsurf/">Windsurf</a></li>
+            <li><a href="/aimarathi/antigravity/">Antigravity</a></li>
             <li><a href="/aimarathi/github-copilot/">GitHub Copilot</a></li>
             <li><a href="/aimarathi/midjourney/">Midjourney</a></li>
             <li><a href="/aimarathi/canva-ai/">Canva AI</a></li>
@@ -85,6 +86,11 @@
           <span class="dropdown-label">&#128221; Blog &#9662;</span>
           <ul class="dropdown">
             <li><a href="/aimarathi/blog/aggregators/">AI Aggregators</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-copywriting/">Prompt Engineering: Copywriting</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-ad-images/">Prompt Engineering: Ad Images</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-app/">Prompt Engineering: App बनवा</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-music/">Prompt Engineering: Music</a></li>
+            <li><a href="/aimarathi/blog/prompt-engineering-voice/">Prompt Engineering: Voice</a></li>
           </ul>
         </li>
       </ul>
@@ -102,15 +108,76 @@
 
     <p>CSV, Excel, JSON, databases — कोणत्याही data द्या, AI analyze करतो. Charts बनवतो, patterns शोधतो, insights काढतो. College assignments साठी पण उपयोगी, business साठी पण.</p>
 
+    <h2>कोणते Tools वापरायचे?</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Free / Paid</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Gemini</strong></td>
+          <td>Free</td>
+          <td>Google चा AI. File upload करा (CSV, Excel), direct analysis मिळतो. Charts पण बनवतो. Free आहे — सुरुवात इथून करा.</td>
+        </tr>
+        <tr>
+          <td><strong>ChatGPT (Code Interpreter)</strong></td>
+          <td>Paid ($20/mo)</td>
+          <td>File upload करा, Python code run करतो, charts बनवतो. Advanced analysis साठी best.</td>
+        </tr>
+        <tr>
+          <td><strong>Claude</strong></td>
+          <td>Free tier + Paid</td>
+          <td>File upload support आहे. Analysis explanation खूप clear देतो. Complex data patterns समजावून सांगतो.</td>
+        </tr>
+      </tbody>
+    </table>
+
     <div class="tip">
-      <h4>कोणते tools वापरता येतात?</h4>
-      <p><strong>Claude Code, ChatGPT (Code Interpreter), Cursor</strong></p>
-      <p>प्रत्येक tool चे detailed tutorial लवकरच येतोय.</p>
+      <h4>Recommend: Gemini ने सुरुवात करा</h4>
+      <p><strong>Gemini free आहे</strong> आणि file upload support आहे. CSV किंवा Excel upload करा, question विचारा — charts आणि insights मिळतात. पैसे खर्च शिवाय data analysis शिकता येतो.</p>
     </div>
 
-    <div class="urgency">
-      <h4>Coming Soon!</h4>
-      <p>हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial</a> बघा — तो आत्ता ready आहे!</p>
+    <h2>Copy-Paste Prompts</h2>
+    <p>तुमची file upload करा आणि हे prompts paste करा. File name तुमच्या file नुसार बदला.</p>
+
+    <div class="exercise">
+      <h4>Sales Data Analysis</h4>
+      <p>Analyze this sales data. Show me: 1) Total revenue and average order value, 2) Month-wise sales trend as a line chart, 3) Top 5 best-selling products, 4) Which day of the week has most sales, 5) Category-wise revenue breakdown as a pie chart. Highlight any interesting patterns or anomalies.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Survey Results Analysis</h4>
+      <p>Analyze this survey data. Show me: 1) Response summary for each question with percentages, 2) Bar charts for multiple-choice questions, 3) Common themes in open-ended responses, 4) Demographic breakdown of respondents, 5) Cross-tabulation between age group and satisfaction rating. Summarize key findings in 5 bullet points.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Monthly Expense Tracking</h4>
+      <p>Analyze my expense data. Show me: 1) Total spending per month as a bar chart, 2) Category-wise breakdown (Food, Transport, Bills, Entertainment, Shopping) as a pie chart, 3) Average daily spending, 4) Which category am I overspending on compared to previous months, 5) Predict next month's expenses based on the trend. Give me 3 practical tips to save money.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Student Marks Analysis (College Projects साठी)</h4>
+      <p>Analyze this student marks data. Calculate: 1) Class average, median, highest, and lowest for each subject, 2) Subject-wise pass/fail percentage, 3) Grade distribution (A/B/C/D/F) as a bar chart, 4) Correlation between subjects — which subjects' marks move together, 5) Top 10 students by total marks. Create a summary report suitable for a college presentation.</p>
+    </div>
+
+    <div class="tip">
+      <h4>Pro Tips</h4>
+      <ul>
+        <li>File upload करण्यापूर्वी data clean असलं तर चांगलं — column names English मध्ये, empty rows काढा.</li>
+        <li>"Explain this like I'm a beginner" add करा prompt मध्ये — AI simple भाषेत सांगतो.</li>
+        <li>Chart आवडलं नाही? "Make it a bar chart instead" किंवा "use blue color scheme" सांगा.</li>
+        <li>AI ने दिलेला Python code save करा — पुन्हा same analysis करायची असेल तर code run करा.</li>
+      </ul>
+    </div>
+
+    <div class="warning">
+      <h4>लक्षात ठेवा</h4>
+      <p>Sensitive data (salary, personal info) upload करताना काळजी घ्या. AI tools चे servers बाहेरच्या देशात आहेत. Confidential business data साठी company policy check करा. Practice साठी sample/dummy data वापरा.</p>
     </div>
   </main>
 

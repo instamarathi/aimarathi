@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App बनवा Claude Code ने — AI Marathi</title>
+  <meta name="description" content="Claude Code ला Android app बनवायला सांगताना prompt कसं लिहायचं? Todo app example सह step-by-step prompt engineering शिका मराठीत.">
+  <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+{{NAV}}
+
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo; <a href="/aimarathi/blog/">Blog</a> &rsaquo; Prompt Engineering: App बनवा
+      </div>
+      <h1>Todo App बनवा Claude Code ने — AI ला नक्की काय सांगायचं?</h1>
+    </div>
+
+    <section>
+      <p>Claude Code सारख्या AI tools ने app बनवणं आता शक्य आहे — पण तुम्ही <strong>काय सांगता</strong> त्यावर सगळं अवलंबून आहे. चुकीचं prompt दिलं तर AI random choices करतो, आणि तुम्हाला नको ते मिळतं.</p>
+
+      <p>या tutorial मध्ये आपण एक <strong>Todo app</strong> बनवायला शिकणार — पण focus app वर नाही, तर <strong>prompt कसं लिहायचं</strong> यावर आहे. Same technique कोणत्याही app साठी वापरता येईल.</p>
+    </section>
+
+    <!-- ==================== PART 1: DEEP-DIVE WALKTHROUGH ==================== -->
+
+    <section>
+      <h2>Part 1: Prompt कसं improve होतं — step by step</h2>
+
+      <h3>1. Bad prompt — "मला app बनवून दे"</h3>
+
+      <div class="warning">
+        <h4>Bad Prompt</h4>
+        <p><em>"Make me a todo app"</em></p>
+      </div>
+
+      <p>हे prompt वाचून AI ला काहीच clarity नाही:</p>
+      <ul>
+        <li><strong>Platform कोणता?</strong> Web app? Android? iOS? Desktop? AI randomly निवडेल — कदाचित web app बनवेल जेव्हा तुम्हाला mobile हवं होतं</li>
+        <li><strong>Tech stack?</strong> React Native? Flutter? Kotlin? AI स्वतःच ठरवेल — आणि तुम्हाला ते run करता येणार नाही कारण तुमच्याकडे ते setup नाही</li>
+        <li><strong>Features काय?</strong> फक्त add/delete? Categories हव्या? Due dates? Reminders? AI guess करेल</li>
+        <li><strong>Design कसं?</strong> Light theme? Dark? Colors कोणते? AI चा default output बहुतेक boring असतो</li>
+      </ul>
+
+      <p>Result: तुम्हाला एक generic, boring app मिळेल जो तुम्हाला नको त्या tech stack मध्ये असेल. मग तुम्ही 10 follow-up prompts लिहून fix कराल — वेळ वाया.</p>
+
+      <h3>2. Better prompt — details add करा</h3>
+
+      <div class="tip">
+        <h4>Better Prompt</h4>
+        <p><em>"Make me an Android todo app using React Native. It should have: add tasks, mark complete, delete tasks. Use a dark theme."</em></p>
+      </div>
+
+      <p>हे बरंच चांगलं आहे कारण:</p>
+      <ul>
+        <li>Platform clear आहे (Android)</li>
+        <li>Tech stack specified आहे (React Native)</li>
+        <li>Basic features listed आहेत</li>
+        <li>Design direction आहे (dark theme)</li>
+      </ul>
+
+      <p>पण अजूनही important details missing आहेत:</p>
+      <ul>
+        <li>Expo वापरायचं की bare React Native? (Expo ने testing सोपं होतं)</li>
+        <li>Data कुठे store करायचा? Local? Cloud?</li>
+        <li>UI layout कसं? Floating button? Tab bar?</li>
+        <li>Colors exact कोणते? "Dark theme" म्हणजे 1000 variations आहेत</li>
+        <li>Categories, due dates यासारखे useful features missing</li>
+      </ul>
+
+      <h3>3. Great prompt — complete spec द्या</h3>
+
+      <div class="exercise">
+        <h4>Great Prompt — Ready to Use</h4>
+        <p>हा prompt Claude Code मध्ये directly paste करा:</p>
+        <p><em>"मला एक Todo app बनवायचा आहे Android साठी. Details:</em></p>
+        <ul>
+          <li><em><strong>Tech:</strong> React Native with Expo (so I can test easily)</em></li>
+          <li><em><strong>Features:</strong> add task with title + optional due date, mark complete (strikethrough), delete with swipe, categories (काम, शिक्षण, घर, इतर), filter by category</em></li>
+          <li><em><strong>Design:</strong> dark theme, orange accent color (#D4915E), Marathi UI labels (जोडा, पूर्ण, काढा), clean minimal design</em></li>
+          <li><em><strong>Data:</strong> store locally with AsyncStorage (no backend needed)</em></li>
+          <li><em><strong>Screen:</strong> single screen with floating add button, task list with checkboxes</em></li>
+        </ul>
+        <p><em>Give me the complete project. Start with expo init, then build each component."</em></p>
+      </div>
+
+      <p><strong>हे prompt का काम करतं?</strong></p>
+      <ul>
+        <li><strong>Tech stack exact आहे</strong> — React Native with Expo, म्हणजे AI ला कोणतं project structure बनवायचं ते माहीत आहे</li>
+        <li><strong>Features list specific आहे</strong> — "add task" नाही, तर "add task with title + optional due date" — AI ला exact form fields माहीत आहेत</li>
+        <li><strong>Design tokens दिले</strong> — exact hex color (#D4915E), theme (dark), style (minimal) — AI ला guess करायची गरज नाही</li>
+        <li><strong>Data strategy clear आहे</strong> — AsyncStorage, no backend — AI server code बनवणार नाही</li>
+        <li><strong>Layout described आहे</strong> — floating button, checkboxes — AI ला screen कसं दिसेल ते माहीत आहे</li>
+        <li><strong>Step-by-step instruction</strong> — "Start with expo init, then build each component" — AI एकदम सगळं dump करणार नाही</li>
+      </ul>
+
+      <h3>4. Iteration — app बनवणं ही conversation आहे</h3>
+
+      <p>एक perfect prompt दिलं तरी first output 100% perfect नसतो. App building ही <strong>conversation</strong> आहे — prompt दे, output बघ, adjust कर, पुढे जा.</p>
+
+      <p>पहिल्या generation नंतर असे follow-up prompts द्या:</p>
+
+      <div class="tip">
+        <h4>Follow-up Prompt 1: Feature add करा</h4>
+        <p><em>"Add a 'सगळे पूर्ण' button at the top to mark all tasks complete at once"</em></p>
+      </div>
+
+      <div class="tip">
+        <h4>Follow-up Prompt 2: Bug fix / polish</h4>
+        <p><em>"The delete animation is jerky — make it smooth with 300ms transition"</em></p>
+      </div>
+
+      <div class="tip">
+        <h4>Follow-up Prompt 3: नवीन screen add करा</h4>
+        <p><em>"Add a simple splash screen with the app name 'माझी यादी' in white text on dark background, show for 2 seconds"</em></p>
+      </div>
+
+      <p><strong>Important:</strong> प्रत्येक step नंतर app run करा आणि test करा. एकदम 10 features मागू नका — एक-एक करा, test करा, मग पुढे जा.</p>
+
+      <h3>5. Key Takeaways</h3>
+
+      <p>कोणताही app बनवताना या 5 गोष्टी prompt मध्ये असायलाच हव्या:</p>
+      <ol>
+        <li><strong>Tech stack specify करा</strong> — language, framework, आणि tools exact सांगा</li>
+        <li><strong>Features explicitly list करा</strong> — प्रत्येक feature चे details द्या, vague ठेवू नका</li>
+        <li><strong>Design tokens द्या</strong> — colors (hex codes), theme, font style, spacing</li>
+        <li><strong>Layout describe करा</strong> — कोणत्या screen वर काय दिसेल ते सांगा</li>
+        <li><strong>Small steps मध्ये iterate करा</strong> — एकदम सगळं मागू नका, step by step बनवा</li>
+      </ol>
+    </section>
+
+    <!-- ==================== PART 2: READY-TO-USE PROMPTS ==================== -->
+
+    <section>
+      <h2>Part 2: Ready-to-use prompts — Copy-paste करा आणि बनवा</h2>
+
+      <p>खालचे prompts Claude Code मध्ये directly paste करता येतील. प्रत्येक prompt complete spec आहे — AI ला guess करायची गरज नाही.</p>
+
+      <div class="exercise">
+        <h4>Expense Tracker App — दैनंदिन खर्च track करा</h4>
+        <p><em>"Build me an expense tracker Android app. Details:</em></p>
+        <ul>
+          <li><em><strong>Tech:</strong> React Native with Expo</em></li>
+          <li><em><strong>Features:</strong> add expense with amount + description + date, categories (खाणे, प्रवास, बिलं, शॉपिंग, इतर), monthly total at top, list of expenses sorted by date, delete expense with swipe, filter by category, simple bar chart showing category-wise spending</em></li>
+          <li><em><strong>Design:</strong> dark theme, green accent (#4CAF50) for income, red (#E57373) for expenses, Marathi UI labels (जोडा, एकूण, महिना), clean cards for each expense</em></li>
+          <li><em><strong>Data:</strong> AsyncStorage, no backend</em></li>
+          <li><em><strong>Screens:</strong> home screen with expense list + monthly total, add expense modal with category picker, simple stats screen with bar chart</em></li>
+        </ul>
+        <p><em>Start with expo init, then build the home screen first."</em></p>
+      </div>
+
+      <div class="exercise">
+        <h4>Recipe App — मराठी रेसिपी save करा</h4>
+        <p><em>"Build me a recipe app for Android. Details:</em></p>
+        <ul>
+          <li><em><strong>Tech:</strong> React Native with Expo</em></li>
+          <li><em><strong>Features:</strong> add recipe with title + ingredients list + steps + cooking time + photo (from gallery), search recipes by name or ingredient, categories (नाश्ता, जेवण, snacks, गोड पदार्थ, पेये), favorite recipes, share recipe as text</em></li>
+          <li><em><strong>Design:</strong> light theme, warm orange accent (#FF8A65), Marathi labels (रेसिपी जोडा, शोधा, आवडते), recipe cards with photo thumbnail, clean typography</em></li>
+          <li><em><strong>Data:</strong> AsyncStorage for recipes, expo-image-picker for photos, stored locally</em></li>
+          <li><em><strong>Screens:</strong> home with recipe grid, recipe detail with full ingredients and steps, add/edit recipe form, search screen with filters</em></li>
+        </ul>
+        <p><em>Start with expo init, build the recipe list screen first, then add form."</em></p>
+      </div>
+
+      <div class="exercise">
+        <h4>Habit Tracker — रोज check-in करा, streak वाढवा</h4>
+        <p><em>"Build me a habit tracker app for Android. Details:</em></p>
+        <ul>
+          <li><em><strong>Tech:</strong> React Native with Expo</em></li>
+          <li><em><strong>Features:</strong> add habits with name + icon emoji, daily check-in (tap to mark done), streak counter for each habit (consecutive days), weekly view showing 7 days with done/not-done indicators, reset streak if missed, simple stats (current streak, best streak, completion rate)</em></li>
+          <li><em><strong>Design:</strong> dark theme, purple accent (#B39DDB), Marathi labels (सवय जोडा, आजचं, streak), habit cards with big tap area, satisfying checkmark animation on completion</em></li>
+          <li><em><strong>Data:</strong> AsyncStorage, store daily completion log per habit</em></li>
+          <li><em><strong>Screens:</strong> home with today's habits and streaks, add habit form, habit detail with weekly calendar view and stats</em></li>
+        </ul>
+        <p><em>Start with expo init, build the daily check-in screen first."</em></p>
+      </div>
+
+      <div class="exercise">
+        <h4>Calculator with History — calculation history save करा</h4>
+        <p><em>"Build me a calculator app for Android with history. Details:</em></p>
+        <ul>
+          <li><em><strong>Tech:</strong> React Native with Expo</em></li>
+          <li><em><strong>Features:</strong> basic calculator (+, -, x, /, %), history of past calculations, tap on history item to reuse that number, clear history button, copy result to clipboard with long press</em></li>
+          <li><em><strong>Design:</strong> dark theme, teal accent (#4DB6AC), large buttons with good tap targets, display at top showing current input and result, history slides up from bottom as a panel, Marathi labels for clear (पुसा) and history (इतिहास)</em></li>
+          <li><em><strong>Data:</strong> AsyncStorage for history, last 50 calculations</em></li>
+          <li><em><strong>Screens:</strong> single screen — calculator top half, history panel bottom half (collapsible)</em></li>
+        </ul>
+        <p><em>Start with expo init, build the calculator logic first, then add history."</em></p>
+      </div>
+
+      <div class="exercise">
+        <h4>Notes App with Search — quick notes लिहा, शोधा</h4>
+        <p><em>"Build me a notes app for Android. Details:</em></p>
+        <ul>
+          <li><em><strong>Tech:</strong> React Native with Expo</em></li>
+          <li><em><strong>Features:</strong> create note with title + body text, edit existing notes, delete with swipe, search notes by title or content (real-time filtering as you type), pin important notes to top, sort by date modified, note preview in list (first 2 lines of body)</em></li>
+          <li><em><strong>Design:</strong> dark theme, yellow accent (#FFD54F), Marathi labels (नवीन नोट, शोधा, pin करा), note cards with title bold and preview below, search bar at top, floating add button</em></li>
+          <li><em><strong>Data:</strong> AsyncStorage, each note stored with id, title, body, timestamp, pinned boolean</em></li>
+          <li><em><strong>Screens:</strong> home with notes list and search bar, note editor (full screen), no separate view screen — tap to edit directly</em></li>
+        </ul>
+        <p><em>Start with expo init, build the notes list first, then add editor."</em></p>
+      </div>
+    </section>
+
+    <!-- ==================== PART 3: COMMON MISTAKES ==================== -->
+
+    <section>
+      <h2>Part 3: सगळ्यात common चुका</h2>
+
+      <p>App बनवताना हे mistakes करू नका:</p>
+
+      <div class="warning">
+        <h4>1. Tech stack specify करू नका</h4>
+        <p>"Make me an app" म्हणलात तर AI कदाचित Swift मध्ये iOS app बनवेल — आणि तुमच्याकडे Mac नसेल तर run च करता येणार नाही. <strong>नेहमी platform + framework + tools सांगा.</strong></p>
+      </div>
+
+      <div class="warning">
+        <h4>2. एकदम सगळं एकाच prompt मध्ये मागणं</h4>
+        <p>"Todo app बनव with push notifications, cloud sync, user login, dark mode, animations, and 5 screens" — हे एका prompt मध्ये दिलं तर output messy येतो. <strong>Core features आधी बनवा, बाकी iterate करत add करा.</strong></p>
+      </div>
+
+      <div class="warning">
+        <h4>3. UI layout describe करू नका</h4>
+        <p>तुम्ही "add a list of tasks" म्हणलात — पण list कुठे? Screen च्या top ला? Bottom ला? Floating button हवा की tab bar? <strong>Layout सांगा — कोणत्या screen वर काय, कुठे, कसं.</strong></p>
+      </div>
+
+      <div class="warning">
+        <h4>4. Data storage बद्दल काहीच न सांगणं</h4>
+        <p>App चा data कुठे save होतो हे सांगितलं नाही तर AI कदाचित Firebase setup करेल — ज्याला account लागतो, configuration लागतं. Simple app साठी <strong>AsyncStorage (local) पुरेसं आहे — explicitly सांगा.</strong></p>
+      </div>
+
+      <div class="warning">
+        <h4>5. प्रत्येक step test करू नका</h4>
+        <p>5 features एकदम add केल्या आणि मग app crash झालं — कोणत्या feature मुळे ते शोधणं कठीण. <strong>प्रत्येक step नंतर run करा, test करा, मग पुढचा step मागा.</strong></p>
+      </div>
+    </section>
+
+    <div class="tip">
+      <p><strong>लक्षात ठेवा:</strong> AI ला app बनवायला सांगणं म्हणजे एखाद्या builder ला घर बनवायला सांगणं. "घर बनव" म्हणलात तर काहीही मिळेल. पण "2BHK, east-facing, modular kitchen, vitrified tiles" म्हणलात तर तुम्हाला हवं ते मिळेल. Prompt मध्ये detail द्या — AI बरोबर बनवेल.</p>
+    </div>
+  </main>
+
+{{FOOTER}}
+
+</body>
+</html>

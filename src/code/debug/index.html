@@ -20,17 +20,105 @@
       <h1>Debug & Fix</h1>
     </div>
 
-    <p>Error येतोय? AI ला code दाखवा, तो bug शोधतो आणि fix करतो. Stack traces, error messages — सगळं समजतो.</p>
+    <p>Error येतोय? Code काम करत नाही? AI ला error message दाखवा — तो bug शोधतो, explain करतो, आणि fix देतो. Stack traces, runtime errors, logic bugs — सगळं handle करतो.</p>
+
+    <h2>कोणते Tools वापरायचे?</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Free / Paid</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Claude Code</strong></td>
+          <td>Paid ($20/mo)</td>
+          <td>Terminal-based — तुमचा full codebase वाचतो. Bug कुठे आहे ते context सकट शोधतो. Debugging साठी best.</td>
+        </tr>
+        <tr>
+          <td><strong>Cursor</strong></td>
+          <td>Free tier + Paid</td>
+          <td>VS Code मध्ये error select करा, AI fix suggest करतो. Inline debugging — खूप convenient.</td>
+        </tr>
+        <tr>
+          <td><strong>ChatGPT</strong></td>
+          <td>Free tier + Paid</td>
+          <td>Error message paste करा, explanation आणि fix मिळतो. Free tier मध्ये पण चांगलं काम करतो.</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini</strong></td>
+          <td>Free</td>
+          <td>Google चा AI — free आहे. Error messages explain करतो, fix suggest करतो. सुरुवात इथून करा.</td>
+        </tr>
+      </tbody>
+    </table>
 
     <div class="tip">
-      <h4>कोणते tools वापरता येतात?</h4>
-      <p><strong>Claude Code, Cursor, ChatGPT</strong></p>
-      <p>प्रत्येक tool चे detailed tutorial लवकरच येतोय.</p>
+      <h4>Recommend: Claude Code किंवा Gemini</h4>
+      <p>Full project debug करायचं असेल तर <strong>Claude Code</strong> वापरा — तो तुमचे सगळे files वाचतो आणि bug शोधतो. Quick fix साठी <strong>Gemini</strong> (free) वापरा — error paste करा, answer मिळतो.</p>
     </div>
 
-    <div class="urgency">
-      <h4>Coming Soon!</h4>
-      <p>हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial</a> बघा — तो आत्ता ready आहे!</p>
+    <h2>Copy-Paste Prompts</h2>
+    <p>Error message किंवा code copy करा आणि हे prompts वापरा.</p>
+
+    <div class="exercise">
+      <h4>Error Message Fix करा</h4>
+      <p>I'm getting this error in my Python/JavaScript/Java code:
+
+[तुमचा error message इथे paste करा]
+
+Here's the relevant code:
+
+[तुमचा code इथे paste करा]
+
+Explain: 1) What is causing this error, 2) How to fix it step by step, 3) How to prevent this error in the future. Show the corrected code.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Code Explain करा</h4>
+      <p>Explain this code line by line in simple terms. I'm a beginner.
+
+[तुमचा code इथे paste करा]
+
+For each section explain: 1) What it does, 2) Why it's written this way, 3) What would happen if we removed it. Use simple analogies where possible.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Bug शोधा — Code काम करत नाही</h4>
+      <p>This code is supposed to [तुमच्या code ने काय करायला हवं ते लिहा], but instead it [actually काय होतंय ते लिहा].
+
+Here's the code:
+
+[तुमचा code इथे paste करा]
+
+Find the bug. Explain: 1) Where exactly the bug is, 2) Why it's causing the wrong behavior, 3) The corrected code with comments marking what changed.</p>
+    </div>
+
+    <div class="exercise">
+      <h4>Performance Fix — Code Slow आहे</h4>
+      <p>This code works correctly but it's very slow. It takes [time] to process [data size].
+
+[तुमचा code इथे paste करा]
+
+Analyze the performance issues: 1) Which parts are slow and why, 2) Suggest optimized version with better time complexity, 3) Show before/after comparison. Explain the optimization in simple terms.</p>
+    </div>
+
+    <div class="tip">
+      <h4>Pro Tips</h4>
+      <ul>
+        <li><strong>Full error message</strong> paste करा — फक्त last line नाही, संपूर्ण stack trace. जितकी जास्त info, तितका चांगला fix.</li>
+        <li>Error सोबत <strong>तुमचा code</strong> पण द्या — AI ला context लागतो.</li>
+        <li>"What does this error mean?" विचारा — fix सोबत तुम्हाला समजतं पण का error आलं.</li>
+        <li>Claude Code वापरत असाल तर directory मध्ये जा आणि "find and fix the bug in this project" सांगा — तो सगळे files scan करतो.</li>
+      </ul>
+    </div>
+
+    <div class="warning">
+      <h4>लक्षात ठेवा</h4>
+      <p>AI चा fix blindly apply करू नका. आधी <strong>समजून घ्या</strong> काय बदललं आणि का. नाहीतर same bug पुन्हा येतो. AI ला "explain why this fixes the bug" विचारा — तुमची debugging skill पण improve होते.</p>
     </div>
   </main>
 
