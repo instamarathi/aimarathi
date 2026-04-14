@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Images बनवा — AI Marathi</title>
+  <meta name="description" content="Images बनवा — AI ने Images बनवा कसं करायचं ते शिका मराठीत.">
+  <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/aimarathi/" class="logo">
+        <img src="/aimarathi/assets/logo.svg" alt="AI Marathi logo">
+        <span>AI</span> Marathi
+      </a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <span class="dropdown-label">&#9997; &#x0932;&#x093F;&#x0939;&#x093E; &#9662;</span>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/likha/copywriting/">Copywriting</a></li>
+            <li><a href="/aimarathi/likha/creative-writing/">Creative Writing</a></li>
+            <li><a href="/aimarathi/likha/research/">Research</a></li>
+            <li><a href="/aimarathi/likha/planning/">Planning</a></li>
+            <li><a href="/aimarathi/likha/translation/">Translation</a></li>
+            <li><a href="/aimarathi/likha/college-essays/">College Essays</a></li>
+          </ul>
+        </li>
+        <li>
+          <span class="dropdown-label">&lt;/&gt; Code &#9662;</span>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/code/website-banva/">Website &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/code/app-banva/">App &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/code/debug/">Debug &amp; Fix</a></li>
+            <li><a href="/aimarathi/code/automation/">Automation</a></li>
+            <li><a href="/aimarathi/code/data-analysis/">Data Analysis</a></li>
+          </ul>
+        </li>
+        <li>
+          <span class="dropdown-label">&#127912; &#x092C;&#x0918;&#x093E; &#9662;</span>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/bagha/images/">Images &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/bagha/videos/">Videos &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/bagha/lipsync/">Lipsync</a></li>
+            <li><a href="/aimarathi/bagha/photo-editing/">Photo Editing</a></li>
+            <li><a href="/aimarathi/bagha/presentations/">Presentations</a></li>
+          </ul>
+        </li>
+        <li>
+          <span class="dropdown-label">&#127911; &#x0910;&#x0915;&#x093E; &#9662;</span>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/aika/voice/">Voice Generation</a></li>
+            <li><a href="/aimarathi/aika/music/">Music &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/aika/voice-cloning/">Voice Cloning</a></li>
+            <li><a href="/aimarathi/aika/podcast/">Podcast &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/aika/transcription/">Transcription</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#9790;</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo; बघा &rsaquo; Images बनवा
+      </div>
+      <h1>Images बनवा</h1>
+    </div>
+
+    <p>Text prompt द्या, stunning images बनतात. Logos, illustrations, product photos, art — सगळं AI ने.</p>
+
+    <div class="tip">
+      <h4>कोणते tools वापरता येतात?</h4>
+      <p><strong>Midjourney, Nano Banana, DALL-E</strong></p>
+      <p>प्रत्येक tool चे detailed tutorial लवकरच येतोय.</p>
+    </div>
+
+    <div class="urgency">
+      <h4>Coming Soon!</h4>
+      <p>हा tutorial लवकरच येतोय. तोपर्यंत <a href="/aimarathi/claude-code/">Claude Code चा tutorial</a> बघा — तो आत्ता ready आहे!</p>
+    </div>
+  </main>
+
+  <footer>
+    <p><strong>AIMarathi</strong> — AI शिका, मराठीत. Free and open.</p>
+    <p>A project by <a href="https://instamarathi.github.io">InstaMarathi</a></p>
+  </footer>
+
+  <script>
+    (function() {
+      var toggle = document.getElementById('themeToggle');
+      var stored = localStorage.getItem('aimarathi-theme');
+      if (stored) document.documentElement.setAttribute('data-theme', stored);
+      function updateIcon() {
+        toggle.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u2600' : '\u263E';
+      }
+      updateIcon();
+      toggle.addEventListener('click', function() {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('aimarathi-theme', next);
+        updateIcon();
+      });
+      document.getElementById('navHamburger').addEventListener('click', function() {
+        document.getElementById('navLinks').classList.toggle('open');
+      });
+      document.querySelectorAll('.dropdown-label').forEach(function(label) {
+        label.addEventListener('click', function() {
+          this.parentElement.classList.toggle('mobile-open');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

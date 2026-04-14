@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code Install करा (Windows) — AI Marathi</title>
+  <meta name="description" content="Windows वर Claude Code install करायची step-by-step guide. Node.js, Anthropic account, आणि Claude Code setup — सोप्या Marathi मध्ये.">
+  <link rel="stylesheet" href="/aimarathi/assets/css/style.css">
+  <link rel="icon" href="/aimarathi/assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/aimarathi/" class="logo">
+        <img src="/aimarathi/assets/logo.svg" alt="AI Marathi logo">
+        <span>AI</span> Marathi
+      </a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <span class="dropdown-label">&#9997; &#x0932;&#x093F;&#x0939;&#x093E; &#9662;</span>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/likha/copywriting/">Copywriting</a></li>
+            <li><a href="/aimarathi/likha/creative-writing/">Creative Writing</a></li>
+            <li><a href="/aimarathi/likha/research/">Research</a></li>
+            <li><a href="/aimarathi/likha/planning/">Planning</a></li>
+            <li><a href="/aimarathi/likha/translation/">Translation</a></li>
+            <li><a href="/aimarathi/likha/college-essays/">College Essays</a></li>
+          </ul>
+        </li>
+        <li>
+          <span class="dropdown-label">&lt;/&gt; Code &#9662;</span>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/code/website-banva/">Website &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/code/app-banva/">App &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/code/debug/">Debug &amp; Fix</a></li>
+            <li><a href="/aimarathi/code/automation/">Automation</a></li>
+            <li><a href="/aimarathi/code/data-analysis/">Data Analysis</a></li>
+          </ul>
+        </li>
+        <li>
+          <span class="dropdown-label">&#127912; &#x092C;&#x0918;&#x093E; &#9662;</span>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/bagha/images/">Images &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/bagha/videos/">Videos &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/bagha/lipsync/">Lipsync</a></li>
+            <li><a href="/aimarathi/bagha/photo-editing/">Photo Editing</a></li>
+            <li><a href="/aimarathi/bagha/presentations/">Presentations</a></li>
+          </ul>
+        </li>
+        <li>
+          <span class="dropdown-label">&#127911; &#x0910;&#x0915;&#x093E; &#9662;</span>
+          <ul class="dropdown">
+            <li><a href="/aimarathi/aika/voice/">Voice Generation</a></li>
+            <li><a href="/aimarathi/aika/music/">Music &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/aika/voice-cloning/">Voice Cloning</a></li>
+            <li><a href="/aimarathi/aika/podcast/">Podcast &#x092C;&#x0928;&#x0935;&#x093E;</a></li>
+            <li><a href="/aimarathi/aika/transcription/">Transcription</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#9790;</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="/aimarathi/">AIMarathi</a> &rsaquo; <a href="/aimarathi/claude-code/">Claude Code</a> &rsaquo; Installation
+      </div>
+      <h1>Claude Code Windows वर Install करा</h1>
+      <p class="subtitle" style="color: var(--color-text-light); font-size: 1.05rem;">Step-by-step guide — प्रत्येक step सोपा आहे, follow करा</p>
+    </div>
+
+    <!-- Prerequisites -->
+    <div class="tip">
+      <h4>Prerequisites — आधी हे check करा</h4>
+      <ul>
+        <li><strong>Windows 10</strong> version 1903+ किंवा <strong>Windows 11</strong> लागेल</li>
+        <li><strong>Internet connection</strong> लागेल</li>
+        <li><strong>Admin access</strong> लागेल (install करायला)</li>
+      </ul>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="step">
+      <span class="step-number">1</span>
+      <h3>Node.js Install करा</h3>
+      <p>Claude Code ला <strong>Node.js</strong> लागतं — हे एक runtime आहे जे JavaScript चालवतं. Claude Code हे Node.js वर बनलंय, म्हणून आधी हे install करायला लागेल.</p>
+      <ul>
+        <li><a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> वर जा → <strong>"LTS"</strong> version download करा</li>
+        <li>Downloaded file वर double-click करा → Next → Next → Next → Install</li>
+        <li>Installation मध्ये <strong>"Add to PATH"</strong> checkbox tick आहे ना ते बघा</li>
+      </ul>
+      <div class="screenshot-placeholder">📸 Node.js installer — LTS version select करा</div>
+      <p><strong>Check करा:</strong> Command Prompt उघडा, type करा:</p>
+      <div class="prompt-block"><span class="label">Command Prompt</span>node --version</div>
+      <p>Version number दिसला (जसं <code>v20.x.x</code>) म्हणजे Node.js नीट install झालंय!</p>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step">
+      <span class="step-number">2</span>
+      <h3>Anthropic Account बनवा</h3>
+      <p>Claude Code हे Anthropic ने बनवलंय. वापरायला त्यांचं account लागतं.</p>
+      <ul>
+        <li><a href="https://console.anthropic.com" target="_blank" rel="noopener">console.anthropic.com</a> वर जा</li>
+        <li>Sign up करा — Google account ने पण होतं</li>
+        <li>Free tier मध्ये पण Claude Code वापरता येतो</li>
+        <li>Pro plan ($20/month) मध्ये जास्त usage मिळतो — पण सुरुवातीला free पुरेसं आहे</li>
+      </ul>
+      <div class="tip">
+        <h4>Plan बद्दल Note</h4>
+        <p>Claude Code ला <strong>Max plan ($100/month)</strong> किंवा <strong>API key</strong> लागतो for unlimited use. सुरुवातीला free tier ने experiment करा, आवडलं तर upgrade करा.</p>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step">
+      <span class="step-number">3</span>
+      <h3>Claude Code Install करा</h3>
+      <p>आता actual Claude Code install करायचं — एक command आहे, बस!</p>
+      <ul>
+        <li><strong>Command Prompt (cmd)</strong> उघडा — Start menu मध्ये <code>cmd</code> search करा</li>
+        <li>खालची command type करा आणि Enter दाबा:</li>
+      </ul>
+      <div class="prompt-block"><span class="label">Command Prompt</span>npm install -g @anthropic-ai/claude-code</div>
+      <ul>
+        <li>Wait करा — download होईल (1-2 minutes लागतील)</li>
+        <li>बऱ्याच lines येतील screen वर — घाबरू नका, ते normal आहे</li>
+      </ul>
+      <div class="screenshot-placeholder">📸 npm install command running</div>
+      <p>Done message आलं की installation complete!</p>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step">
+      <span class="step-number">4</span>
+      <h3>पहिल्यांदा Run करा</h3>
+      <p>Install झालं — आता Claude Code चालवू या!</p>
+      <ul>
+        <li>Command Prompt मध्ये type करा:</li>
+      </ul>
+      <div class="prompt-block"><span class="label">Command Prompt</span>claude</div>
+      <ul>
+        <li>पहिल्यांदा Anthropic login मागेल — browser automatically उघडेल</li>
+        <li>Browser मध्ये login करा (Step 2 मध्ये बनवलेलं account वापरा)</li>
+        <li>Login झालं की terminal मध्ये Claude ready दिसेल</li>
+      </ul>
+      <div class="screenshot-placeholder">📸 Claude Code first run — login prompt</div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="step">
+      <span class="step-number">5</span>
+      <h3>Test करा</h3>
+      <p>सगळं नीट काम करतंय का ते बघू या:</p>
+      <div class="prompt-block"><span class="label">Claude Code prompt</span>Hello! Tell me about yourself in Marathi</div>
+      <p>Claude ने Marathi मध्ये reply दिला? <strong>Congratulations — सगळं काम करतंय!</strong> तुम्ही successfully Claude Code install केलंय.</p>
+    </div>
+
+    <!-- Troubleshooting -->
+    <h2>Troubleshooting — काही problem आला?</h2>
+
+    <div class="warning">
+      <h4>"node is not recognized" error आला?</h4>
+      <p>Node.js install नीट झालं नाही. Reinstall करा आणि installation मध्ये <strong>"Add to PATH"</strong> checkbox tick करा. Reinstall केल्यावर Command Prompt बंद करून नवीन उघडा.</p>
+    </div>
+
+    <div class="warning">
+      <h4>"npm ERR!" error आला?</h4>
+      <p>Internet connection check करा. जर college/office मध्ये proxy मागे असाल तर IT admin ला विचारा — proxy settings set करायला लागतील.</p>
+    </div>
+
+    <div class="warning">
+      <h4>Login page उघडत नाही?</h4>
+      <p>Browser default check करा. काम नाही झालं तर terminal मध्ये दिसणारी URL manually copy करा आणि browser मध्ये paste करा.</p>
+    </div>
+
+    <!-- Page Navigation -->
+    <div class="page-nav">
+      <a href="/aimarathi/claude-code/" class="prev">
+        ← Previous<br>
+        <strong>Overview</strong>
+      </a>
+      <a href="/aimarathi/claude-code/basic-usage.html" class="next">
+        Next →<br>
+        <strong>Basic Usage</strong>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    AI Marathi — AI शिका, मराठीत.
+  </footer>
+
+  <script>
+    (function() {
+      var toggle = document.getElementById('themeToggle');
+      var stored = localStorage.getItem('aimarathi-theme');
+      if (stored) document.documentElement.setAttribute('data-theme', stored);
+      function updateIcon() {
+        toggle.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u2600' : '\u263E';
+      }
+      updateIcon();
+      toggle.addEventListener('click', function() {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('aimarathi-theme', next);
+        updateIcon();
+      });
+      document.getElementById('navHamburger').addEventListener('click', function() {
+        document.getElementById('navLinks').classList.toggle('open');
+      });
+      document.querySelectorAll('.dropdown-label').forEach(function(label) {
+        label.addEventListener('click', function() {
+          this.parentElement.classList.toggle('mobile-open');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
